@@ -33,4 +33,4 @@ format:
   html:
     theme: cosmo
 
-
+callout-appearance: simple
