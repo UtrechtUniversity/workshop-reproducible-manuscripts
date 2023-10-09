@@ -1,5 +1,35 @@
-# Welcome {.unnumbered}
+# Welcome! {.unnumbered}
 
-This is a Quarto book.
+:::{.callout-warning}
+These materials are a Work In Progress!
+:::
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Welcome to the workshop "Writing reproducible manuscripts in R and Python". 
+This workshops is developed by [Research Data Management Support](https://uu.nl/rdm) at Utrecht University, the Netherlands. 
+We teach this workshop every 2 months, have a look at the [agenda](https://www.uu.nl/en/research/research-data-management/workshops/writing-reproducible-manuscripts-in-r-and-python) for information on dates and locations. 
+
+In this 3-hour workshop, you will use the Quarto publishing system in conjunction with R or Python (you can use the programming language you prefer) to create a publication-ready manuscript that combines data, code, text, and references. 
+More specifically, you will learn how to: 
+
+- Create a reproducible project (folder) structure
+- Use Markdown syntax effectively for writing text
+- Run analyses in code chunks or cells
+- Manage references using Zotero and Better BibTex for Zotero
+- 'Render' your Quarto project to Word, HTML, and pdf files 
+
+This workflow reduces the amount of human error, improves computational reproducibility and makes updating your scientific manuscript more efficient. 
+
+::: {.callout-note}
+Note that this workshop focuses on the (reproducible) manuscript as a whole and it does not dive into the (analysis) code itself. The latter is addressed in our workshop on [Best Practices in Writing Reproducible Code](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code), which is aimed at participants with more experience in programming in R & Python. 
+:::
+
+## Prerequisites 
+
+We recommend basic knowledge of R or Python to follow this workshop. 
+You can gain this knowledge in our workshops [Introduction to R and Data](https://www.uu.nl/en/research/research-data-management/training-workshops/introduction-to-r-data) or [Introduction to Python](https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-python).
+You do not need to bring your own research project to the workshop.
+The workshop is open to participants from Utrecht University (UU) and UU-affiliated organizations (for example, UMC Utrecht) only.   
+
+## License
+
+Our workshop material is licensed under a Creative Commons Attribution 4.0 International License. You can view the license on our [GitHub repository](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts).
