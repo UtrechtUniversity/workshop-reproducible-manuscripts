@@ -1,0 +1,8 @@
+# Inline code {.unnumbered}
+
+Here we will talk about how to do inline code.
+For Python, this feature will be hugely simplified from Quarto v1.4 onwards.
+
+- R: https://quarto.org/docs/get-started/computations/rstudio.html#inline-code
+- All: https://quarto.org/docs/computations/execution-options.html#inline-code
+- Jupyter new feature: https://cwickham.github.io/whats-new-in-quarto/#/inline-execution-for-jupyter-1 
