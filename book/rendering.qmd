@@ -1,0 +1,10 @@
+# Rendering to your manuscript {.unnumbered}
+
+Here we will add instructions on how to render to several output formats, 
+including different journal formats.
+
+Links:
+
+- https://quarto.org/docs/journals/
+- https://quarto.org/docs/journals/formats.html
+- https://quarto.org/docs/output-formats/all-formats.html
