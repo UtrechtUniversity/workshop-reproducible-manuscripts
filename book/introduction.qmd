@@ -1,0 +1,8 @@
+# Introduction {.unnumbered}
+
+- talk about research compendiums and executable articles
+- links to the relevant articles: this could also be given as pre-workshop reading 
+
+```{=html}
+<iframe width="1050" height="700" src="slides/test-prez.html"></iframe>
+```

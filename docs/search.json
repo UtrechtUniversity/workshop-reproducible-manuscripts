@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Writing Reproducible Manuscripts in R & Python",
+    "section": "",
+    "text": "Welcome\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "installation-and-setup.html",
+    "href": "installation-and-setup.html",
+    "title": "Installation & Setup",
+    "section": "",
+    "text": "Quarto (do the full installation just to be safe, not just via RStudio)\nQuarto & RStudio\nQuarto & VSCode (there are extensions)\nQuarto & JupyterLab, no clue just yet"
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "talk about research compendiums and executable articles\nlinks to the relevant articles: this could also be given as pre-workshop reading"
+  },
+  {
+    "objectID": "getting-started.html",
+    "href": "getting-started.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "1. Create a project in RStudio or VSCode\n\nIn RStudio, click File -&gt; New Project -&gt; New Directory -&gt; New Project.\nGive your project directory a clear name, preferably without spaces.\nMake sure your project directory folder is created (as a subdirectory) in an accessible place on your system.\nSelect Open project in a new session.\n\n2. Create a project structure suited for reproducible work\n\nYou can generate a directory structure by running the following piece of code in you R console:\n\nThis is RSTudio:\n\ndir.create(\"data\", recursive = TRUE)\ndir.create(\"docs\", recursive = TRUE)\ndir.create(\"results\", recursive = TRUE)\ndir.create(\"R\", recursive = TRUE)\n\nlibrary(usethis)\n\nusethis::use_readme_md(open = rlang::is_interactive())\nusethis::use_mit_license(copyright_holder = NULL)\n\n3. Place your data in the correct folder\n\nlibrary(palmerpenguins)\n\nwrite.csv(palmerpenguins::penguins_raw, \"data/data.csv\")\n\n4. Create a R Markdown document for your manuscript.\n\nIn RStudio, click File -&gt; New File -&gt; R Markdown\nClick on ‘From Template’ and scroll through the available options and select the MDPI Journal Article\nName the directory for this document (and associated files) as manuscript and ensure that it will be located in the docs folder.\n\n5. Familiarize yourself with the R Markdown document and associated files\n\nYAML Header\nSections\nBibliography"
+  },
+  {
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Writing\nThe body of the document is where you will do your writing, which will primarily be in the Markdown format (LaTeX and HTML would also work, depending on the output format)."
+  },
+  {
+    "objectID": "writing.html#markdown-syntax",
+    "href": "writing.html#markdown-syntax",
+    "title": "Writing",
+    "section": "Markdown Syntax",
+    "text": "Markdown Syntax\nIf you’re not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: https://learnxinyminutes.com/docs/markdown/.\nAdditionally, you can use the Visual Editor option in RStudio to see Markdown syntax previewed in it’s final format as you write.\nSome things you can do with Markdown:\n\nHeadings can be created for sections and subsections using the # hashtag character. So # Heading 1 for a top-level heading and ## Heading 2 for a second-level heading and so on.\nText can be formatted in italic or bold using the * asterisk character.\nBullet point lists can be created with a - hyphen or * asterisk for each line in the list.\nLinks can be embedded by writing in the following way: insert text which should be hyperlinked\nPlain code can be embedded in text using the ``` backtick character. R code can be embedded as well, but we will cover that in the next section."
+  },
+  {
+    "objectID": "writing.html#rendering",
+    "href": "writing.html#rendering",
+    "title": "Writing",
+    "section": "Rendering",
+    "text": "Rendering\nYou can render the R Markdown document to it’s specified output format using the Knit button in RStudio’s editor toolbar.\nYou can also use the render function documented in the following page: https://pkgs.rstudio.com/rmarkdown/reference/render.html"
+  },
+  {
+    "objectID": "writing.html#output-formats",
+    "href": "writing.html#output-formats",
+    "title": "Writing",
+    "section": "Output Formats",
+    "text": "Output Formats\noutput formats may have to be a whole other chapter"
+  },
+  {
+    "objectID": "writing.html#exercise",
+    "href": "writing.html#exercise",
+    "title": "Writing",
+    "section": "Exercise",
+    "text": "Exercise"
+  },
+  {
+    "objectID": "referencing.html",
+    "href": "referencing.html",
+    "title": "Referencing",
+    "section": "",
+    "text": "Referencing\nNow that we know how to write in Markdown and run analyses in code chunks, let’s learn about referencing using BibTex keys!"
+  },
+  {
+    "objectID": "referencing.html#working-with-bibtex-keys",
+    "href": "referencing.html#working-with-bibtex-keys",
+    "title": "Referencing",
+    "section": "Working with BibTex keys",
+    "text": "Working with BibTex keys\nWe will work with with bibliographies in the form of .bib files. .bib files stand for BibTeX Bibliographical Database files. They are text files which contain a list of references in the form of BibTex keys.\nA typical BibTex key might look like the following:\n@article{nash51,\n  author  = \"Nash, John\",\n  title   = \"Non-cooperative Games\",\n  journal = \"Annals of Mathematics\",\n  year    = 1951,\n  volume  = \"54\",\n  number  = \"2\",\n  pages   = \"286--295\"\n}\nHere is an example BibTex key for a reference used in this workshop:\n@misc{RMarkdownWritingReproducible,\n    title = {{RMarkdown} for writing reproducible scientific papers},\n    url = {https://libscie.github.io/rmarkdown-workshop/handout.html},\n    urldate = {2023-04-18},\n    file = {RMarkdown for writing reproducible scientific papers:C\\:\\\\Users\\\\Moope001\\\\Zotero\\\\storage\\\\SJITSZZI\\\\handout.html:text/html},\n}\nIn practice, your .bib file should be updated along the way to include the BibTex keys for all your references. You can cite a specific reference using the the @ character with the key/idenitifier in the first line of the entry.\nFor the above examples, it would be @nash51 and @RMarkdownWritingReproducible\n\nExercise\nFor this exercise, we will update our .bib file manually and making a citation. Note that this workflow can be made more efficient using Zotero and BetterBibTex for Zotero as described in the section after the exercise.\n\nSearch for the paper related to the Palmer Penguins data in Google Scholar:\n\nHorst, A. M., Hill, A. P., & Gorman, K. B. (2022). Palmer Archipelago Penguins Data in the palmerpenguins R Package-An Alternative to Anderson’s Irises. R JOURNAL, 14(1), 244-254.\n\nFind the BibTex key for this paper and copy it into your existing .bib file.\nCite the Palmer Penguins paper in your manuscript.\nRender the document and see how it looks."
+  },
+  {
+    "objectID": "referencing.html#using-zotero-better-bibtex-for-zotero",
+    "href": "referencing.html#using-zotero-better-bibtex-for-zotero",
+    "title": "Referencing",
+    "section": "Using Zotero & Better BibTex for Zotero",
+    "text": "Using Zotero & Better BibTex for Zotero\n\nSet up Zotero\n\nInstall Zotero on your computer\nInstall the Zotero connector with Chrome (unless you want to input your papers manually)\nCreate a Zotero account (Zotero webpage)\nSync your account with your local Zotero installation (in Zotero preferences -&gt; sync)\n\nInstall the “Better Bibtex” plugin\n\nDownload the Zotero-better-bibtex-6.7.75.xpi file from here: https://github.com/retorquere/zotero-better-bibtex/releases/tag/v6.7.75\nFollow the installation instructions here: https://retorque.re/zotero-better-bibtex/installation/\n\nSet up your library and collect bibliography material\n\nCreate a new folder inside your Zotero library to collect all the materials relevant to your study\nCollect studies in your new folder using Zotero connector or adding the material manually to your library\n\nCreate a .bib file (bibliography file)\n\nIn your Zotero local app, right click on your new folder -&gt; Export Collection\nChoose format BibText and click Okay\nChoose a destination folder. The destination folder MUST be the same of your R Markdown file\n\nInclude the .bib file into your R Markdown and quote studies\n\nIn the YAML lines (the ones between ———) of your R markdown template look for the keyword “bibliography”. Write your just created .bib file (without quotes) after “:”\nWhen you need to quote a material, look inside the bib file, look at the first line after the very first left curly bracket “{“ and, in the markdown text, write @, where  is the line of text after “{“. NOTE: this very first line of text does not appear in the bibliography printed on your final paper, it is a sort of nickname you use to quote paper and it can be set up to whatever word/sentence you like (but try to avoid empty space and use underscores _ instead)\nAlternatively, when using the Visual Editor option - you can use the citation dialog/option to insert citations directly."
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Analysis",
+    "section": "",
+    "text": "Analysis\nUnlike regular R scripts, code in R Markdown documents is run within so-called code chunks to separate text from code.\nYou can insert code chunks by:\nIf the default code chunk options are in place, rendering your R Markdown file will involve each code chunk being run and the results being embedded beneath the code chunk in the final document."
+  },
+  {
+    "objectID": "analysis.html#code-chunk-options",
+    "href": "analysis.html#code-chunk-options",
+    "title": "Analysis",
+    "section": "Code Chunk Options",
+    "text": "Code Chunk Options\nChunks can be customized using the following options:\n\ninclude = FALSE prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.\necho = FALSE prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.\nmessage = FALSE prevents messages that are generated by code from appearing in the finished file.\nwarning = FALSE prevents warnings that are generated by code from appearing in the finished.\nfig.cap = \"...\" adds a caption to graphical results.\n\nThe code chunk option has to be specified within the top chunk delimiter: ```{r}\nFor example, ```{r echo=FALSE, warning=TRUE}"
+  },
+  {
+    "objectID": "analysis.html#inline-code",
+    "href": "analysis.html#inline-code",
+    "title": "Analysis",
+    "section": "Inline Code",
+    "text": "Inline Code\nCode results or quick calculations can be inserted directly into the text of a R Markdown by enclosing the code with r. When the document is rendered, the results of the inline code will be displayed but not the code itself. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.\nInline code is a great option for reporting results in text in a reproducible way, while minimizing errors.\n\nExercise\nLike the previous exercise, we’re providing some code that you could place in your R Markdown document.\n\nFirst, insert a setup code chunk t the beginning of your document (i.e. below the YAML header) to specify the working directory.\nUse the following workflow for the rest of the script:\n\ncreate a code chunk in the Results section of your document,\ncopy a piece/section of the script and paste it into the code chunk,\nrun the code chunk and see if it works alright,\nrepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\n\nRender the document and check the output.\nPlay around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?\nInsert a sentence or two in the Results section about the mean flipper length and mean bill length. Use inline R code to:\n\ncalculate the mean flipper length within the text itself\nreport the mean bill length directly from the mean data frame\n\nRender the document again and observe the differences with the code chunks and inline code."
+  },
+  {
+    "objectID": "dependency-management.html",
+    "href": "dependency-management.html",
+    "title": "Dependency Managment",
+    "section": "",
+    "text": "something about dependency management, think along the whole reproducibility spectrum\nbasic: declaring dependencies using things like sessionInfo() and annotater package - both in R, conda/pip enviornments\nmore advanced…just let them know if they’re interested"
+  },
+  {
+    "objectID": "version-control.html",
+    "href": "version-control.html",
+    "title": "Version Control",
+    "section": "",
+    "text": "Basic info about git, just a sneak peek but we can use the browser to drag and drop files"
+  },
+  {
+    "objectID": "archiving-and-publishing.html",
+    "href": "archiving-and-publishing.html",
+    "title": "Archiving & Publishing",
+    "section": "",
+    "text": "archive on github and publish via Zenodo/OSF"
+  }
+]

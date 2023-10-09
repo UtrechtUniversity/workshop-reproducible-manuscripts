@@ -1,0 +1,55 @@
+# Getting Started {.unnumbered}
+
+**1. Create a project in RStudio or VSCode**
+
+- In RStudio, click File -> New Project -> New Directory -> New Project. 
+
+- Give your project directory a clear name, preferably without spaces.
+
+- Make sure your project directory folder is created (as a subdirectory) in an accessible place on your system.
+
+- Select `Open project in a new session`.
+
+**2. Create a project structure suited for reproducible work**
+
+- You can generate a directory structure by running the following piece of code in you R console:
+
+This is RSTudio:
+
+```{r}
+#| eval: false
+
+dir.create("data", recursive = TRUE)
+dir.create("docs", recursive = TRUE)
+dir.create("results", recursive = TRUE)
+dir.create("R", recursive = TRUE)
+
+library(usethis)
+
+usethis::use_readme_md(open = rlang::is_interactive())
+usethis::use_mit_license(copyright_holder = NULL)
+```
+
+**3. Place your data in the correct folder**
+
+```{r}
+#| eval: false
+
+library(palmerpenguins)
+
+write.csv(palmerpenguins::penguins_raw, "data/data.csv")
+```
+
+**4. Create a R Markdown document for your manuscript.**
+
+- In RStudio, click File -> New File -> R Markdown
+
+- Click on 'From Template' and scroll through the available options and select the **MDPI Journal Article**
+
+- Name the directory for this document (and associated files) as `manuscript` and ensure that it will be located in the `docs` folder.
+
+**5. Familiarize yourself with the R Markdown document and associated files**
+
+- YAML Header
+- Sections
+- Bibliography 

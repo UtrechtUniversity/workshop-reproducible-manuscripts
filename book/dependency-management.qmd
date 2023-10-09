@@ -1,0 +1,5 @@
+# Dependency Managment {.unnumbered}
+
+- something about dependency management, think along the whole reproducibility spectrum
+- basic: declaring dependencies using things like sessionInfo() and annotater package - both in R, conda/pip enviornments
+- more advanced...just let them know if they're interested

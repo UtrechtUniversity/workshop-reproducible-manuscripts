@@ -1,0 +1,36 @@
+project:
+  type: book
+  output-dir: ../docs 
+
+book:
+  title: "Writing Reproducible Manuscripts in R & Python"
+  author: "Research Data Management Support<br>Utrecht University"
+  date: last-modified
+  chapters:
+    - index.qmd
+    - installation-and-setup.qmd
+    - introduction.qmd
+    - getting-started.qmd
+    - part: Writing
+      chapters:
+        - writing.qmd
+        - referencing.qmd
+    - part: Analysis
+      chapters:
+        - analysis.qmd
+    - part: Bonus
+      chapters:
+        - dependency-management.qmd
+        - version-control.qmd
+        - archiving-and-publishing.qmd
+    - references.qmd
+  repo-url: https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts
+  repo-actions: [edit]
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+
+

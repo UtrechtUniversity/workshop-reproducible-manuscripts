@@ -1,0 +1,7 @@
+# Installation & Setup {.unnumbered}
+
+- Quarto (do the full installation just to be safe, not just via RStudio)
+- Quarto & RStudio
+- Quarto & VSCode (there are extensions)
+- Quarto & JupyterLab, no clue just yet
+
