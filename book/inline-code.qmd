@@ -6,3 +6,9 @@ For Python, this feature will be hugely simplified from Quarto v1.4 onwards.
 - R: https://quarto.org/docs/get-started/computations/rstudio.html#inline-code
 - All: https://quarto.org/docs/computations/execution-options.html#inline-code
 - Jupyter new feature: https://cwickham.github.io/whats-new-in-quarto/#/inline-execution-for-jupyter-1 
+
+## Inline Code
+
+Code results or quick calculations can be inserted directly into the text of a R Markdown by enclosing the code with ``r ``. When the document is rendered, the results of the inline code will be displayed but not the code itself. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.
+
+Inline code is a great option for reporting results in text in a reproducible way, while minimizing errors.
