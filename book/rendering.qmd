@@ -1,4 +1,4 @@
-# Rendering to your manuscript {.unnumbered}
+# Rendering your manuscript {.unnumbered}
 
 Here we will add instructions on how to render to several output formats, 
 including different journal formats.
@@ -8,3 +8,9 @@ Links:
 - https://quarto.org/docs/journals/
 - https://quarto.org/docs/journals/formats.html
 - https://quarto.org/docs/output-formats/all-formats.html
+
+## Rendering
+
+You can render the R Markdown document to it's specified output format using the _Knit_ button in RStudio's editor toolbar.
+
+You can also use the `render` function documented in the following page: [https://pkgs.rstudio.com/rmarkdown/reference/render.html](https://pkgs.rstudio.com/rmarkdown/reference/render.html)
