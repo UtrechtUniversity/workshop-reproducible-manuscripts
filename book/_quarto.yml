@@ -8,7 +8,12 @@ book:
   date: last-modified
   chapters:
     - index.qmd
-    - installation-and-setup.qmd
+    - acknowledgements.qmd
+    - schedule.qmd
+    - part: Preparation
+      chapters:
+        - installation-and-setup.qmd
+        - workshop-materials.qmd
     - introduction.qmd
     - getting-started.qmd
     - part: Writing
@@ -17,7 +22,10 @@ book:
         - referencing.qmd
     - part: Analysis
       chapters:
-        - analysis.qmd
+        - analysis.qmd # code chunks
+        - inline-code.qmd
+        - sourcing.qmd
+    - rendering.qmd
     - part: Bonus
       chapters:
         - dependency-management.qmd
