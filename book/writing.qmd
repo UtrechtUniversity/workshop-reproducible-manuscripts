@@ -22,14 +22,4 @@ Some things you can do with Markdown:
 
 - Plain code can be embedded in text using the ``` backtick character. R code can be embedded as well, but we will cover that in the next section.
 
-## Rendering
-
-You can render the R Markdown document to it's specified output format using the _Knit_ button in RStudio's editor toolbar.
-
-You can also use the `render` function documented in the following page: [https://pkgs.rstudio.com/rmarkdown/reference/render.html](https://pkgs.rstudio.com/rmarkdown/reference/render.html)
-
-## Output Formats
-
-output formats may have to be a whole other chapter
-
 ## Exercise
