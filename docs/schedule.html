@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Research Data Management Support Utrecht University">
-<meta name="dcterms.date" content="2023-10-09">
 
-<title>Writing Reproducible Manuscripts in R &amp; Python</title>
+<title>Writing Reproducible Manuscripts in R &amp; Python - Schedule</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./acknowledgements.html" rel="next">
+<link href="./installation-and-setup.html" rel="next">
+<link href="./acknowledgements.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome!</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./schedule.html">Schedule</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -105,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
@@ -117,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -255,43 +254,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a>
-  <ul class="collapse">
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/index.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing Reproducible Manuscripts in R &amp; Python</h1>
+<h1 class="title">Schedule</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Research Data Management Support<br>Utrecht University </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 9, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -299,49 +276,50 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome!</h1>
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>These materials are a Work In Progress!</p>
-</div>
-</div>
-</div>
-<p>Welcome to the workshop “Writing reproducible manuscripts in R and Python”. This workshops is developed by <a href="https://uu.nl/rdm">Research Data Management Support</a> at Utrecht University, the Netherlands. We teach this workshop every 2 months, have a look at the <a href="https://www.uu.nl/en/research/research-data-management/workshops/writing-reproducible-manuscripts-in-r-and-python">agenda</a> for information on dates and locations.</p>
-<p>In this 3-hour workshop, you will use the Quarto publishing system in conjunction with R or Python (you can use the programming language you prefer) to create a publication-ready manuscript that combines data, code, text, and references. More specifically, you will learn how to:</p>
-<ul>
-<li>Create a reproducible project (folder) structure</li>
-<li>Use Markdown syntax effectively for writing text</li>
-<li>Run analyses in code chunks or cells</li>
-<li>Manage references using Zotero and Better BibTex for Zotero</li>
-<li>‘Render’ your Quarto project to Word, HTML, and pdf files</li>
-</ul>
-<p>This workflow reduces the amount of human error, improves computational reproducibility and makes updating your scientific manuscript more efficient.</p>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Note that this workshop focuses on the (reproducible) manuscript as a whole and it does not dive into the (analysis) code itself. The latter is addressed in our workshop on <a href="https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code">Best Practices in Writing Reproducible Code</a>, which is aimed at participants with more experience in programming in R &amp; Python.</p>
-</div>
-</div>
-</div>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>We recommend basic knowledge of R or Python to follow this workshop. You can gain this knowledge in our workshops <a href="https://www.uu.nl/en/research/research-data-management/training-workshops/introduction-to-r-data">Introduction to R and Data</a> or <a href="https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-python">Introduction to Python</a>. You do not need to bring your own research project to the workshop. The workshop is open to participants from Utrecht University (UU) and UU-affiliated organizations (for example, UMC Utrecht) only.</p>
-</section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>Our workshop material is licensed under a Creative Commons Attribution 4.0 International License. You can view the license on our <a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts">GitHub repository</a>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>09:00</td>
+<td>Walk-in, tech support</td>
+</tr>
+<tr class="even">
+<td>09:30</td>
+<td>Introduction</td>
+</tr>
+<tr class="odd">
+<td>09:45</td>
+<td>Getting started</td>
+</tr>
+<tr class="even">
+<td>10:00</td>
+<td>Writing</td>
+</tr>
+<tr class="odd">
+<td>10:45</td>
+<td>Analysis</td>
+</tr>
+<tr class="even">
+<td>11:30</td>
+<td>Coffee break</td>
+</tr>
+<tr class="odd">
+<td>11:45</td>
+<td>Rendering your manuscript</td>
+</tr>
+<tr class="even">
+<td>12:30</td>
+<td>Recap &amp; Questions</td>
+</tr>
+</tbody>
+</table>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -579,10 +557,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./acknowledgements.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Acknowledgements</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./acknowledgements.html" class="pagination-link">
-        <span class="nav-page-text">Acknowledgements</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./installation-and-setup.html" class="pagination-link">
+        <span class="nav-page-text">Installation &amp; Setup</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -590,4 +571,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/schedule.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>

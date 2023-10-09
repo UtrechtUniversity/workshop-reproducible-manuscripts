@@ -4,14 +4,112 @@
     "href": "index.html",
     "title": "Writing Reproducible Manuscripts in R & Python",
     "section": "",
-    "text": "Welcome\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "Welcome!\nWelcome to the workshop “Writing reproducible manuscripts in R and Python”. This workshops is developed by Research Data Management Support at Utrecht University, the Netherlands. We teach this workshop every 2 months, have a look at the agenda for information on dates and locations.\nIn this 3-hour workshop, you will use the Quarto publishing system in conjunction with R or Python (you can use the programming language you prefer) to create a publication-ready manuscript that combines data, code, text, and references. More specifically, you will learn how to:\nThis workflow reduces the amount of human error, improves computational reproducibility and makes updating your scientific manuscript more efficient."
   },
   {
-    "objectID": "installation-and-setup.html",
-    "href": "installation-and-setup.html",
-    "title": "Installation & Setup",
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "Writing Reproducible Manuscripts in R & Python",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nWe recommend basic knowledge of R or Python to follow this workshop. You can gain this knowledge in our workshops Introduction to R and Data or Introduction to Python. You do not need to bring your own research project to the workshop. The workshop is open to participants from Utrecht University (UU) and UU-affiliated organizations (for example, UMC Utrecht) only."
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Writing Reproducible Manuscripts in R & Python",
+    "section": "License",
+    "text": "License\nOur workshop material is licensed under a Creative Commons Attribution 4.0 International License. You can view the license on our GitHub repository."
+  },
+  {
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
     "section": "",
-    "text": "Quarto (do the full installation just to be safe, not just via RStudio)\nQuarto & RStudio\nQuarto & VSCode (there are extensions)\nQuarto & JupyterLab, no clue just yet"
+    "text": "These materials were drafted with the help from the following contributors:\n\nNeha Moopen\nDorien Huijser\n[ADD YOUR NAME]"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Time\nActivity\n\n\n\n\n09:00\nWalk-in, tech support\n\n\n09:30\nIntroduction\n\n\n09:45\nGetting started\n\n\n10:00\nWriting\n\n\n10:45\nAnalysis\n\n\n11:30\nCoffee break\n\n\n11:45\nRendering your manuscript\n\n\n12:30\nRecap & Questions"
+  },
+  {
+    "objectID": "installation-and-setup.html#install-visual-studio-code",
+    "href": "installation-and-setup.html#install-visual-studio-code",
+    "title": "Installation & Setup",
+    "section": "1. Install Visual Studio Code",
+    "text": "1. Install Visual Studio Code\nInstall Visual Studio Code (VS Code) using the set-up instructions for your operating system.\n\nDownload VS Code from https://code.visualstudio.com/\nWalk through the installation steps. The default installation location is usually fine. If you have administrator rights, we recommend to Add VS Code to the PATH if you’re using Windows."
+  },
+  {
+    "objectID": "installation-and-setup.html#set-up-python-andor-r-for-use-in-vs-code",
+    "href": "installation-and-setup.html#set-up-python-andor-r-for-use-in-vs-code",
+    "title": "Installation & Setup",
+    "section": "2. Set up Python and/or R for use in VS Code",
+    "text": "2. Set up Python and/or R for use in VS Code\n\nR: Follow the instructions here for installing R and using it in VS Code.\n\nIn VS Code, you can open an R terminal to install the languageserver package.\n\nPython: Follow the instructions here for installing a Python interpreter, or see the installation instructions in our Introduction to Python workshop.\n\nBe sure to also install the Jupyter extension in VS Code if you wish to work with Jupyter notebooks (.ipynb)."
+  },
+  {
+    "objectID": "installation-and-setup.html#install-quarto",
+    "href": "installation-and-setup.html#install-quarto",
+    "title": "Installation & Setup",
+    "section": "3. Install Quarto",
+    "text": "3. Install Quarto\n\nDownload Quarto from https://quarto.org/docs/get-started/\nOpen the msi/executable file. Answer “Yes” to the pop-up question “Do you want to allow this app to make changes to your device?”. Then start the set-up wizard.\nChoose Install for all users. If you do not have administrator rights, select Install just for you.\nChoose the installation location, usually the default proposed location is fine.\nInstallation will start. After installation, click Finish."
+  },
+  {
+    "objectID": "installation-and-setup.html#make-vs-code-quarto-and-rpython-talk-to-each-other",
+    "href": "installation-and-setup.html#make-vs-code-quarto-and-rpython-talk-to-each-other",
+    "title": "Installation & Setup",
+    "section": "4. Make VS Code, Quarto and R/Python talk to each other",
+    "text": "4. Make VS Code, Quarto and R/Python talk to each other\nNow that everything is installed, we need to make sure VS Code can use Quarto and Python/R.\n\nOpen VS Code.\nOpen the Extensions view in VS Code (Ctrl+Shift+X on Windows and Linux, Cmd+Shift+X on macOS)\nInstall the Quarto extension from the Extensions view in VS Code.\nIf you want to use Python in VS Code:\n\nFrom the Extensions view in VS Code, install the Python extension.\nSet the Python interpreter: Open the command palette in VS Code (Ctrl+Shift+P on Windows and Linux, Cmd+Shift+P on macOS), type “Python: Select Interpreter”, and select the relevant Python interpreter from the interpreters that VS Code can find.\n\nIf you want to use R in VS Code: install the R extension from the extensions view in VS Code.\nCheck whether Quarto is detected:\n\nOpen a new terminal: Terminal &gt; New terminal.\nType quarto --version\nIf a version number appears, Quarto is detected.\n\nCheck whether Python is detected:\n\nOpen a new terminal or use the one that you used in step 6a.\nType python --version\nIf a version number appears, Python is detected.\n\nCheck whether R is detected: if you can open an R terminal, it shows you the R version and R is detected successfully."
+  },
+  {
+    "objectID": "installation-and-setup.html#install-r-and-rstudio",
+    "href": "installation-and-setup.html#install-r-and-rstudio",
+    "title": "Installation & Setup",
+    "section": "1. Install R and Rstudio",
+    "text": "1. Install R and Rstudio\nIf you do not yet have an installation for R and Rstudio, you need to install them on your device.\n\nIf you have a personal device with administrator/installation rights:\n\nInstall R from https://cran.rstudio.com/\nInstall Rstudio from https://posit.co/download/rstudio-desktop/#download\n\nIf you have a Utrecht University managed device:\n\nInstall the R for Windows suite from the Software Center. It should contain both R and Rstudio.\nCheck the installation. R packages on a UU laptop are usually installed on a so-called ‘mounted’ drive. This causes problems with the performance. Check the installation as follows:\n\nOpen RStudio.\nWrite the following line of code in your console: .libPaths(), and press enter to execute.\nIf the response starts with // or \\\\, you are installing on a mounted drive. Follow the steps below to change the installation location.\n\n\nIf you already have an existing R and RStudio installation:\n\nCheck which version of RStudio you have installed: Go to Help &gt; About RStudio.\nIf your RStudio version is older than v2022.07, then you should update it. Quarto recommends using the latest version of RStudio (currently v.2023.06)."
+  },
+  {
+    "objectID": "installation-and-setup.html#install-quarto-and-r-markdown",
+    "href": "installation-and-setup.html#install-quarto-and-r-markdown",
+    "title": "Installation & Setup",
+    "section": "2. Install Quarto and R Markdown",
+    "text": "2. Install Quarto and R Markdown\n\nIn the RStudio console, type install.packages(\"rmarkdown\") and install.packages(\"quarto\")\nLoad both packages with library(rmarkdown) and library(quarto)\nRestart RStudio.\nCheck whether Quarto is detected: go to the Terminal (next to the Console) and type quarto --version. Alternatively, go to File &gt; New project &gt; New directory and check whether the Quarto outputs are presented as options (Quarto project, Quarto website, Quarto blog, Quarto book)"
+  },
+  {
+    "objectID": "installation-and-setup.html#troubleshooting",
+    "href": "installation-and-setup.html#troubleshooting",
+    "title": "Installation & Setup",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nPackages are being installed on a mounted drive\nThis can cause various errors, and even if everything goes right, installing new packages takes ages.\nSolution 1: There is a solution to prevent problems with mounted drives for applications like R, RStudio and Office. Read more about the solution on intranet.\nSolution 2:\n\nCreate a folder R-packages on a local drive.\nCopy the location to that drive. For example: C:/Users/User/R-packages.\nRun the following line of code: file.edit(file.path(\"~\", \".Rprofile\"))\nPaste .libPaths(\"C:/Users/User/R-packages\") in the editor and save the file.\nRestart your R session\nClick on Packages&gt;Install. Is Install to library pointing to C:/Users/User/R-packages?\nIf not: check if the path is correctly spelled. Try inverting the slashes (\\ instead of /). You may need to use double slashes (\\\\ or //).\nTick ‘source on save’, click save, and check Packages&gt;Install again.\n\n\n\n“Unable to move temporary installation” (Windows error)\nDo you get issues like this:\n&gt; install.packages(\"tibble\")\nInstalling package into ‘C:/Users/UserName/R’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/windows/contrib/3.4/tibble_1.4.2.zip'\nContent type 'application/zip' length 172649 bytes (168 KB)\ndownloaded 168 KB\n\npackage ‘tibble’ successfully unpacked and MD5 sums checked\nWarning in install.packages :\n  unable to move temporary installation ‘C:\\Users\\UserName\\R\\file18b813387562\\tibble’ to ‘C:\\Users\\UserName\\R\\tibble’\nThe downloaded binary packages are in\nC:\\Users\\UserName\\AppData\\Local\\Temp\\RtmpYh5ogU\\downloaded_packages\nCheck for the line unable to move temporary installation. Your virus scanner might be blocking the installation of tidyverse.\nThe solution (found here) is to enter:\ntrace(utils:::unpackPkgZip, edit=TRUE)\nYou should see:\nTracing function \"unpackPkgZip\" in package \"utils (not-exported)\"\n[1] \"unpackPkgZip\"\nAnd a file should open. Change 0.5 in line 142 to 2.5, save the file, and try installing the package again."
+  },
+  {
+    "objectID": "installation-and-setup.html#install-python",
+    "href": "installation-and-setup.html#install-python",
+    "title": "Installation & Setup",
+    "section": "1. Install Python",
+    "text": "1. Install Python\nTo install Python, you can follow the instructions as laid out in our workshop Introduction to Python. If you wish to work in Jupyter Lab/Notebook, we recommend installing Python via Anaconda Navigator."
+  },
+  {
+    "objectID": "installation-and-setup.html#install-quarto-1",
+    "href": "installation-and-setup.html#install-quarto-1",
+    "title": "Installation & Setup",
+    "section": "2. Install Quarto",
+    "text": "2. Install Quarto\n\nDownload Quarto from https://quarto.org/docs/get-started/\nOpen the msi/executable file. Answer “Yes” to the pop-up question “Do you want to allow this app to make changes to your device?”. Then start the set-up wizard.\nChoose Install for all users. If you do not have administrator rights, select Install just for you.\nChoose the installation location, usually the default proposed location is fine.\nInstallation will start. After installation, click Finish."
+  },
+  {
+    "objectID": "installation-and-setup.html#check-the-installation",
+    "href": "installation-and-setup.html#check-the-installation",
+    "title": "Installation & Setup",
+    "section": "3. Check the installation",
+    "text": "3. Check the installation\n\nOpen Anaconda Navigator.\nLaunch Jupyter Lab.\nOpen a terminal via File &gt; New &gt; Terminal\nType quarto --version. If it returns a version number, you’re all set!"
+  },
+  {
+    "objectID": "workshop-materials.html",
+    "href": "workshop-materials.html",
+    "title": "Workshop materials",
+    "section": "",
+    "text": "Here we will put instructions for downloading the workshop materials."
   },
   {
     "objectID": "introduction.html",
@@ -40,20 +138,6 @@
     "title": "Writing",
     "section": "Markdown Syntax",
     "text": "Markdown Syntax\nIf you’re not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: https://learnxinyminutes.com/docs/markdown/.\nAdditionally, you can use the Visual Editor option in RStudio to see Markdown syntax previewed in it’s final format as you write.\nSome things you can do with Markdown:\n\nHeadings can be created for sections and subsections using the # hashtag character. So # Heading 1 for a top-level heading and ## Heading 2 for a second-level heading and so on.\nText can be formatted in italic or bold using the * asterisk character.\nBullet point lists can be created with a - hyphen or * asterisk for each line in the list.\nLinks can be embedded by writing in the following way: insert text which should be hyperlinked\nPlain code can be embedded in text using the ``` backtick character. R code can be embedded as well, but we will cover that in the next section."
-  },
-  {
-    "objectID": "writing.html#rendering",
-    "href": "writing.html#rendering",
-    "title": "Writing",
-    "section": "Rendering",
-    "text": "Rendering\nYou can render the R Markdown document to it’s specified output format using the Knit button in RStudio’s editor toolbar.\nYou can also use the render function documented in the following page: https://pkgs.rstudio.com/rmarkdown/reference/render.html"
-  },
-  {
-    "objectID": "writing.html#output-formats",
-    "href": "writing.html#output-formats",
-    "title": "Writing",
-    "section": "Output Formats",
-    "text": "Output Formats\noutput formats may have to be a whole other chapter"
   },
   {
     "objectID": "writing.html#exercise",
@@ -95,14 +179,28 @@
     "href": "analysis.html#code-chunk-options",
     "title": "Analysis",
     "section": "Code Chunk Options",
-    "text": "Code Chunk Options\nChunks can be customized using the following options:\n\ninclude = FALSE prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.\necho = FALSE prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.\nmessage = FALSE prevents messages that are generated by code from appearing in the finished file.\nwarning = FALSE prevents warnings that are generated by code from appearing in the finished.\nfig.cap = \"...\" adds a caption to graphical results.\n\nThe code chunk option has to be specified within the top chunk delimiter: ```{r}\nFor example, ```{r echo=FALSE, warning=TRUE}"
+    "text": "Code Chunk Options\nChunks can be customized using the following options:\n\ninclude = FALSE prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.\necho = FALSE prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.\nmessage = FALSE prevents messages that are generated by code from appearing in the finished file.\nwarning = FALSE prevents warnings that are generated by code from appearing in the finished.\nfig.cap = \"...\" adds a caption to graphical results.\n\nThe code chunk option has to be specified within the top chunk delimiter: ```{r}\nFor example, ```{r echo=FALSE, warning=TRUE}\n\nExercise\nLike the previous exercise, we’re providing some code that you could place in your R Markdown document.\n\nFirst, insert a setup code chunk t the beginning of your document (i.e. below the YAML header) to specify the working directory.\nUse the following workflow for the rest of the script:\n\ncreate a code chunk in the Results section of your document,\ncopy a piece/section of the script and paste it into the code chunk,\nrun the code chunk and see if it works alright,\nrepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\n\nRender the document and check the output.\nPlay around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?\nInsert a sentence or two in the Results section about the mean flipper length and mean bill length. Use inline R code to:\n\ncalculate the mean flipper length within the text itself\nreport the mean bill length directly from the mean data frame\n\nRender the document again and observe the differences with the code chunks and inline code."
   },
   {
-    "objectID": "analysis.html#inline-code",
-    "href": "analysis.html#inline-code",
-    "title": "Analysis",
+    "objectID": "inline-code.html#inline-code",
+    "href": "inline-code.html#inline-code",
+    "title": "Inline code",
     "section": "Inline Code",
-    "text": "Inline Code\nCode results or quick calculations can be inserted directly into the text of a R Markdown by enclosing the code with r. When the document is rendered, the results of the inline code will be displayed but not the code itself. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.\nInline code is a great option for reporting results in text in a reproducible way, while minimizing errors.\n\nExercise\nLike the previous exercise, we’re providing some code that you could place in your R Markdown document.\n\nFirst, insert a setup code chunk t the beginning of your document (i.e. below the YAML header) to specify the working directory.\nUse the following workflow for the rest of the script:\n\ncreate a code chunk in the Results section of your document,\ncopy a piece/section of the script and paste it into the code chunk,\nrun the code chunk and see if it works alright,\nrepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\n\nRender the document and check the output.\nPlay around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?\nInsert a sentence or two in the Results section about the mean flipper length and mean bill length. Use inline R code to:\n\ncalculate the mean flipper length within the text itself\nreport the mean bill length directly from the mean data frame\n\nRender the document again and observe the differences with the code chunks and inline code."
+    "text": "Inline Code\nCode results or quick calculations can be inserted directly into the text of a R Markdown by enclosing the code with r. When the document is rendered, the results of the inline code will be displayed but not the code itself. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.\nInline code is a great option for reporting results in text in a reproducible way, while minimizing errors."
+  },
+  {
+    "objectID": "sourcing.html",
+    "href": "sourcing.html",
+    "title": "Sourcing external code",
+    "section": "",
+    "text": "Here I will add content about sourcing external code."
+  },
+  {
+    "objectID": "rendering.html#rendering",
+    "href": "rendering.html#rendering",
+    "title": "Rendering your manuscript",
+    "section": "Rendering",
+    "text": "Rendering\nYou can render the R Markdown document to it’s specified output format using the Knit button in RStudio’s editor toolbar.\nYou can also use the render function documented in the following page: https://pkgs.rstudio.com/rmarkdown/reference/render.html"
   },
   {
     "objectID": "dependency-management.html",
