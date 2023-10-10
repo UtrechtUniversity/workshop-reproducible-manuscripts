@@ -105,25 +105,25 @@
     "text": "1. Create a project in RStudio or VSCode\n\nIn RStudio, click File -&gt; New Project -&gt; New Directory -&gt; New Project.\nGive your project directory a clear name, preferably without spaces.\nMake sure your project directory folder is created (as a subdirectory) in an accessible place on your system.\nSelect Open project in a new session.\n\n2. Create a project structure suited for reproducible work\n\nYou can generate a directory structure by running the following piece of code in you R console:\n\nThis is RSTudio:\n\ndir.create(\"data\", recursive = TRUE)\ndir.create(\"docs\", recursive = TRUE)\ndir.create(\"results\", recursive = TRUE)\ndir.create(\"R\", recursive = TRUE)\n\nlibrary(usethis)\n\nusethis::use_readme_md(open = rlang::is_interactive())\nusethis::use_mit_license(copyright_holder = NULL)\n\n3. Place your data in the correct folder\n\nlibrary(palmerpenguins)\n\nwrite.csv(palmerpenguins::penguins_raw, \"data/data.csv\")\n\n4. Create a R Markdown document for your manuscript.\n\nIn RStudio, click File -&gt; New File -&gt; R Markdown\nClick on ‘From Template’ and scroll through the available options and select the MDPI Journal Article\nName the directory for this document (and associated files) as manuscript and ensure that it will be located in the docs folder.\n\n5. Familiarize yourself with the R Markdown document and associated files\n\nYAML Header\nSections\nBibliography"
   },
   {
-    "objectID": "writing.html",
-    "href": "writing.html",
-    "title": "Writing",
-    "section": "",
-    "text": "Writing\nThe body of the document is where you will do your writing, which will primarily be in the Markdown format (LaTeX and HTML would also work, depending on the output format)."
-  },
-  {
     "objectID": "writing.html#markdown-syntax",
     "href": "writing.html#markdown-syntax",
-    "title": "Writing",
+    "title": "Writing with Markdown",
     "section": "Markdown Syntax",
-    "text": "Markdown Syntax\nIf you’re not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: https://learnxinyminutes.com/docs/markdown/.\nAdditionally, you can use the Visual Editor option in RStudio to see Markdown syntax previewed in it’s final format as you write.\nSome things you can do with Markdown:\n\nHeadings can be created for sections and subsections using the # hashtag character. So # Heading 1 for a top-level heading and ## Heading 2 for a second-level heading and so on.\nText can be formatted in italic or bold using the * asterisk character.\nBullet point lists can be created with a - hyphen or * asterisk for each line in the list.\nLinks can be embedded by writing in the following way: insert text which should be hyperlinked\nPlain code can be embedded in text using the ``` backtick character. R code can be embedded as well, but we will cover that in the next section."
+    "text": "Markdown Syntax\nIf you’re not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: https://learnxinyminutes.com/docs/markdown/.\nAdditionally, you can use the Visual Editor, either in VS Code or RStudio, to see Markdown syntax previewed in it’s final format as you write. The Visual Editor also has some common Word-like shortcuts, such as CTRL+b to make text bold.\nSome things you can do with Markdown:\n\nHeadings can be created for sections and subsections using the # hashtag character. So # Heading 1 for a top-level heading and ## Heading 2 for a second-level heading and so on.\nText can be formatted in italic or bold using the * asterisk character. **This text would become bold**\nBullet point lists can be created with a - hyphen or * asterisk for each line in the list.\nLinks can be embedded by writing in the following way: [text to hyperlink](link)\nPlain code can be embedded in text using the ` backtick character. Code can be embedded as well, but we will cover that in the next section.\nImages can be included using ![Image title](path/to/img.png)"
   },
   {
     "objectID": "writing.html#exercise",
     "href": "writing.html#exercise",
-    "title": "Writing",
+    "title": "Writing with Markdown",
     "section": "Exercise",
-    "text": "Exercise"
+    "text": "Exercise\nRecreate the following paragraph1 using markdown:\n\nIntroduction\nWhy use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:\n\nMarkdown can be used for everything. People use it to create websites, documents, notes, books, presentations, email messages, and technical documentation.\nMarkdown is portable.\n\nFiles containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application.\nThat’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.\n\nMarkdown is platform independent. You can create Markdown-formatted text on any device running any operating system.\nMarkdown is future proof. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your Markdown-formatted text using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.\nMarkdown is everywhere. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.\n\nHere is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)"
+  },
+  {
+    "objectID": "writing.html#footnotes",
+    "href": "writing.html#footnotes",
+    "title": "Writing with Markdown",
+    "section": "",
+    "text": "Source: Markdown Guide↩︎"
   },
   {
     "objectID": "referencing.html",
@@ -147,25 +147,39 @@
     "text": "Using Zotero & Better BibTex for Zotero\n\nSet up Zotero\n\nInstall Zotero on your computer\nInstall the Zotero connector with Chrome (unless you want to input your papers manually)\nCreate a Zotero account (Zotero webpage)\nSync your account with your local Zotero installation (in Zotero preferences -&gt; sync)\n\nInstall the “Better Bibtex” plugin\n\nDownload the Zotero-better-bibtex-6.7.75.xpi file from here: https://github.com/retorquere/zotero-better-bibtex/releases/tag/v6.7.75\nFollow the installation instructions here: https://retorque.re/zotero-better-bibtex/installation/\n\nSet up your library and collect bibliography material\n\nCreate a new folder inside your Zotero library to collect all the materials relevant to your study\nCollect studies in your new folder using Zotero connector or adding the material manually to your library\n\nCreate a .bib file (bibliography file)\n\nIn your Zotero local app, right click on your new folder -&gt; Export Collection\nChoose format BibText and click Okay\nChoose a destination folder. The destination folder MUST be the same of your R Markdown file\n\nInclude the .bib file into your R Markdown and quote studies\n\nIn the YAML lines (the ones between ———) of your R markdown template look for the keyword “bibliography”. Write your just created .bib file (without quotes) after “:”\nWhen you need to quote a material, look inside the bib file, look at the first line after the very first left curly bracket “{“ and, in the markdown text, write @, where  is the line of text after “{“. NOTE: this very first line of text does not appear in the bibliography printed on your final paper, it is a sort of nickname you use to quote paper and it can be set up to whatever word/sentence you like (but try to avoid empty space and use underscores _ instead)\nAlternatively, when using the Visual Editor option - you can use the citation dialog/option to insert citations directly."
   },
   {
-    "objectID": "analysis.html",
-    "href": "analysis.html",
-    "title": "Analysis",
-    "section": "",
-    "text": "Analysis\nUnlike regular R scripts, code in R Markdown documents is run within so-called code chunks to separate text from code.\nYou can insert code chunks by:\nIf the default code chunk options are in place, rendering your R Markdown file will involve each code chunk being run and the results being embedded beneath the code chunk in the final document."
+    "objectID": "analysis.html#what-does-a-code-chunk-do",
+    "href": "analysis.html#what-does-a-code-chunk-do",
+    "title": "Code chunks",
+    "section": "What does a code chunk do?",
+    "text": "What does a code chunk do?\nA code chunk simply executes code that you specify. Depending on the content of your code, it may print code output into the document when the chunk is executed, or create new variables, for example.\nIf the default code chunk options are in place, rendering your Quarto file will involve each code chunk being run and the results being embedded beneath the code chunk in the final document."
   },
   {
     "objectID": "analysis.html#code-chunk-options",
     "href": "analysis.html#code-chunk-options",
-    "title": "Analysis",
+    "title": "Code chunks",
     "section": "Code Chunk Options",
-    "text": "Code Chunk Options\nChunks can be customized using the following options:\n\ninclude = FALSE prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.\necho = FALSE prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.\nmessage = FALSE prevents messages that are generated by code from appearing in the finished file.\nwarning = FALSE prevents warnings that are generated by code from appearing in the finished.\nfig.cap = \"...\" adds a caption to graphical results.\n\nThe code chunk option has to be specified within the top chunk delimiter: ```{r}\nFor example, ```{r echo=FALSE, warning=TRUE}\n\nExercise\nLike the previous exercise, we’re providing some code that you could place in your R Markdown document.\n\nFirst, insert a setup code chunk t the beginning of your document (i.e. below the YAML header) to specify the working directory.\nUse the following workflow for the rest of the script:\n\ncreate a code chunk in the Results section of your document,\ncopy a piece/section of the script and paste it into the code chunk,\nrun the code chunk and see if it works alright,\nrepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\n\nRender the document and check the output.\nPlay around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?\nInsert a sentence or two in the Results section about the mean flipper length and mean bill length. Use inline R code to:\n\ncalculate the mean flipper length within the text itself\nreport the mean bill length directly from the mean data frame\n\nRender the document again and observe the differences with the code chunks and inline code."
+    "text": "Code Chunk Options\nCode chunks can be customized via the code chunk yaml, denoted with #| chunk-option: setting-value at the top of each code chunk.\nThe following code chunk options are useful to include:\n\n#| label: your-code-chunk-title: It is good practice to always label a code chunk. This is also handy when you want to reuse the chunk elsewhere (see Sourcing external code)\n#| eval: true: Do you want to execute the code? If not, set eval to false\n#| echo: false: Do you want to show the source code in the finished document? If set to false, the results of the computation will still be displayed in the document!\n#| output: true: If you want to exclude the output of the computation into the resulting document, set output to false.\n#| warning: false: Choose whether to include warnings in the output documents. You usually want this to be true during the writing phase, but false when rendering to the final document.\n#| include: false: If set to false, both code ánd computation results are suppressed from the final document. Note that the code is still run, and the results of the chunk can be used by other chunks.\n\nIf you have a code chunk that creates a figure, you can also set several options for the looks of the figure, such as:\n\n#| fig.cap: \"your figure's caption\": caption of the figure\n#| fig-width: 8: width of the figure\n#| fig-height: 6: height of the figure"
   },
   {
-    "objectID": "inline-code.html#inline-code",
-    "href": "inline-code.html#inline-code",
+    "objectID": "analysis.html#chunk-options-for-the-entire-document",
+    "href": "analysis.html#chunk-options-for-the-entire-document",
+    "title": "Code chunks",
+    "section": "Chunk options for the entire document",
+    "text": "Chunk options for the entire document\nIn many cases, you want to use chunk options across all chunks in the document or in a project. In that case, you can put the chunk options that you want to apply across the document in the _quarto.yml file or in the main yaml at the top of the document as such:\ntitle: \"My Document\"\nexecute:\n  echo: false\n  warning: false\n\nExercises\n\nExercise 1\n\nInsert a setup code chunk t the beginning of your document (i.e. below the YAML header) to read in the necessary packages.\nCreate a code chunk in the Results section of your document\nCopy a piece/section of your script and paste it into the code chunk\nRun the code chunk and see if it works alright,\nRepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\nRender the document and check the output.\n\n\n\nExercise 2\nPlay around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?"
+  },
+  {
+    "objectID": "inline-code.html#an-example-in-r-source",
+    "href": "inline-code.html#an-example-in-r-source",
     "title": "Inline code",
-    "section": "Inline Code",
-    "text": "Inline Code\nCode results or quick calculations can be inserted directly into the text of a R Markdown by enclosing the code with r. When the document is rendered, the results of the inline code will be displayed but not the code itself. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.\nInline code is a great option for reporting results in text in a reproducible way, while minimizing errors."
+    "section": "An example in R (source)",
+    "text": "An example in R (source)\n\nThere are 152 penguins of the “Adelie” species in the dataset.\n\nThis line was created as follows:\n```{r}\n#| label: Load the penguins dataset\n#| echo: false\nlibrary(palmerpenguins)\npenguins_data &lt;- penguins\n```\n&gt; There are `r sum(penguins_data$species=='Adelie')` penguins of the Adelie species in the dataset.\nBy enclosing the inline code with `r `, the code will be executed when the document is rendered, displaying not the code but the results of the computation. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text."
+  },
+  {
+    "objectID": "inline-code.html#in-python",
+    "href": "inline-code.html#in-python",
+    "title": "Inline code",
+    "section": "In Python",
+    "text": "In Python\nFor Python, this feature will be hugely simplified from Quarto v1.4 onwards.\n```{python}\nx = 5\n```\n\nThe answer is `{python} x`\nFor earlier Quarto versions, the solution is a bit overly complicated and does not always seem to work as well:\n```{python}\n#| echo: false\nradius = 10\nfrom IPython.display import display, Markdown\ndisplay(Markdown(\"\"\"\nThe radius of the circle is {radius}.\n\"\"\".format(radius = radius)))\n```"
   },
   {
     "objectID": "sourcing.html#what-can-you-do-in-quarto",
