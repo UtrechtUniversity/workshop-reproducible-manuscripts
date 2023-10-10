@@ -1,10 +1,11 @@
 # Installation & Setup {.unnumbered}
 
-The installation procedure will differ depending on how you choose to work with the Quarto publishing system. Below we go into the following 3 situations:
+The installation procedure will differ depending on how you choose to work with the Quarto publishing system. Below we go into the following 2 situations:
 
 1. Using Quarto with Python or R in Visual Studio Code
 2. Using Quarto with R in RStudio
-3. Using Quarto with Python in Jupyter notebooks
+
+It is also possible to use Quarto with Python in Jupyter notebooks. We do not go into that situation in this workshop for now. Just know that it is possible by installing a Python installation, Jupyter lab (e.g., via Anaconda) and Quarto ([see Quarto documentation](https://quarto.org/docs/get-started/hello/jupyter.html)).
 
 :::{.callout-note}
 Besides R and Python, Quarto can also work with other programming languages, such as Julia or Observable, and it can interact with other software as well, like Neovim and simple Text editors.
@@ -138,26 +139,5 @@ Tracing function "unpackPkgZip" in package "utils (not-exported)"
 And a file should open. Change `0.5` in line 142 to `2.5`, save the file, and try 
 installing the package again.
 
-
-# 3. Quarto in Jupyter notebooks (Python)
-
-## 1. Install Python
-
-To install Python, you can follow the instructions as laid out in our workshop [Introduction to Python](https://utrechtuniversity.github.io/workshop-introduction-to-python/installation-and-setup.html#install-python). If you wish to work in Jupyter Lab/Notebook, we recommend installing Python via [Anaconda Navigator](https://www.anaconda.com/).
-
-## 2. Install Quarto
-
-1. Download Quarto from [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
-2. Open the msi/executable file. Answer "Yes" to the pop-up question "Do you want to allow this app to make changes to your device?". Then start the set-up wizard.
-3. Choose `Install for all users`. If you do not have administrator rights, select `Install just for you`.
-4. Choose the installation location, usually the default proposed location is fine.
-5. Installation will start. After installation, click Finish.
-
-## 3. Check the installation
-
-1. Open Anaconda Navigator.
-2. Launch Jupyter Lab.
-3. Open a terminal via `File` > `New` > `Terminal`
-4. Type `quarto --version`. If it returns a version number, you're all set!
 
 :::
