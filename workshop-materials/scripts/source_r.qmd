@@ -1,0 +1,27 @@
+---
+title: "Source file with R code"
+format: html
+editor: visual
+---
+
+This is a source qmd file to show how one can reuse code from existing qmd files.
+
+## R code to create a scatterplot of the penguins dataset
+
+```{r}
+#| label: fig-scatter
+#| fig-cap: Scatterplot code in the source document
+#| warning: false
+
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```
