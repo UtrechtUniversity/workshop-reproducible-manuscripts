@@ -1,14 +1,55 @@
 # Inline code {.unnumbered}
 
-Here we will talk about how to do inline code.
-For Python, this feature will be hugely simplified from Quarto v1.4 onwards.
+You can insert code results or quick calculations directly into the text of a Quarto document. This is very useful if you want to describe computation results in your manuscript in a reproducible way, while minimizing errors.
 
-- R: https://quarto.org/docs/get-started/computations/rstudio.html#inline-code
-- All: https://quarto.org/docs/computations/execution-options.html#inline-code
-- Jupyter new feature: https://cwickham.github.io/whats-new-in-quarto/#/inline-execution-for-jupyter-1 
+## An example in R ([source](https://quarto.org/docs/get-started/computations/rstudio.html#inline-code))
 
-## Inline Code
+```{r}
+#| label: Load the penguins dataset
+#| echo: false
+library(palmerpenguins)
+penguins_data <- penguins
+```
 
-Code results or quick calculations can be inserted directly into the text of a R Markdown by enclosing the code with ``r ``. When the document is rendered, the results of the inline code will be displayed but not the code itself. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.
+> There are `r sum(penguins_data$species=="Adelie")` penguins of the "Adelie" species in the dataset.
 
-Inline code is a great option for reporting results in text in a reproducible way, while minimizing errors.
+This line was created as follows:
+
+````
+```{{r}}
+#| label: Load the penguins dataset
+#| echo: false
+library(palmerpenguins)
+penguins_data <- penguins
+```
+````
+
+````md
+> There are `r knitr::inline_expr("sum(penguins_data$species=='Adelie')")` penguins of the Adelie species in the dataset.
+````
+
+By enclosing the inline code with `` `r ` ``, the code will be executed when the document is rendered, displaying not the code but the results of the computation. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.
+
+## In Python
+
+For Python, this feature will be hugely simplified from [Quarto v1.4](https://quarto.org/docs/prerelease/1.4/inline.html) onwards.
+
+````
+```{{python}}
+x = 5
+```
+
+The answer is `{python} x`
+````
+For earlier Quarto versions, the solution is a bit overly complicated and does not always seem to work as well:
+
+````
+```{{python}}
+#| echo: false
+radius = 10
+from IPython.display import display, Markdown
+display(Markdown("""
+The radius of the circle is {radius}.
+""".format(radius = radius)))
+```
+````
