@@ -1,25 +1,43 @@
-# Writing {.unnumbered}
+# Writing with Markdown {.unnumbered}
 
-# Writing
+The body of the document is where you will do your writing. Writing will happen primarily in the [Markdown](https://daringfireball.net/projects/markdown/syntax) format (LaTeX and HTML would also work, depending on the output format). 
 
-The body of the document is where you will do your writing, which will primarily be in the [Markdown](https://daringfireball.net/projects/markdown/syntax) format (LaTeX and HTML would also work, depending on the output format).
+> Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. 
+> - *[Markdown Guide](https://www.markdownguide.org/getting-started/)*
 
 ## Markdown Syntax
 
 If you're not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: [https://learnxinyminutes.com/docs/markdown/](https://learnxinyminutes.com/docs/markdown/).
 
-Additionally, you can use the [Visual Editor](https://rstudio.github.io/visual-markdown-editing/) option in RStudio to see Markdown syntax previewed in it's final format as you write. 
+Additionally, you can use the Visual Editor, either in [VS Code](https://quarto.org/docs/visual-editor/vscode/) or [RStudio](https://quarto.org/docs/visual-editor/), to see Markdown syntax previewed in it's final format as you write. The Visual Editor also has some common Word-like shortcuts, such as `CTRL+b` to make text bold.
 
 Some things you can do with Markdown:
 
-- Headings can be created for sections and subsections using the `#` hashtag character. So `# Heading 1` for a top-level heading and `## Heading 2` for a second-level heading and so on. 
-
-- Text can be formatted in *italic* or **bold** using the `*` asterisk character.
-
+- Headings can be created for sections and subsections using the `#` hashtag character. 
+So `# Heading 1` for a top-level heading and `## Heading 2` for a second-level heading and so on. 
+- Text can be formatted in *italic* or **bold** using the `*` asterisk character. `**This text would become bold**`
 - Bullet point lists can be created with a `-` hyphen or `*` asterisk for each line in the list.
-
-- Links can be embedded by writing in the following way: [insert text which should be hyperlinked](insert link to website)
-
-- Plain code can be embedded in text using the ``` backtick character. R code can be embedded as well, but we will cover that in the next section.
+- Links can be embedded by writing in the following way: `[text to hyperlink](link)`
+- Plain code can be embedded in text using the ` backtick character. Code can be embedded as well, but we will cover that in the next section.
+- Images can be included using `![Image title](path/to/img.png)`
 
 ## Exercise
+
+Recreate the following paragraph[^1] using markdown:
+
+> ### Introduction
+> Why use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:
+>
+> - Markdown can be used for everything. People use it to create websites, [documents](https://www.markdownguide.org/getting-started/#documents), notes, books, presentations, email messages, and technical documentation.
+> - Markdown is portable. 
+>    1. Files containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application. 
+>    2. That’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.
+> - Markdown is **platform independent**. You can create Markdown-formatted text on any device running any operating system.
+> - Markdown is _future proof_. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your `Markdown-formatted text` using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.
+> - ***Markdown is everywhere***. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.
+>
+> Here is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
+> 
+> ![](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
+
+[^1]: Source: [Markdown Guide](https://www.markdownguide.org/getting-started/)
