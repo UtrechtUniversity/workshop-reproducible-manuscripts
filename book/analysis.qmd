@@ -48,6 +48,19 @@ If you have a code chunk that creates a figure, you can also set several options
 - `#| fig-width: 8`: width of the figure
 - `#| fig-height: 6`: height of the figure
 
+## Chunk options for the entire document
+
+In many cases, you want to use chunk options across _all_ chunks in the document or in a project. In that case, you can put the chunk options that you want to apply across the document in the `_quarto.yml` file or in the main yaml at the top of the document as such:
+
+````yaml
+title: "My Document"
+execute:
+  echo: false
+  warning: false
+
+````
+
+
 ### Exercises
 
 #### Exercise 1
