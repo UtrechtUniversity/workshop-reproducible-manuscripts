@@ -1,4 +1,8 @@
-# Inline code {.unnumbered}
+# Inline Code {.unnumbered}
+
+```{=html}
+<iframe width="1050" height="700" src="slides/analysis.html"></iframe>
+```
 
 You can insert code results or quick calculations directly into the text of a Quarto document. This is very useful if you want to describe computation results in your manuscript in a reproducible way, while minimizing errors.
 

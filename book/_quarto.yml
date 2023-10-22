@@ -18,13 +18,13 @@ book:
     - getting-started.qmd
     - part: Writing
       chapters:
-        - writing.qmd
+        - markdown-syntax.qmd
         - referencing.qmd
-    - part: Analysis
+    - part: Code
       chapters:
-        - analysis.qmd # code chunks
+        - code-chunks.qmd 
         - inline-code.qmd
-        - sourcing.qmd
+        - sourcing-code.qmd
     - rendering.qmd
     - part: Bonus
       chapters:

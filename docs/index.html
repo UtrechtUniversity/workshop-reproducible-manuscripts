@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Research Data Management Support Utrecht University">
-<meta name="dcterms.date" content="2023-10-10">
+<meta name="dcterms.date" content="2023-10-23">
 
 <title>Writing Reproducible Manuscripts in R &amp; Python</title>
 <style>
@@ -167,8 +167,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Writing with Markdown</span></a>
+  <a href="./markdown-syntax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown Syntax</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -190,20 +190,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code chunks</span></a>
+  <a href="./code-chunks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./inline-code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Inline code</span></a>
+ <span class="menu-text">Inline Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sourcing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sourcing external code</span></a>
+  <a href="./sourcing-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sourcing Code</span></a>
   </div>
 </li>
       </ul>
@@ -211,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rendering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rendering your manuscript</span></a>
+ <span class="menu-text">Rendering</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -259,11 +259,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a>
-  <ul class="collapse">
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul></li>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/index.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
@@ -289,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 10, 2023</p>
+      <p class="date">October 23, 2023</p>
     </div>
   </div>
   
@@ -301,46 +297,20 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="welcome" class="level1 unnumbered">
 <h1 class="unnumbered">Welcome!</h1>
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>These materials are a Work In Progress!</p>
-</div>
-</div>
-</div>
-<p>Welcome to the workshop “Writing reproducible manuscripts in R and Python”. This workshops is developed by <a href="https://uu.nl/rdm">Research Data Management Support</a> at Utrecht University, the Netherlands. We teach this workshop every 2 months, have a look at the <a href="https://www.uu.nl/en/research/research-data-management/workshops/writing-reproducible-manuscripts-in-r-and-python">agenda</a> for information on dates and locations.</p>
-<p>In this 3-hour workshop, you will use the Quarto publishing system in conjunction with R or Python (you can use the programming language you prefer) to create a publication-ready manuscript that combines data, code, text, and references. More specifically, you will learn how to:</p>
+<p>Open Science practices are becoming central to the way research is conducted. In this workshop, you will learn to set up a reproducible workflow to create a publication-ready manuscript that combines data, R or Python code, text, and references.</p>
+<p>We will use the Quarto publishing system in conjunction with R or Python to create a publication-ready manuscript that combines data, code, text, and references. More specifically, you will learn how to:</p>
 <ul>
 <li>Create a reproducible project (folder) structure</li>
 <li>Use Markdown syntax effectively for writing text</li>
 <li>Run analyses in code chunks or cells</li>
 <li>Manage references using Zotero and Better BibTex for Zotero</li>
-<li>‘Render’ your Quarto project to Word, HTML, and pdf files</li>
+<li>Render your Quarto project to docx, HTML, and pdf files</li>
 </ul>
 <p>This workflow reduces the amount of human error, improves computational reproducibility and makes updating your scientific manuscript more efficient.</p>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Note that this workshop focuses on the (reproducible) manuscript as a whole and it does not dive into the (analysis) code itself. The latter is addressed in our workshop on <a href="https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code">Best Practices in Writing Reproducible Code</a>, which is aimed at participants with more experience in programming in R &amp; Python.</p>
-</div>
-</div>
-</div>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>We recommend basic knowledge of R or Python to follow this workshop. You can gain this knowledge in our workshops <a href="https://www.uu.nl/en/research/research-data-management/training-workshops/introduction-to-r-data">Introduction to R and Data</a> or <a href="https://www.uu.nl/en/research/research-data-management/workshops/introduction-to-python">Introduction to Python</a>. You do not need to bring your own research project to the workshop. The workshop is open to participants from Utrecht University (UU) and UU-affiliated organizations (for example, UMC Utrecht) only.</p>
-</section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
+<p>By the end of the workshop, you will be sufficiently familiar with the tools and components behind a reproducible manunscript, so you can implement the workflow in your own research projects.</p>
 <p>Our workshop material is licensed under a Creative Commons Attribution 4.0 International License. You can view the license on our <a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts">GitHub repository</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

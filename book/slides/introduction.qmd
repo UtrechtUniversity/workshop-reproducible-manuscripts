@@ -1,0 +1,12 @@
+---
+title: "Reproducible Manscripts"
+format:
+  revealjs:
+    theme: default
+    embed-resources: true
+---
+
+# Hello There
+
+yoohoo
+

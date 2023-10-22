@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Writing Reproducible Manuscripts in R &amp; Python - Acknowledgements</title>
+<title>Writing Reproducible Manuscripts in R &amp; Python - Code Chunks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./schedule.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./inline-code.html" rel="next">
+<link href="./referencing.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./acknowledgements.html">Acknowledgements</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./code-chunks.html">Code</a></li><li class="breadcrumb-item"><a href="./code-chunks.html">Code Chunks</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -110,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link active">
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgements</span></a>
   </div>
 </li>
@@ -138,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./workshop-materials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Workshop materials</span></a>
+ <span class="menu-text">Workshop Materials</span></a>
   </div>
 </li>
       </ul>
@@ -181,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Analysis</span></a>
+ <span class="menu-text">Code</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -189,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code-chunks.html" class="sidebar-item-text sidebar-link">
+  <a href="./code-chunks.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Code Chunks</span></a>
   </div>
 </li>
@@ -254,14 +288,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-does-a-code-chunk-do" id="toc-what-does-a-code-chunk-do" class="nav-link active" data-scroll-target="#what-does-a-code-chunk-do">What does a code chunk do?</a></li>
+  <li><a href="#code-chunk-options" id="toc-code-chunk-options" class="nav-link" data-scroll-target="#code-chunk-options">Code Chunk Options</a></li>
+  <li><a href="#chunk-options-for-the-entire-document" id="toc-chunk-options-for-the-entire-document" class="nav-link" data-scroll-target="#chunk-options-for-the-entire-document">Chunk options for the entire document</a>
+  <ul class="collapse">
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/code-chunks.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Acknowledgements</h1>
+<h1 class="title">Code Chunks</h1>
 </div>
 
 
@@ -276,14 +321,76 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>These materials were drafted with the help from the following contributors:</p>
+<iframe width="1050" height="700" src="slides/analysis.html"></iframe>
+<p>Besides text, Quarto documents can also contain code. Unlike regular R or Python scripts, code in Quarto documents is run within so-called <em>code chunks</em> to separate text from code.</p>
+<p>A code chunk looks as follows in a Quarto document:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Methods</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Here is some plain Markdown text, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>for example describing your methods.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">```{programming-language}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: your-code-label</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">#| [other settings]</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="in">[your code here]</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>After the code chunk, you can write regular Markdown text again, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>like in a Discussion.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you work with a visual editor, you can simply click <code>Insert</code> &gt; <code>Code cell</code> &gt; <code>[your programming language]</code> to add a code chunk to your document.</p>
+<section id="what-does-a-code-chunk-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-a-code-chunk-do">What does a code chunk do?</h2>
+<p>A code chunk simply executes code that you specify. Depending on the content of your code, it may print code output into the document when the chunk is executed, or create new variables, for example.</p>
+<p>If the default code chunk options are in place, rendering your Quarto file will involve each code chunk being run and the results being embedded beneath the code chunk in the final document.</p>
+</section>
+<section id="code-chunk-options" class="level2">
+<h2 class="anchored" data-anchor-id="code-chunk-options">Code Chunk Options</h2>
+<p>Code chunks can be customized via the code chunk <em>yaml</em>, denoted with <code>#| chunk-option: setting-value</code> at the top of each code chunk.</p>
+<p>The following <a href="https://quarto.org/docs/computations/execution-options.html">code chunk options</a> are useful to include:</p>
 <ul>
-<li><a href="https://orcid.org/0000-0003-1412-4402">Neha Moopen</a></li>
-<li><a href="https://orcid.org/0000-0003-3282-8083">Dorien Huijser</a></li>
-<li>[ADD YOUR NAME]</li>
+<li><code>#| label: your-code-chunk-title</code>: It is good practice to always label a code chunk. This is also handy when you want to reuse the chunk elsewhere (see <a href="sourcing">Sourcing external code</a>)</li>
+<li><code>#| eval: true</code>: Do you want to execute the code? If not, set eval to <code>false</code></li>
+<li><code>#| echo: false</code>: Do you want to show the source code in the finished document? If set to <code>false</code>, the <em>results</em> of the computation will still be displayed in the document!</li>
+<li><code>#| output: true</code>: If you want to exclude the <em>output</em> of the computation into the resulting document, set output to <code>false</code>.</li>
+<li><code>#| warning: false</code>: Choose whether to include warnings in the output documents. You usually want this to be <code>true</code> during the writing phase, but <code>false</code> when rendering to the final document.</li>
+<li><code>#| include: false</code>: If set to <code>false</code>, both code ánd computation results are suppressed from the final document. Note that the code is still run, and the results of the chunk <em>can</em> be used by other chunks.</li>
 </ul>
+<p>If you have a code chunk that creates a figure, you can also set several options for the looks of the figure, such as:</p>
+<ul>
+<li><code>#| fig.cap: "your figure's caption"</code>: caption of the figure</li>
+<li><code>#| fig-width: 8</code>: width of the figure</li>
+<li><code>#| fig-height: 6</code>: height of the figure</li>
+</ul>
+</section>
+<section id="chunk-options-for-the-entire-document" class="level2">
+<h2 class="anchored" data-anchor-id="chunk-options-for-the-entire-document">Chunk options for the entire document</h2>
+<p>In many cases, you want to use chunk options across <em>all</em> chunks in the document or in a project. In that case, you can put the chunk options that you want to apply across the document in the <code>_quarto.yml</code> file or in the main yaml at the top of the document as such:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">warning</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercises" class="level3">
+<h3 class="anchored" data-anchor-id="exercises">Exercises</h3>
+<section id="exercise-1" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-1">Exercise 1</h4>
+<ul>
+<li>Insert a setup code chunk t the beginning of your document (i.e.&nbsp;below the YAML header) to read in the necessary packages.</li>
+<li>Create a code chunk in the <code>Results</code> section of your document</li>
+<li>Copy a piece/section of your script and paste it into the code chunk</li>
+<li>Run the code chunk and see if it works alright,</li>
+<li>Repeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.</li>
+<li>Render the document and check the output.</li>
+</ul>
+</section>
+<section id="exercise-2" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-2">Exercise 2</h4>
+<p>Play around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?</p>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -521,13 +628,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome!</span>
+      <a href="./referencing.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Referencing</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./schedule.html" class="pagination-link">
-        <span class="nav-page-text">Schedule</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./inline-code.html" class="pagination-link">
+        <span class="nav-page-text">Inline Code</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -535,4 +642,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/acknowledgements.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>
+</body></html>

@@ -1,4 +1,8 @@
-# Code chunks {.unnumbered}
+# Code Chunks {.unnumbered}
+
+```{=html}
+<iframe width="1050" height="700" src="slides/analysis.html"></iframe>
+```
 
 Besides text, Quarto documents can also contain code. Unlike regular R or Python scripts, code in Quarto documents is run within so-called _code chunks_ to separate text from code.
 

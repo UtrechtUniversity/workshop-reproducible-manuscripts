@@ -1,4 +1,8 @@
-# Writing with Markdown {.unnumbered}
+# Markdown Syntax {.unnumbered}
+
+```{=html}
+<iframe width="1050" height="700" src="slides/writing.html"></iframe>
+```
 
 The body of the document is where you will do your writing. Writing will happen primarily in the [Markdown](https://daringfireball.net/projects/markdown/syntax) format (LaTeX and HTML would also work, depending on the output format). 
 
@@ -23,7 +27,7 @@ So `# Heading 1` for a top-level heading and `## Heading 2` for a second-level h
 
 ## Exercise
 
-Recreate the following paragraph[^1] using markdown:
+Recreate the following paragraph[^1] in your Quarto document using Markdown:
 
 > ### Introduction
 > Why use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:

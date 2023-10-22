@@ -1,4 +1,8 @@
-# Sourcing external code {.unnumbered}
+# Sourcing Code {.unnumbered}
+
+```{=html}
+<iframe width="1050" height="700" src="slides/analysis.html"></iframe>
+```
 
 Quarto has the option to include code from external files, such as R and Python scripts, `.qmd` or `.ipynb` files.
 It can be desirable to leave code in files separated from the main manuscript file. 

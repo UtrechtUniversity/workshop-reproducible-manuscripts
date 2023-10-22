@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Writing Reproducible Manuscripts in R &amp; Python - Acknowledgements</title>
+<title>Writing Reproducible Manuscripts in R &amp; Python - Markdown Syntax</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./schedule.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./referencing.html" rel="next">
+<link href="./getting-started.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./acknowledgements.html">Acknowledgements</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./markdown-syntax.html">Writing</a></li><li class="breadcrumb-item"><a href="./markdown-syntax.html">Markdown Syntax</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link active">
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgements</span></a>
   </div>
 </li>
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./workshop-materials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Workshop materials</span></a>
+ <span class="menu-text">Workshop Materials</span></a>
   </div>
 </li>
       </ul>
@@ -166,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./markdown-syntax.html" class="sidebar-item-text sidebar-link">
+  <a href="./markdown-syntax.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Markdown Syntax</span></a>
   </div>
 </li>
@@ -181,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Analysis</span></a>
+ <span class="menu-text">Code</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -254,14 +254,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#markdown-syntax" id="toc-markdown-syntax" class="nav-link active" data-scroll-target="#markdown-syntax">Markdown Syntax</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/markdown-syntax.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Acknowledgements</h1>
+<h1 class="title">Markdown Syntax</h1>
 </div>
 
 
@@ -276,14 +283,54 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>These materials were drafted with the help from the following contributors:</p>
+<iframe width="1050" height="700" src="slides/writing.html"></iframe>
+<p>The body of the document is where you will do your writing. Writing will happen primarily in the <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> format (LaTeX and HTML would also work, depending on the output format).</p>
+<blockquote class="blockquote">
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. - <em><a href="https://www.markdownguide.org/getting-started/">Markdown Guide</a></em></p>
+</blockquote>
+<section id="markdown-syntax" class="level2">
+<h2 class="anchored" data-anchor-id="markdown-syntax">Markdown Syntax</h2>
+<p>If you’re not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: <a href="https://learnxinyminutes.com/docs/markdown/">https://learnxinyminutes.com/docs/markdown/</a>.</p>
+<p>Additionally, you can use the Visual Editor, either in <a href="https://quarto.org/docs/visual-editor/vscode/">VS Code</a> or <a href="https://quarto.org/docs/visual-editor/">RStudio</a>, to see Markdown syntax previewed in it’s final format as you write. The Visual Editor also has some common Word-like shortcuts, such as <code>CTRL+b</code> to make text bold.</p>
+<p>Some things you can do with Markdown:</p>
 <ul>
-<li><a href="https://orcid.org/0000-0003-1412-4402">Neha Moopen</a></li>
-<li><a href="https://orcid.org/0000-0003-3282-8083">Dorien Huijser</a></li>
-<li>[ADD YOUR NAME]</li>
+<li>Headings can be created for sections and subsections using the <code>#</code> hashtag character. So <code># Heading 1</code> for a top-level heading and <code>## Heading 2</code> for a second-level heading and so on.</li>
+<li>Text can be formatted in <em>italic</em> or <strong>bold</strong> using the <code>*</code> asterisk character. <code>**This text would become bold**</code></li>
+<li>Bullet point lists can be created with a <code>-</code> hyphen or <code>*</code> asterisk for each line in the list.</li>
+<li>Links can be embedded by writing in the following way: <code>[text to hyperlink](link)</code></li>
+<li>Plain code can be embedded in text using the ` backtick character. Code can be embedded as well, but we will cover that in the next section.</li>
+<li>Images can be included using <code>![Image title](path/to/img.png)</code></li>
 </ul>
+</section>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>Recreate the following paragraph<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in your Quarto document using Markdown:</p>
+<blockquote class="blockquote">
+<h3 id="introduction" class="anchored">Introduction</h3>
+<p>Why use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:</p>
+<ul>
+<li>Markdown can be used for everything. People use it to create websites, <a href="https://www.markdownguide.org/getting-started/#documents">documents</a>, notes, books, presentations, email messages, and technical documentation.</li>
+<li>Markdown is portable.
+<ol type="1">
+<li>Files containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application.</li>
+<li>That’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.</li>
+</ol></li>
+<li>Markdown is <strong>platform independent</strong>. You can create Markdown-formatted text on any device running any operating system.</li>
+<li>Markdown is <em>future proof</em>. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your <code>Markdown-formatted text</code> using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.</li>
+<li><strong><em>Markdown is everywhere</em></strong>. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.</li>
+</ul>
+<p>Here is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" class="img-fluid"></p>
+</blockquote>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Source: <a href="https://www.markdownguide.org/getting-started/">Markdown Guide</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -521,13 +568,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome!</span>
+      <a href="./getting-started.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting Started</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./schedule.html" class="pagination-link">
-        <span class="nav-page-text">Schedule</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./referencing.html" class="pagination-link">
+        <span class="nav-page-text">Referencing</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -535,4 +582,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/acknowledgements.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>
+</body></html>

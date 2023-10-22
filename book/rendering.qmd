@@ -1,4 +1,8 @@
-# Rendering your manuscript {.unnumbered}
+# Rendering {.unnumbered}
+
+```{=html}
+<iframe width="1050" height="700" src="slides/rendering.html"></iframe>
+```
 
 Here we will add instructions on how to render to several output formats, 
 including different journal formats.

@@ -1,6 +1,10 @@
 # Getting Started {.unnumbered}
 
-**1. Create a project in RStudio or VSCode**
+::: {.panel-tabset}
+
+## R
+
+**1. Create a project in RStudio**
 
 - In RStudio, click File -> New Project -> New Directory -> New Project. 
 
@@ -52,4 +56,10 @@ write.csv(palmerpenguins::penguins_raw, "data/data.csv")
 
 - YAML Header
 - Sections
-- Bibliography 
+- Bibliography
+
+## Python
+
+dfgdfgf
+
+:::

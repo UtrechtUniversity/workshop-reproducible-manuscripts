@@ -1,5 +1,9 @@
 # Referencing {.unnumbered}
 
+```{=html}
+<iframe width="1050" height="700" src="slides/writing.html"></iframe>
+```
+
 # Referencing
 
 Now that we know how to write in Markdown and run analyses in code chunks, let's learn about referencing using BibTex keys!
