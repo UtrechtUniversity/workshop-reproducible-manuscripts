@@ -1,81 +1,23 @@
 # Code Chunks {.unnumbered}
 
 ```{=html}
-<iframe width="1050" height="700" src="slides/analysis.html"></iframe>
+<iframe width="700" height="650" src="slides/analysis.html"></iframe>
 ```
 
-Besides text, Quarto documents can also contain code. Unlike regular R or Python scripts, code in Quarto documents is run within so-called _code chunks_ to separate text from code.
+## Exercise
 
-A code chunk looks as follows in a Quarto document:
+Refer to the dummy R & Python scripts that have been provided in the `workshop-materials`: 
 
-````
-## Methods
+- Insert a setup code chunk at the beginning of your document (i.e. below the YAML header) to load the necessary packages.
 
-Here is some plain Markdown text, 
-for example describing your methods.
-
-```{{programming-language}}
-#| label: your-code-label
-#| [other settings]
-
-[your code here]
-```
-
-After the code chunk, you can write regular Markdown text again, 
-like in a Discussion.
-````
-
-If you work with a visual editor, you can simply click `Insert` > `Code cell` > `[your programming language]` to add a code chunk to your document.
-
-## What does a code chunk do?
-
-A code chunk simply executes code that you specify. Depending on the content of your code, it may print code output into the document when the chunk is executed, or create new variables, for example.
-
-If the default code chunk options are in place, rendering your Quarto file will involve each code chunk being run and the results being embedded beneath the code chunk in the final document.
-
-## Code Chunk Options
-
-Code chunks can be customized via the code chunk _yaml_, denoted with `#| chunk-option: setting-value` at the top of each code chunk.
-
-The following [code chunk options](https://quarto.org/docs/computations/execution-options.html) are useful to include:
-
-- `#| label: your-code-chunk-title`: It is good practice to always label a code chunk. This is also handy when you want to reuse the chunk elsewhere (see [Sourcing external code](sourcing))
-- `#| eval: true`: Do you want to execute the code? If not, set eval to `false`
-- `#| echo: false`: Do you want to show the source code in the finished document? If set to `false`, the _results_ of the computation will still be displayed in the document!
-- `#| output: true`: If you want to exclude the _output_ of the computation into the resulting document, set output to `false`. 
--  `#| warning: false`: Choose whether to include warnings in the output documents. You usually want this to be `true` during the writing phase, but `false` when rendering to the final document.
-- `#| include: false`: If set to `false`, both code ánd computation results are suppressed from the final document. Note that the code is still run, and the results of the chunk _can_ be used by other chunks.
-
-If you have a code chunk that creates a figure, you can also set several options for the looks of the figure, such as:
-
-- `#| fig.cap: "your figure's caption"`: caption of the figure
-- `#| fig-width: 8`: width of the figure
-- `#| fig-height: 6`: height of the figure
-
-## Chunk options for the entire document
-
-In many cases, you want to use chunk options across _all_ chunks in the document or in a project. In that case, you can put the chunk options that you want to apply across the document in the `_quarto.yml` file or in the main yaml at the top of the document as such:
-
-````yaml
-title: "My Document"
-execute:
-  echo: false
-  warning: false
-
-````
-
-
-### Exercises
-
-#### Exercise 1
-
-- Insert a setup code chunk t the beginning of your document (i.e. below the YAML header) to read in the necessary packages.
 - Create a code chunk in the `Results` section of your document
-- Copy a piece/section of your script and paste it into the code chunk
-- Run the code chunk and see if it works alright,
+
+- Copy a piece/section of the dummy script and paste it into the code chunk.
+
+- Run the code chunk and see if it works alright.
+
 - Repeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.
+
 - Render the document and check the output.
 
-#### Exercise 2
-
-Play around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?
+- Play around with the code chunk options and re-render the document.

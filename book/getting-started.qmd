@@ -4,21 +4,21 @@
 
 ## R
 
-**1. Create a project in RStudio**
+**1. Create a Project in RStudio**
 
-- In RStudio, click File -> New Project -> New Directory -> New Project. 
+- In RStudio, click _File_ -> _New Project_ -> _New Directory_ -> _New Project_. 
 
-- Give your project directory a clear name, preferably without spaces.
+- Give your project directory a clear name, without using spaces. For example, `my-reproducible-manuscript`.
 
-- Make sure your project directory folder is created (as a subdirectory) in an accessible place on your system.
+- Make sure your project will be created (as a subdirectory) in an accessible place on your system.
 
-- Select `Open project in a new session`.
+- Check the _Open in new session_ option.
 
-**2. Create a project structure suited for reproducible work**
+- Click _Create Project_.
 
-- You can generate a directory structure by running the following piece of code in you R console:
+**2. Structure your Project for reproducible work**
 
-This is RSTudio:
+- Generate a directory structure by running the following piece of code in the _Console_ of RStudio:
 
 ```{r}
 #| eval: false
@@ -28,38 +28,50 @@ dir.create("docs", recursive = TRUE)
 dir.create("results", recursive = TRUE)
 dir.create("R", recursive = TRUE)
 
+# install.packages("usethis")
 library(usethis)
 
 usethis::use_readme_md(open = rlang::is_interactive())
 usethis::use_mit_license(copyright_holder = NULL)
 ```
 
-**3. Place your data in the correct folder**
+**3. Get the data for your Project**
+
+- Obtain the data and place it in the correct folder by running the following piece of code in the _Console_ of RStudio:
 
 ```{r}
 #| eval: false
 
+# install.packages("palmerpenguins")
 library(palmerpenguins)
 
 write.csv(palmerpenguins::penguins_raw, "data/data.csv")
 ```
 
-**4. Create a R Markdown document for your manuscript.**
+**4. Create a Quarto document for your manuscript.**
 
-- In RStudio, click File -> New File -> R Markdown
+- In RStudio, click _File_ -> _New File_ -> _Quarto Document_
 
-- Click on 'From Template' and scroll through the available options and select the **MDPI Journal Article**
+- Give your document a Title, such as `My Reproducible Manuscript`.
 
-- Name the directory for this document (and associated files) as `manuscript` and ensure that it will be located in the `docs` folder.
+- Deselect the _Use visual markdown editor_ option.
 
-**5. Familiarize yourself with the R Markdown document and associated files**
+- Click _Create_.
 
-- YAML Header
-- Sections
-- Bibliography
+**6. Render the Quarto document to HTML**
+
+- Click the _Render_ button in the menu bar.
+
+- Give the Quarto document a clear name, without using spaces. For example, `my-reproducible-manuscript`.
+
+- Save the Quarto document in the `docs folder you recently created.
+
+- Once everything has been saved correctly, click the _Render_ button in the menu bar again.
+
+- The rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio.
 
 ## Python
 
-dfgdfgf
+
 
 :::

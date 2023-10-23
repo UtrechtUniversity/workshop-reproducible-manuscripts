@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -292,8 +258,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#an-example-in-r-source" id="toc-an-example-in-r-source" class="nav-link active" data-scroll-target="#an-example-in-r-source">An example in R (source)</a></li>
-  <li><a href="#in-python" id="toc-in-python" class="nav-link" data-scroll-target="#in-python">In Python</a></li>
+  <li><a href="#slides" id="toc-slides" class="nav-link active" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/inline-code.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
@@ -317,40 +283,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<iframe width="1050" height="700" src="slides/analysis.html"></iframe>
-<p>You can insert code results or quick calculations directly into the text of a Quarto document. This is very useful if you want to describe computation results in your manuscript in a reproducible way, while minimizing errors.</p>
-<section id="an-example-in-r-source" class="level2">
-<h2 class="anchored" data-anchor-id="an-example-in-r-source">An example in R (<a href="https://quarto.org/docs/get-started/computations/rstudio.html#inline-code">source</a>)</h2>
-<blockquote class="blockquote">
-<p>There are 152 penguins of the “Adelie” species in the dataset.</p>
-</blockquote>
-<p>This line was created as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: Load the penguins dataset</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>penguins_data <span class="ot">&lt;-</span> penguins</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; There are </span><span class="in">`r sum(penguins_data$species=='Adelie')`</span><span class="at"> penguins of the Adelie species in the dataset.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>By enclosing the inline code with <code>`r `</code>, the code will be executed when the document is rendered, displaying not the code but the results of the computation. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.</p>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<iframe width="700" height="650" src="slides/analysis.html"></iframe>
 </section>
-<section id="in-python" class="level2">
-<h2 class="anchored" data-anchor-id="in-python">In Python</h2>
-<p>For Python, this feature will be hugely simplified from <a href="https://quarto.org/docs/prerelease/1.4/inline.html">Quarto v1.4</a> onwards.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>The answer is <span class="in">`{python} x`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For earlier Quarto versions, the solution is a bit overly complicated and does not always seem to work as well:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Markdown</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>display(Markdown(<span class="st">"""</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">The radius of the circle is </span><span class="sc">{radius}</span><span class="st">.</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span>.<span class="bu">format</span>(radius <span class="op">=</span> radius)))</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>Take a couple of minutes to play around with the possibilities of <em>inline code</em>:</p>
+<ul>
+<li><p>Do a simple calculation such as <code>r knitr::inline_expr("25 + 25")</code> within your text.</p></li>
+<li><p>Report the number of “Gentoo” and/or “Chinstrap” species of penguins within the data (hint: refer to the example in the slides).</p></li>
+<li><p>Try out one other (simple) computation or calculation!</p></li>
+</ul>
 
 
 </section>

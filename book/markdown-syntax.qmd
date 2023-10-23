@@ -1,29 +1,10 @@
 # Markdown Syntax {.unnumbered}
 
+## Slides
+
 ```{=html}
-<iframe width="1050" height="700" src="slides/writing.html"></iframe>
+<iframe width="650" height="500" src="slides/writing.html"></iframe>
 ```
-
-The body of the document is where you will do your writing. Writing will happen primarily in the [Markdown](https://daringfireball.net/projects/markdown/syntax) format (LaTeX and HTML would also work, depending on the output format). 
-
-> Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. 
-> - *[Markdown Guide](https://www.markdownguide.org/getting-started/)*
-
-## Markdown Syntax
-
-If you're not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: [https://learnxinyminutes.com/docs/markdown/](https://learnxinyminutes.com/docs/markdown/).
-
-Additionally, you can use the Visual Editor, either in [VS Code](https://quarto.org/docs/visual-editor/vscode/) or [RStudio](https://quarto.org/docs/visual-editor/), to see Markdown syntax previewed in it's final format as you write. The Visual Editor also has some common Word-like shortcuts, such as `CTRL+b` to make text bold.
-
-Some things you can do with Markdown:
-
-- Headings can be created for sections and subsections using the `#` hashtag character. 
-So `# Heading 1` for a top-level heading and `## Heading 2` for a second-level heading and so on. 
-- Text can be formatted in *italic* or **bold** using the `*` asterisk character. `**This text would become bold**`
-- Bullet point lists can be created with a `-` hyphen or `*` asterisk for each line in the list.
-- Links can be embedded by writing in the following way: `[text to hyperlink](link)`
-- Plain code can be embedded in text using the ` backtick character. Code can be embedded as well, but we will cover that in the next section.
-- Images can be included using `![Image title](path/to/img.png)`
 
 ## Exercise
 

@@ -1,7 +1,7 @@
 # Sourcing Code {.unnumbered}
 
 ```{=html}
-<iframe width="1050" height="700" src="slides/analysis.html"></iframe>
+<iframe width="700" height="650" src="slides/analysis.html"></iframe>
 ```
 
 Quarto has the option to include code from external files, such as R and Python scripts, `.qmd` or `.ipynb` files.
@@ -21,34 +21,7 @@ This can help to:
 3. Use code chunks from existing Quarto documents or Jupyter notebooks.
 4. Include entire Quarto documents or Jupyter notebooks within your current Quarto document.
 
-
-## 1. Run a script before or after rendering
-
-You can run a script before or after rendering a Quarto document or project [in 2 ways](https://quarto.org/docs/projects/scripts.html):
-
-1.  Run a script via the terminal:
-
-```shell
-quarto run your-script.py
-```
-
-2.  Include the script(s) in the project yaml:
-
-```yaml        
-project:
-  type: website
-  pre-render: prepare.py
-  post-render: 
-    - compress.ts
-    - fix-links.py
-```
-
-::: callout-note
-These kinds of scripts should perform some *independent* preparatory or finishing work, for which the objects do not have to be available in the Quarto document itself. 
-If you want to use objects from an R or Python script within the Quarto document, proceed to the next step!
-:::
-
-## 2. Use an external script
+## 1. Use an external script
 
 ::: panel-tabset
 
@@ -110,6 +83,32 @@ You can include the code from an existing script in your Quarto document by usin
 #| file: "your-script.py"
 ```
 ````
+:::
+
+## 2. Run a script before or after rendering
+
+You can run a script before or after rendering a Quarto document or project [in 2 ways](https://quarto.org/docs/projects/scripts.html):
+
+1.  Run a script via the terminal:
+
+```shell
+quarto run your-script.py
+```
+
+2.  Include the script(s) in the project yaml:
+
+```yaml        
+project:
+  type: website
+  pre-render: prepare.py
+  post-render: 
+    - compress.ts
+    - fix-links.py
+```
+
+::: callout-note
+These kinds of scripts should perform some *independent* preparatory or finishing work, for which the objects do not have to be available in the Quarto document itself. 
+If you want to use objects from an R or Python script within the Quarto document, proceed to the next step!
 :::
 
 ## 3. Use code chunks from another Quarto document

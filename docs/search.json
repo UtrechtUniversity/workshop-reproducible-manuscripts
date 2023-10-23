@@ -7,20 +7,6 @@
     "text": "Welcome!\nOpen Science practices are becoming central to the way research is conducted. In this workshop, you will learn to set up a reproducible workflow to create a publication-ready manuscript that combines data, R or Python code, text, and references.\nWe will use the Quarto publishing system in conjunction with R or Python to create a publication-ready manuscript that combines data, code, text, and references. More specifically, you will learn how to:\n\nCreate a reproducible project (folder) structure\nUse Markdown syntax effectively for writing text\nRun analyses in code chunks or cells\nManage references using Zotero and Better BibTex for Zotero\nRender your Quarto project to docx, HTML, and pdf files\n\nThis workflow reduces the amount of human error, improves computational reproducibility and makes updating your scientific manuscript more efficient.\nBy the end of the workshop, you will be sufficiently familiar with the tools and components behind a reproducible manunscript, so you can implement the workflow in your own research projects.\nOur workshop material is licensed under a Creative Commons Attribution 4.0 International License. You can view the license on our GitHub repository."
   },
   {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
-    "title": "Writing Reproducible Manuscripts in R & Python",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nWe recommend basic knowledge of R or Python to follow this workshop. You can gain this knowledge in our workshops Introduction to R and Data or Introduction to Python. You do not need to bring your own research project to the workshop. The workshop is open to participants from Utrecht University (UU) and UU-affiliated organizations (for example, UMC Utrecht) only."
-  },
-  {
-    "objectID": "index.html#license",
-    "href": "index.html#license",
-    "title": "Writing Reproducible Manuscripts in R & Python",
-    "section": "License",
-    "text": "License\nOur workshop material is licensed under a Creative Commons Attribution 4.0 International License. You can view the license on our GitHub repository."
-  },
-  {
     "objectID": "acknowledgements.html",
     "href": "acknowledgements.html",
     "title": "Acknowledgements",
@@ -102,26 +88,26 @@
     "href": "getting-started.html",
     "title": "Getting Started",
     "section": "",
-    "text": "RPython\n\n\n1. Create a project in RStudio\n\nIn RStudio, click File -&gt; New Project -&gt; New Directory -&gt; New Project.\nGive your project directory a clear name, preferably without spaces.\nMake sure your project directory folder is created (as a subdirectory) in an accessible place on your system.\nSelect Open project in a new session.\n\n2. Create a project structure suited for reproducible work\n\nYou can generate a directory structure by running the following piece of code in you R console:\n\nThis is RSTudio:\n\ndir.create(\"data\", recursive = TRUE)\ndir.create(\"docs\", recursive = TRUE)\ndir.create(\"results\", recursive = TRUE)\ndir.create(\"R\", recursive = TRUE)\n\nlibrary(usethis)\n\nusethis::use_readme_md(open = rlang::is_interactive())\nusethis::use_mit_license(copyright_holder = NULL)\n\n3. Place your data in the correct folder\n\nlibrary(palmerpenguins)\n\nwrite.csv(palmerpenguins::penguins_raw, \"data/data.csv\")\n\n4. Create a R Markdown document for your manuscript.\n\nIn RStudio, click File -&gt; New File -&gt; R Markdown\nClick on ‘From Template’ and scroll through the available options and select the MDPI Journal Article\nName the directory for this document (and associated files) as manuscript and ensure that it will be located in the docs folder.\n\n5. Familiarize yourself with the R Markdown document and associated files\n\nYAML Header\nSections\nBibliography\n\n\n\ndfgdfgf"
+    "text": "RPython\n\n\n1. Create a Project in RStudio\n\nIn RStudio, click File -&gt; New Project -&gt; New Directory -&gt; New Project.\nGive your project directory a clear name, without using spaces. For example, my-reproducible-manuscript.\nMake sure your project will be created (as a subdirectory) in an accessible place on your system.\nCheck the Open in new session option.\nClick Create Project.\n\n2. Structure your Project for reproducible work\n\nGenerate a directory structure by running the following piece of code in the Console of RStudio:\n\n\ndir.create(\"data\", recursive = TRUE)\ndir.create(\"docs\", recursive = TRUE)\ndir.create(\"results\", recursive = TRUE)\ndir.create(\"R\", recursive = TRUE)\n\n# install.packages(\"usethis\")\nlibrary(usethis)\n\nusethis::use_readme_md(open = rlang::is_interactive())\nusethis::use_mit_license(copyright_holder = NULL)\n\n3. Get the data for your Project\n\nObtain the data and place it in the correct folder by running the following piece of code in the Console of RStudio:\n\n\n# install.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\n\nwrite.csv(palmerpenguins::penguins_raw, \"data/data.csv\")\n\n4. Create a Quarto document for your manuscript.\n\nIn RStudio, click File -&gt; New File -&gt; Quarto Document\nGive your document a Title, such as My Reproducible Manuscript.\nDeselect the Use visual markdown editor option.\nClick Create.\n\n6. Render the Quarto document to HTML\n\nClick the Render button in the menu bar.\nGive the Quarto document a clear name, without using spaces. For example, my-reproducible-manuscript.\nSave the Quarto document in the `docs folder you recently created.\nOnce everything has been saved correctly, click the Render button in the menu bar again.\nThe rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio."
   },
   {
-    "objectID": "writing.html#markdown-syntax",
-    "href": "writing.html#markdown-syntax",
-    "title": "Writing with Markdown",
-    "section": "Markdown Syntax",
-    "text": "Markdown Syntax\nIf you’re not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: https://learnxinyminutes.com/docs/markdown/.\nAdditionally, you can use the Visual Editor, either in VS Code or RStudio, to see Markdown syntax previewed in it’s final format as you write. The Visual Editor also has some common Word-like shortcuts, such as CTRL+b to make text bold.\nSome things you can do with Markdown:\n\nHeadings can be created for sections and subsections using the # hashtag character. So # Heading 1 for a top-level heading and ## Heading 2 for a second-level heading and so on.\nText can be formatted in italic or bold using the * asterisk character. **This text would become bold**\nBullet point lists can be created with a - hyphen or * asterisk for each line in the list.\nLinks can be embedded by writing in the following way: [text to hyperlink](link)\nPlain code can be embedded in text using the ` backtick character. Code can be embedded as well, but we will cover that in the next section.\nImages can be included using ![Image title](path/to/img.png)"
+    "objectID": "markdown-syntax.html#slides",
+    "href": "markdown-syntax.html#slides",
+    "title": "Markdown Syntax",
+    "section": "Slides",
+    "text": "Slides"
   },
   {
-    "objectID": "writing.html#exercise",
-    "href": "writing.html#exercise",
-    "title": "Writing with Markdown",
+    "objectID": "markdown-syntax.html#exercise",
+    "href": "markdown-syntax.html#exercise",
+    "title": "Markdown Syntax",
     "section": "Exercise",
-    "text": "Exercise\nRecreate the following paragraph1 using markdown:\n\nIntroduction\nWhy use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:\n\nMarkdown can be used for everything. People use it to create websites, documents, notes, books, presentations, email messages, and technical documentation.\nMarkdown is portable.\n\nFiles containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application.\nThat’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.\n\nMarkdown is platform independent. You can create Markdown-formatted text on any device running any operating system.\nMarkdown is future proof. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your Markdown-formatted text using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.\nMarkdown is everywhere. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.\n\nHere is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)"
+    "text": "Exercise\nRecreate the following paragraph1 in your Quarto document using Markdown:\n\nIntroduction\nWhy use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:\n\nMarkdown can be used for everything. People use it to create websites, documents, notes, books, presentations, email messages, and technical documentation.\nMarkdown is portable.\n\nFiles containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application.\nThat’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.\n\nMarkdown is platform independent. You can create Markdown-formatted text on any device running any operating system.\nMarkdown is future proof. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your Markdown-formatted text using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.\nMarkdown is everywhere. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.\n\nHere is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)"
   },
   {
-    "objectID": "writing.html#footnotes",
-    "href": "writing.html#footnotes",
-    "title": "Writing with Markdown",
+    "objectID": "markdown-syntax.html#footnotes",
+    "href": "markdown-syntax.html#footnotes",
+    "title": "Markdown Syntax",
     "section": "",
     "text": "Source: Markdown Guide↩︎"
   },
@@ -147,116 +133,25 @@
     "text": "Using Zotero & Better BibTex for Zotero\n\nSet up Zotero\n\nInstall Zotero on your computer\nInstall the Zotero connector with Chrome (unless you want to input your papers manually)\nCreate a Zotero account (Zotero webpage)\nSync your account with your local Zotero installation (in Zotero preferences -&gt; sync)\n\nInstall the “Better Bibtex” plugin\n\nDownload the Zotero-better-bibtex-6.7.75.xpi file from here: https://github.com/retorquere/zotero-better-bibtex/releases/tag/v6.7.75\nFollow the installation instructions here: https://retorque.re/zotero-better-bibtex/installation/\n\nSet up your library and collect bibliography material\n\nCreate a new folder inside your Zotero library to collect all the materials relevant to your study\nCollect studies in your new folder using Zotero connector or adding the material manually to your library\n\nCreate a .bib file (bibliography file)\n\nIn your Zotero local app, right click on your new folder -&gt; Export Collection\nChoose format BibText and click Okay\nChoose a destination folder. The destination folder MUST be the same of your R Markdown file\n\nInclude the .bib file into your R Markdown and quote studies\n\nIn the YAML lines (the ones between ———) of your R markdown template look for the keyword “bibliography”. Write your just created .bib file (without quotes) after “:”\nWhen you need to quote a material, look inside the bib file, look at the first line after the very first left curly bracket “{“ and, in the markdown text, write @, where  is the line of text after “{“. NOTE: this very first line of text does not appear in the bibliography printed on your final paper, it is a sort of nickname you use to quote paper and it can be set up to whatever word/sentence you like (but try to avoid empty space and use underscores _ instead)\nAlternatively, when using the Visual Editor option - you can use the citation dialog/option to insert citations directly."
   },
   {
-    "objectID": "analysis.html#what-does-a-code-chunk-do",
-    "href": "analysis.html#what-does-a-code-chunk-do",
-    "title": "Code chunks",
-    "section": "What does a code chunk do?",
-    "text": "What does a code chunk do?\nA code chunk simply executes code that you specify. Depending on the content of your code, it may print code output into the document when the chunk is executed, or create new variables, for example.\nIf the default code chunk options are in place, rendering your Quarto file will involve each code chunk being run and the results being embedded beneath the code chunk in the final document."
+    "objectID": "code-chunks.html#exercise",
+    "href": "code-chunks.html#exercise",
+    "title": "Code Chunks",
+    "section": "Exercise",
+    "text": "Exercise\nRefer to the dummy R & Python scripts that have been provided in the workshop-materials:\n\nInsert a setup code chunk at the beginning of your document (i.e. below the YAML header) to load the necessary packages.\nCreate a code chunk in the Results section of your document\nCopy a piece/section of the dummy script and paste it into the code chunk.\nRun the code chunk and see if it works alright.\nRepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\nRender the document and check the output.\nPlay around with the code chunk options and re-render the document."
   },
   {
-    "objectID": "analysis.html#code-chunk-options",
-    "href": "analysis.html#code-chunk-options",
-    "title": "Code chunks",
-    "section": "Code Chunk Options",
-    "text": "Code Chunk Options\nCode chunks can be customized via the code chunk yaml, denoted with #| chunk-option: setting-value at the top of each code chunk.\nThe following code chunk options are useful to include:\n\n#| label: your-code-chunk-title: It is good practice to always label a code chunk. This is also handy when you want to reuse the chunk elsewhere (see Sourcing external code)\n#| eval: true: Do you want to execute the code? If not, set eval to false\n#| echo: false: Do you want to show the source code in the finished document? If set to false, the results of the computation will still be displayed in the document!\n#| output: true: If you want to exclude the output of the computation into the resulting document, set output to false.\n#| warning: false: Choose whether to include warnings in the output documents. You usually want this to be true during the writing phase, but false when rendering to the final document.\n#| include: false: If set to false, both code ánd computation results are suppressed from the final document. Note that the code is still run, and the results of the chunk can be used by other chunks.\n\nIf you have a code chunk that creates a figure, you can also set several options for the looks of the figure, such as:\n\n#| fig.cap: \"your figure's caption\": caption of the figure\n#| fig-width: 8: width of the figure\n#| fig-height: 6: height of the figure"
-  },
-  {
-    "objectID": "analysis.html#chunk-options-for-the-entire-document",
-    "href": "analysis.html#chunk-options-for-the-entire-document",
-    "title": "Code chunks",
-    "section": "Chunk options for the entire document",
-    "text": "Chunk options for the entire document\nIn many cases, you want to use chunk options across all chunks in the document or in a project. In that case, you can put the chunk options that you want to apply across the document in the _quarto.yml file or in the main yaml at the top of the document as such:\ntitle: \"My Document\"\nexecute:\n  echo: false\n  warning: false\n\nExercises\n\nExercise 1\n\nInsert a setup code chunk t the beginning of your document (i.e. below the YAML header) to read in the necessary packages.\nCreate a code chunk in the Results section of your document\nCopy a piece/section of your script and paste it into the code chunk\nRun the code chunk and see if it works alright,\nRepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\nRender the document and check the output.\n\n\n\nExercise 2\nPlay around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?"
-  },
-  {
-    "objectID": "inline-code.html#an-example-in-r-source",
-    "href": "inline-code.html#an-example-in-r-source",
+    "objectID": "inline-code.html#slides",
+    "href": "inline-code.html#slides",
     "title": "Inline Code",
-    "section": "An example in R (source)",
-    "text": "An example in R (source)\n\nThere are 152 penguins of the “Adelie” species in the dataset.\n\nThis line was created as follows:\n```{r}\n#| label: Load the penguins dataset\n#| echo: false\nlibrary(palmerpenguins)\npenguins_data &lt;- penguins\n```\n&gt; There are `r sum(penguins_data$species=='Adelie')` penguins of the Adelie species in the dataset.\nBy enclosing the inline code with `r `, the code will be executed when the document is rendered, displaying not the code but the results of the computation. There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text."
+    "section": "Slides",
+    "text": "Slides"
   },
   {
-    "objectID": "inline-code.html#in-python",
-    "href": "inline-code.html#in-python",
+    "objectID": "inline-code.html#exercise",
+    "href": "inline-code.html#exercise",
     "title": "Inline Code",
-    "section": "In Python",
-    "text": "In Python\nFor Python, this feature will be hugely simplified from Quarto v1.4 onwards.\n```{python}\nx = 5\n```\n\nThe answer is `{python} x`\nFor earlier Quarto versions, the solution is a bit overly complicated and does not always seem to work as well:\n```{python}\n#| echo: false\nradius = 10\nfrom IPython.display import display, Markdown\ndisplay(Markdown(\"\"\"\nThe radius of the circle is {radius}.\n\"\"\".format(radius = radius)))\n```"
-  },
-  {
-    "objectID": "sourcing.html#what-can-you-do-in-quarto",
-    "href": "sourcing.html#what-can-you-do-in-quarto",
-    "title": "Sourcing external code",
-    "section": "What can you do in Quarto?",
-    "text": "What can you do in Quarto?\n\nRun a script before or after rendering a Quarto document to a manuscript.\nUse (parts of) a script within the Quarto document, for example to use objects that were created within that script.\nUse code chunks from existing Quarto documents or Jupyter notebooks.\nInclude entire Quarto documents or Jupyter notebooks within your current Quarto document."
-  },
-  {
-    "objectID": "sourcing.html#run-a-script-before-or-after-rendering",
-    "href": "sourcing.html#run-a-script-before-or-after-rendering",
-    "title": "Sourcing external code",
-    "section": "1. Run a script before or after rendering",
-    "text": "1. Run a script before or after rendering\nYou can run a script before or after rendering a Quarto document or project in 2 ways:\n\nRun a script via the terminal:\n\nquarto run your-script.py\n\nInclude the script(s) in the project yaml:\n\nproject:\n  type: website\n  pre-render: prepare.py\n  post-render: \n    - compress.ts\n    - fix-links.py\n\n\n\n\n\n\nThese kinds of scripts should perform some independent preparatory or finishing work, for which the objects do not have to be available in the Quarto document itself. If you want to use objects from an R or Python script within the Quarto document, proceed to the next step!"
-  },
-  {
-    "objectID": "sourcing.html#use-an-external-script",
-    "href": "sourcing.html#use-an-external-script",
-    "title": "Sourcing external code",
-    "section": "2. Use an external script",
-    "text": "2. Use an external script\n\nRPython\n\n\nYou can include the code from an existing script in your Quarto document by using the #| file: chunk option. This includes the code in the Quarto document, which can then be used further.\n```{{r}}\n#| file: \"your-script.R\"\n#| eval: true \n```\n\nRun sections of code one by one\nIn R, it is also possible to use specific sections from a script. This is handy when the script contains multiple functions or anaysis steps that you want to execute step by step.\nThe following instructions were adjusted from the R markdown cookbook:\n\nInclude section indicators in your code. These section indicators allow us to select which parts of the R script to run in a specific Quarto code chunk:\n\n# Content of your-script-with-chunks.R\n## ---- test-a --------\n1 + 1\n\n## ---- test-b --------\nif (TRUE) {\n  plot(cars)\n}\n\nRead the chunks from the script into your Quarto file:\n\n```{r}\n#| include: false\n#| cache: false\nknitr::read_chunk('your-script-with-chunks.R')\n```\n\nExecute the chunks that you want to execute from the external script in an empty labelled code chunk:\n\n```{r}\n#| label: test-a\n```\n\n\n\n\n\n\nIf your external code also contains functions, instead of only directly executable code, you should in step 2 source the file instead of reading the individual chunks!\n```{r}\n#| file: \"scripts/plot-data.R\"\n```\n\n\n\n\n\n\nYou can include the code from an existing script in your Quarto document by using the #| file: chunk option. This includes the code in the Quarto document, which can then be used further.\n```{python}\n#| file: \"your-script.py\"\n```"
-  },
-  {
-    "objectID": "sourcing.html#use-code-chunks-from-another-quarto-document",
-    "href": "sourcing.html#use-code-chunks-from-another-quarto-document",
-    "title": "Sourcing external code",
-    "section": "3. Use code chunks from another Quarto document",
-    "text": "3. Use code chunks from another Quarto document\nYou can also reuse code chunks from existing Quarto files (.qmd) or Jupyter notebooks (.ipynb). This feature is new Quarto v1.4, so make sure you have the newest version of Quarto installed. The basic code to do so is:\n{{&lt; embed sourcequartofile.qmd#code-chunk-label &gt;}}.\nor (source)\n{{&lt; embed source.ipynb#code-chunk-label &gt;}}.\n\n\n\n\n\n\nThis does not yet work in the current Quarto version, because Quarto v1.4 is still just a prerelease!"
-  },
-  {
-    "objectID": "sourcing.html#include-child-quarto-documents",
-    "href": "sourcing.html#include-child-quarto-documents",
-    "title": "Sourcing external code",
-    "section": "4. Include child Quarto documents",
-    "text": "4. Include child Quarto documents\nYou can include child Quarto documents within a “master” document to keep things separate (source).\n{{&lt; include _childdocument.qmd &gt;}}\nThese child documents can also include computational chunks, as long as they use the same engine (e.g. knitr or jupyter).\nFor a Jupyter notebook, simply paste:\n{{&lt; embed source.ipynb &gt;}}"
-  },
-  {
-    "objectID": "sourcing.html#exercises",
-    "href": "sourcing.html#exercises",
-    "title": "Sourcing external code",
-    "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\nThe R script do_addition.R and the Python script do_addition.py in the scripts folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.\n\nComplete the following code to include the do_addition function into your Quarto document:\n\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n# Replace this line with your answer\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n# Replace this line with your answer\n```\n\n\n\n\nUse the do_addition function to add two numbers of your choice to test whether your answer in a was correct!\n\n\nRPython\n\n\n```{r}\n#| label: perform an addition to check whether the sourcing worked\n# Replace this line with your answer\n```\n\n\n```{python}\n#| label: perform an addition to check whether the sourcing worked\n# Replace this line with your answer\n```\n\n\n\n\n\nExercise 2\nInclude the fig-scatter chunk from the source_r.qmd or source_py.qmd file in this Quarto file.\n{{&lt; YOUR-CODE-HERE &gt; }}"
-  },
-  {
-    "objectID": "sourcing.html#answers",
-    "href": "sourcing.html#answers",
-    "title": "Sourcing external code",
-    "section": "Answers",
-    "text": "Answers\n\nExercise 1\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n#| file: \"scripts/do_addition.R\"\n```\nand\n```{r}\n#| label: perform an addition to check whether the sourcing worked\na &lt;- 4\nb &lt;- 3\ndo_addition(a, b)\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n#| file: \"scripts/do_addition.py\"\n```\nand\n```{python}\n#| label: perform an addition to check whether the sourcing worked\na = 4\nb = 3\ndo_addition(a, b)\n```\n\n\n\n\n\nExercise 2\n\nRPython\n\n\n{{&lt; embed scripts/source_r.qmd#fig-scatter&gt; }}\n\n\n{{&lt; embed scripts/source_py.qmd#fig-scatter&gt; }}"
-  },
-  {
-    "objectID": "rendering.html#rendering",
-    "href": "rendering.html#rendering",
-    "title": "Rendering",
-    "section": "Rendering",
-    "text": "Rendering\nYou can render the R Markdown document to it’s specified output format using the Knit button in RStudio’s editor toolbar.\nYou can also use the render function documented in the following page: https://pkgs.rstudio.com/rmarkdown/reference/render.html"
-  },
-  {
-    "objectID": "dependency-management.html",
-    "href": "dependency-management.html",
-    "title": "Dependency Managment",
-    "section": "",
-    "text": "something about dependency management, think along the whole reproducibility spectrum\nbasic: declaring dependencies using things like sessionInfo() and annotater package - both in R, conda/pip enviornments\nmore advanced…just let them know if they’re interested"
-  },
-  {
-    "objectID": "version-control.html",
-    "href": "version-control.html",
-    "title": "Version Control",
-    "section": "",
-    "text": "Basic info about git, just a sneak peek but we can use the browser to drag and drop files"
-  },
-  {
-    "objectID": "archiving-and-publishing.html",
-    "href": "archiving-and-publishing.html",
-    "title": "Archiving & Publishing",
-    "section": "",
-    "text": "archive on github and publish via Zenodo/OSF"
+    "section": "Exercise",
+    "text": "Exercise\nTake a couple of minutes to play around with the possibilities of inline code:\n\nDo a simple calculation such as r knitr::inline_expr(\"25 + 25\") within your text.\nReport the number of “Gentoo” and/or “Chinstrap” species of penguins within the data (hint: refer to the example in the slides).\nTry out one other (simple) computation or calculation!"
   },
   {
     "objectID": "sourcing-code.html#what-can-you-do-in-quarto",
@@ -266,18 +161,18 @@
     "text": "What can you do in Quarto?\n\nRun a script before or after rendering a Quarto document to a manuscript.\nUse (parts of) a script within the Quarto document, for example to use objects that were created within that script.\nUse code chunks from existing Quarto documents or Jupyter notebooks.\nInclude entire Quarto documents or Jupyter notebooks within your current Quarto document."
   },
   {
-    "objectID": "sourcing-code.html#run-a-script-before-or-after-rendering",
-    "href": "sourcing-code.html#run-a-script-before-or-after-rendering",
-    "title": "Sourcing Code",
-    "section": "1. Run a script before or after rendering",
-    "text": "1. Run a script before or after rendering\nYou can run a script before or after rendering a Quarto document or project in 2 ways:\n\nRun a script via the terminal:\n\nquarto run your-script.py\n\nInclude the script(s) in the project yaml:\n\nproject:\n  type: website\n  pre-render: prepare.py\n  post-render: \n    - compress.ts\n    - fix-links.py\n\n\n\n\n\n\nThese kinds of scripts should perform some independent preparatory or finishing work, for which the objects do not have to be available in the Quarto document itself. If you want to use objects from an R or Python script within the Quarto document, proceed to the next step!"
-  },
-  {
     "objectID": "sourcing-code.html#use-an-external-script",
     "href": "sourcing-code.html#use-an-external-script",
     "title": "Sourcing Code",
-    "section": "2. Use an external script",
-    "text": "2. Use an external script\n\nRPython\n\n\nYou can include the code from an existing script in your Quarto document by using the #| file: chunk option. This includes the code in the Quarto document, which can then be used further.\n```{{r}}\n#| file: \"your-script.R\"\n#| eval: true \n```\n\nRun sections of code one by one\nIn R, it is also possible to use specific sections from a script. This is handy when the script contains multiple functions or anaysis steps that you want to execute step by step.\nThe following instructions were adjusted from the R markdown cookbook:\n\nInclude section indicators in your code. These section indicators allow us to select which parts of the R script to run in a specific Quarto code chunk:\n\n# Content of your-script-with-chunks.R\n## ---- test-a --------\n1 + 1\n\n## ---- test-b --------\nif (TRUE) {\n  plot(cars)\n}\n\nRead the chunks from the script into your Quarto file:\n\n```{r}\n#| include: false\n#| cache: false\nknitr::read_chunk('your-script-with-chunks.R')\n```\n\nExecute the chunks that you want to execute from the external script in an empty labelled code chunk:\n\n```{r}\n#| label: test-a\n```\n\n\n\n\n\n\nIf your external code also contains functions, instead of only directly executable code, you should in step 2 source the file instead of reading the individual chunks!\n```{r}\n#| file: \"scripts/plot-data.R\"\n```\n\n\n\n\n\n\nYou can include the code from an existing script in your Quarto document by using the #| file: chunk option. This includes the code in the Quarto document, which can then be used further.\n```{python}\n#| file: \"your-script.py\"\n```"
+    "section": "1. Use an external script",
+    "text": "1. Use an external script\n\nRPython\n\n\nYou can include the code from an existing script in your Quarto document by using the #| file: chunk option. This includes the code in the Quarto document, which can then be used further.\n```{{r}}\n#| file: \"your-script.R\"\n#| eval: true \n```\n\nRun sections of code one by one\nIn R, it is also possible to use specific sections from a script. This is handy when the script contains multiple functions or anaysis steps that you want to execute step by step.\nThe following instructions were adjusted from the R markdown cookbook:\n\nInclude section indicators in your code. These section indicators allow us to select which parts of the R script to run in a specific Quarto code chunk:\n\n# Content of your-script-with-chunks.R\n## ---- test-a --------\n1 + 1\n\n## ---- test-b --------\nif (TRUE) {\n  plot(cars)\n}\n\nRead the chunks from the script into your Quarto file:\n\n```{r}\n#| include: false\n#| cache: false\nknitr::read_chunk('your-script-with-chunks.R')\n```\n\nExecute the chunks that you want to execute from the external script in an empty labelled code chunk:\n\n```{r}\n#| label: test-a\n```\n\n\n\n\n\n\nIf your external code also contains functions, instead of only directly executable code, you should in step 2 source the file instead of reading the individual chunks!\n```{r}\n#| file: \"scripts/plot-data.R\"\n```\n\n\n\n\n\n\nYou can include the code from an existing script in your Quarto document by using the #| file: chunk option. This includes the code in the Quarto document, which can then be used further.\n```{python}\n#| file: \"your-script.py\"\n```"
+  },
+  {
+    "objectID": "sourcing-code.html#run-a-script-before-or-after-rendering",
+    "href": "sourcing-code.html#run-a-script-before-or-after-rendering",
+    "title": "Sourcing Code",
+    "section": "2. Run a script before or after rendering",
+    "text": "2. Run a script before or after rendering\nYou can run a script before or after rendering a Quarto document or project in 2 ways:\n\nRun a script via the terminal:\n\nquarto run your-script.py\n\nInclude the script(s) in the project yaml:\n\nproject:\n  type: website\n  pre-render: prepare.py\n  post-render: \n    - compress.ts\n    - fix-links.py\n\n\n\n\n\n\nThese kinds of scripts should perform some independent preparatory or finishing work, for which the objects do not have to be available in the Quarto document itself. If you want to use objects from an R or Python script within the Quarto document, proceed to the next step!"
   },
   {
     "objectID": "sourcing-code.html#use-code-chunks-from-another-quarto-document",
@@ -308,45 +203,31 @@
     "text": "Answers\n\nExercise 1\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n#| file: \"scripts/do_addition.R\"\n```\nand\n```{r}\n#| label: perform an addition to check whether the sourcing worked\na &lt;- 4\nb &lt;- 3\ndo_addition(a, b)\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n#| file: \"scripts/do_addition.py\"\n```\nand\n```{python}\n#| label: perform an addition to check whether the sourcing worked\na = 4\nb = 3\ndo_addition(a, b)\n```\n\n\n\n\n\nExercise 2\n\nRPython\n\n\n{{&lt; embed scripts/source_r.qmd#fig-scatter&gt; }}\n\n\n{{&lt; embed scripts/source_py.qmd#fig-scatter&gt; }}"
   },
   {
-    "objectID": "markdown-syntax.html#markdown-syntax",
-    "href": "markdown-syntax.html#markdown-syntax",
-    "title": "Markdown Syntax",
-    "section": "Markdown Syntax",
-    "text": "Markdown Syntax\nIf you’re not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: https://learnxinyminutes.com/docs/markdown/.\nAdditionally, you can use the Visual Editor, either in VS Code or RStudio, to see Markdown syntax previewed in it’s final format as you write. The Visual Editor also has some common Word-like shortcuts, such as CTRL+b to make text bold.\nSome things you can do with Markdown:\n\nHeadings can be created for sections and subsections using the # hashtag character. So # Heading 1 for a top-level heading and ## Heading 2 for a second-level heading and so on.\nText can be formatted in italic or bold using the * asterisk character. **This text would become bold**\nBullet point lists can be created with a - hyphen or * asterisk for each line in the list.\nLinks can be embedded by writing in the following way: [text to hyperlink](link)\nPlain code can be embedded in text using the ` backtick character. Code can be embedded as well, but we will cover that in the next section.\nImages can be included using ![Image title](path/to/img.png)"
+    "objectID": "rendering.html#rendering",
+    "href": "rendering.html#rendering",
+    "title": "Rendering",
+    "section": "Rendering",
+    "text": "Rendering\nYou can render the R Markdown document to it’s specified output format using the Knit button in RStudio’s editor toolbar.\nYou can also use the render function documented in the following page: https://pkgs.rstudio.com/rmarkdown/reference/render.html"
   },
   {
-    "objectID": "markdown-syntax.html#exercise",
-    "href": "markdown-syntax.html#exercise",
-    "title": "Markdown Syntax",
-    "section": "Exercise",
-    "text": "Exercise\nRecreate the following paragraph1 in your Quarto document using Markdown:\n\nIntroduction\nWhy use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:\n\nMarkdown can be used for everything. People use it to create websites, documents, notes, books, presentations, email messages, and technical documentation.\nMarkdown is portable.\n\nFiles containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application.\nThat’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.\n\nMarkdown is platform independent. You can create Markdown-formatted text on any device running any operating system.\nMarkdown is future proof. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your Markdown-formatted text using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.\nMarkdown is everywhere. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.\n\nHere is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)"
-  },
-  {
-    "objectID": "markdown-syntax.html#footnotes",
-    "href": "markdown-syntax.html#footnotes",
-    "title": "Markdown Syntax",
+    "objectID": "dependency-management.html",
+    "href": "dependency-management.html",
+    "title": "Dependency Managment",
     "section": "",
-    "text": "Source: Markdown Guide↩︎"
+    "text": "something about dependency management, think along the whole reproducibility spectrum\nbasic: declaring dependencies using things like sessionInfo() and annotater package - both in R, conda/pip enviornments\nmore advanced…just let them know if they’re interested"
   },
   {
-    "objectID": "code-chunks.html#what-does-a-code-chunk-do",
-    "href": "code-chunks.html#what-does-a-code-chunk-do",
-    "title": "Code Chunks",
-    "section": "What does a code chunk do?",
-    "text": "What does a code chunk do?\nA code chunk simply executes code that you specify. Depending on the content of your code, it may print code output into the document when the chunk is executed, or create new variables, for example.\nIf the default code chunk options are in place, rendering your Quarto file will involve each code chunk being run and the results being embedded beneath the code chunk in the final document."
+    "objectID": "version-control.html",
+    "href": "version-control.html",
+    "title": "Version Control",
+    "section": "",
+    "text": "Basic info about git, just a sneak peek but we can use the browser to drag and drop files"
   },
   {
-    "objectID": "code-chunks.html#code-chunk-options",
-    "href": "code-chunks.html#code-chunk-options",
-    "title": "Code Chunks",
-    "section": "Code Chunk Options",
-    "text": "Code Chunk Options\nCode chunks can be customized via the code chunk yaml, denoted with #| chunk-option: setting-value at the top of each code chunk.\nThe following code chunk options are useful to include:\n\n#| label: your-code-chunk-title: It is good practice to always label a code chunk. This is also handy when you want to reuse the chunk elsewhere (see Sourcing external code)\n#| eval: true: Do you want to execute the code? If not, set eval to false\n#| echo: false: Do you want to show the source code in the finished document? If set to false, the results of the computation will still be displayed in the document!\n#| output: true: If you want to exclude the output of the computation into the resulting document, set output to false.\n#| warning: false: Choose whether to include warnings in the output documents. You usually want this to be true during the writing phase, but false when rendering to the final document.\n#| include: false: If set to false, both code ánd computation results are suppressed from the final document. Note that the code is still run, and the results of the chunk can be used by other chunks.\n\nIf you have a code chunk that creates a figure, you can also set several options for the looks of the figure, such as:\n\n#| fig.cap: \"your figure's caption\": caption of the figure\n#| fig-width: 8: width of the figure\n#| fig-height: 6: height of the figure"
-  },
-  {
-    "objectID": "code-chunks.html#chunk-options-for-the-entire-document",
-    "href": "code-chunks.html#chunk-options-for-the-entire-document",
-    "title": "Code Chunks",
-    "section": "Chunk options for the entire document",
-    "text": "Chunk options for the entire document\nIn many cases, you want to use chunk options across all chunks in the document or in a project. In that case, you can put the chunk options that you want to apply across the document in the _quarto.yml file or in the main yaml at the top of the document as such:\ntitle: \"My Document\"\nexecute:\n  echo: false\n  warning: false\n\nExercises\n\nExercise 1\n\nInsert a setup code chunk t the beginning of your document (i.e. below the YAML header) to read in the necessary packages.\nCreate a code chunk in the Results section of your document\nCopy a piece/section of your script and paste it into the code chunk\nRun the code chunk and see if it works alright,\nRepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\nRender the document and check the output.\n\n\n\nExercise 2\nPlay around with different code chunk options. Which chunk option would hide the code and only show results, as you might like in a final manuscript?"
+    "objectID": "archiving-and-publishing.html",
+    "href": "archiving-and-publishing.html",
+    "title": "Archiving & Publishing",
+    "section": "",
+    "text": "archive on github and publish via Zenodo/OSF"
   }
 ]
