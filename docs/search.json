@@ -123,7 +123,7 @@
     "href": "code-chunks.html#exercise",
     "title": "Code Chunks",
     "section": "Exercise",
-    "text": "Exercise\nRefer to the dummy R & Python scripts that have been provided in the workshop-materials:\n\nInsert a setup code chunk at the beginning of your document (i.e. below the YAML header) to load the necessary packages.\nCreate a code chunk in the Results section of your document\nCopy a piece/section of the dummy script and paste it into the code chunk.\nRun the code chunk and see if it works alright.\nRepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\nRender the document and check the output.\nPlay around with the code chunk options and re-render the document."
+    "text": "Exercise\nRefer to the dummy.R or dummy.py script that has been provided in the workshop-materials:\n\nInsert a setup code chunk at the beginning of your document (i.e. below the YAML header) to load the necessary packages.\nCreate a code chunk in the Results section of your document\nCopy a piece/section of the dummy script and paste it into the code chunk.\nRun the code chunk and see if it works alright.\nRepeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.\nRender the document and check the output.\nPlay around with the code chunk options and re-render the document."
   },
   {
     "objectID": "inline-code.html#slides",
@@ -137,21 +137,21 @@
     "href": "inline-code.html#exercise",
     "title": "Inline Code",
     "section": "Exercise",
-    "text": "Exercise\nTake a couple of minutes to play around with the possibilities of inline code:\n\nDo a simple calculation such as r knitr::inline_expr(\"25 + 25\") within your text.\nReport the number of “Gentoo” and/or “Chinstrap” species of penguins within the data (hint: refer to the example in the slides).\nTry out one other (simple) computation or calculation!"
+    "text": "Exercise\nTake a couple of minutes to play around with the possibilities of inline code:\n\nDo a simple calculation such as 25 + 25 within your text.\nReport the number of “Gentoo” and/or “Chinstrap” species of penguins within the data (hint: refer to the example in the slides).\nTry out one other (simple) computation or calculation!"
   },
   {
     "objectID": "sourcing-code.html#exercises",
     "href": "sourcing-code.html#exercises",
     "title": "Sourcing Code",
     "section": "Exercises",
-    "text": "Exercises\nThe R script do_addition.R and the Python script do_addition.py in the scripts folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.\n\nComplete the following code to include the do_addition function into your Quarto document:\n\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n# Replace this line with your answer\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n# Replace this line with your answer\n```\n\n\n\n\nUse the do_addition function to add two numbers of your choice to test whether your answer in a was correct!\n\n\nR\n\n\n```{r}\n#| label: perform an addition to check whether the sourcing worked\n# Replace this line with your answer\n```\n\nPython\n```{python}\n#| label: perform an addition to check whether the sourcing worked\n# Replace this line with your answer\n```"
+    "text": "Exercises\nThe R script do_addition.R and the Python script do_addition.py in the scripts folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.\n\nComplete the following code to include the do_addition function into your Quarto document.\nUse the do_addition function to add two numbers of your choice to test whether your answer in a was correct!"
   },
   {
     "objectID": "sourcing-code.html#solutions",
     "href": "sourcing-code.html#solutions",
     "title": "Sourcing Code",
     "section": "Solutions",
-    "text": "Solutions\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n#| file: \"scripts/do_addition.R\"\n```\nand\n```{r}\n#| label: perform an addition to check whether the sourcing worked\na &lt;- 4\nb &lt;- 3\ndo_addition(a, b)\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n#| file: \"scripts/do_addition.py\"\n```\nand\n```{python}\n#| label: perform an addition to check whether the sourcing worked\na = 4\nb = 3\ndo_addition(a, b)\n```"
+    "text": "Solutions\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n#| file: \"scripts/do_addition.R\"\n```\nand\n```{r}\n#| label: perform an addition to check whether the sourcing worked\na &lt;- 4\nb &lt;- 3\ndo_addition(a, b)\n```\n\n\n```{.python include=scripts/do_addition.py}\n```\n```{python}\n#| echo: false\n%run do_addition_py\n```\nand\n```{python}\n#| label: perform an addition to check whether the sourcing worked\na = 4\nb = 3\ndo_addition(a, b)\n```"
   },
   {
     "objectID": "rendering.html#exercise",

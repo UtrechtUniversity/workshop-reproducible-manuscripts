@@ -10,7 +10,7 @@
 
 Take a couple of minutes to play around with the possibilities of _inline code_:
 
-- Do a simple calculation such as `r knitr::inline_expr("25 + 25")` within your text.
+- Do a simple calculation such as `25 + 25` within your text.
 
 - Report the number of "Gentoo" and/or "Chinstrap" species of penguins within the data (hint: refer to the example in the slides).
 
