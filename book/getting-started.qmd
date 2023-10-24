@@ -64,14 +64,117 @@ write.csv(palmerpenguins::penguins_raw, "data/data.csv")
 
 - Give the Quarto document a clear name, without using spaces. For example, `my-reproducible-manuscript`.
 
-- Save the Quarto document in the `docs folder you recently created.
+- Save the Quarto document in the `docs` folder you recently created.
 
 - Once everything has been saved correctly, click the _Render_ button in the menu bar again.
 
 - The rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio.
 
+7. **Download Other Workshop Materials**
+
+- Right-click on the following link and select _Save Link As..._: [workshop-materials.zip](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip)
+
+- Extract the contents of the zipped file.
+
+- Copy only the `do-addition.R` script into the `scripts` folder of your new project.
+
 ## Python
 
+1. **Create a new folder on your computer**
 
+- Name this folder `my-reproducible-manuscript` and make sure it is in an accessible location on your system. 
+
+2. **Open the newly created folder in Visual Studio Code**
+
+- In VS Code, click _File_ -> _Open Folder..._ -> `my-reproducible-manuscript`
+
+3. **Structure your Project for reproducible work**
+
+- In VS Code, click _Terminal_ -> _New Terminal_
+
+- In the Terminal, type `python`. If you see `>>>` pop up in the Terminal, then you can proceed.
+
+- Generate a directory structure by running the following piece of code in the Terminal:
+
+```
+import os
+
+os.mkdir("data")
+os.mkdir("docs")
+os.mkdir("results")
+os.mkdir("scripts")
+```
+You might want to run it line-by-line.
+
+4. **Get the data for your Project**
+
+- Obtain the data and place it in the correct folder by running the following piece of code in the Terminal:
+
+```
+pip install palmerpenguins
+
+import pandas as pd
+
+from palmerpenguins import load_penguins
+
+penguins = load_penguins()
+
+penguins.to_csv('data/data.csv')
+```
+
+5. **Create a Quarto document for your manuscript.**
+
+- In the Command Palette of VS Code, type `> Quarto: New Document`.
+
+- Give your new document a Title, such as `My Reproducible Manuscript`.
+
+6. **Copy the following block of text + code into your Quarto document.**
+
+````md
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{{python}}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{{python}}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+````
+
+7. **Render the Quarto document to HTML**
+
+- Save the Quarto document in the `docs` folder you recently created.
+
+- Give the Quarto document a clear name, without using spaces. For example, `my-reproducible-manuscript`.
+
+- In VS Code, click _Terminal_ -> _Split Terminal_
+
+- In the newly created Terminal, run the following command:
+
+```
+quarto render my-reproducible-manuscript.qmd
+```
+
+- The rendered, HTML copy of your document will appear in your web browser or alongside the editor in VS Code.
+
+8. **Download Other Workshop Materials**
+
+- Right-click on the following link and select _Save Link As..._: [workshop-materials.zip](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip)
+
+- Extract the contents of the zipped file.
+
+- Copy only the `do-addition.py` script into the `scripts` folder of your new project.
 
 :::

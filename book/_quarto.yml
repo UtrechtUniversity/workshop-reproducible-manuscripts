@@ -26,14 +26,13 @@ book:
         - inline-code.qmd
         - sourcing-code.qmd
     - rendering.qmd
-    - part: Bonus
-      chapters:
-        - dependency-management.qmd
-        - version-control.qmd
-        - archiving-and-publishing.qmd
+    - what-next.qmd
     - references.qmd
   repo-url: https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts
   repo-actions: [edit]
+
+  sidebar:
+    logo: images/quarto-hex-logo.png
 
 bibliography: references.bib
 

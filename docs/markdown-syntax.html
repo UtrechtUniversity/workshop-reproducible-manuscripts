@@ -87,7 +87,10 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/quarto-hex-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Writing Reproducible Manuscripts in R &amp; Python</a> 
         <div class="sidebar-tools-main">
@@ -213,35 +216,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Rendering</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Bonus</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dependency-management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dependency Managment</span></a>
+  <a href="./what-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What Next?</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./version-control.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Version Control</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./archiving-and-publishing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archiving &amp; Publishing</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -260,6 +240,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#slides" id="toc-slides" class="nav-link active" data-scroll-target="#slides">Slides</a></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  <li><a href="#what-it-should-look-like" id="toc-what-it-should-look-like" class="nav-link" data-scroll-target="#what-it-should-look-like">What It Should Look Like</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/markdown-syntax.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
@@ -289,32 +270,33 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="exercise" class="level2">
 <h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
-<p>Recreate the following paragraph<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in your Quarto document using Markdown:</p>
-<blockquote class="blockquote">
-<h3 id="introduction" class="anchored">Introduction</h3>
-<p>Why use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:</p>
-<ul>
-<li>Markdown can be used for everything. People use it to create websites, <a href="https://www.markdownguide.org/getting-started/#documents">documents</a>, notes, books, presentations, email messages, and technical documentation.</li>
-<li>Markdown is portable.
-<ol type="1">
-<li>Files containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application.</li>
-<li>That’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.</li>
-</ol></li>
-<li>Markdown is <strong>platform independent</strong>. You can create Markdown-formatted text on any device running any operating system.</li>
-<li>Markdown is <em>future proof</em>. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your <code>Markdown-formatted text</code> using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.</li>
-<li><strong><em>Markdown is everywhere</em></strong>. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.</li>
-</ul>
-<p>Here is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" class="img-fluid"></p>
-</blockquote>
+<p>Recreate the following paragraph in your Quarto document using Markdown:</p>
+<pre><code>Meet Quarto
 
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.
 
+Meet the penguins
+
+Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst.
+
+https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png
+
+The penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
+
+Data
+
+Data were collected and made available by Dr. Kristen Gorman https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php and the Palmer Station, Antarctica LTER, https://pallter.marine.rutgers.edu/ a member of the Long Term Ecological Research Network. https://lternet.edu/</code></pre>
 </section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Source: <a href="https://www.markdownguide.org/getting-started/">Markdown Guide</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
+<section id="what-it-should-look-like" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-should-look-like">What It Should Look Like</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://quarto.org/docs/get-started/hello/images/rstudio-text.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">quarto-penguins</figcaption>
+</figure>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

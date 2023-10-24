@@ -8,21 +8,26 @@
 
 ## Exercise
 
-Recreate the following paragraph[^1] in your Quarto document using Markdown:
+Recreate the following paragraph in your Quarto document using Markdown:
 
-> ### Introduction
-> Why use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:
->
-> - Markdown can be used for everything. People use it to create websites, [documents](https://www.markdownguide.org/getting-started/#documents), notes, books, presentations, email messages, and technical documentation.
-> - Markdown is portable. 
->    1. Files containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application. 
->    2. That’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.
-> - Markdown is **platform independent**. You can create Markdown-formatted text on any device running any operating system.
-> - Markdown is _future proof_. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your `Markdown-formatted text` using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.
-> - ***Markdown is everywhere***. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.
->
-> Here is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
-> 
-> ![](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
+```
+Meet Quarto
 
-[^1]: Source: [Markdown Guide](https://www.markdownguide.org/getting-started/)
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.
+
+Meet the penguins
+
+Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst.
+
+https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png
+
+The penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
+
+Data
+
+Data were collected and made available by Dr. Kristen Gorman https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php and the Palmer Station, Antarctica LTER, https://pallter.marine.rutgers.edu/ a member of the Long Term Ecological Research Network. https://lternet.edu/
+```
+
+## What It Should Look Like
+
+![quarto-penguins](https://quarto.org/docs/get-started/hello/images/rstudio-text.png)

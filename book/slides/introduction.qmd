@@ -1,12 +1,126 @@
 ---
-title: "Reproducible Manscripts"
 format:
   revealjs:
     theme: default
     embed-resources: true
+    slide-number: true
+    navigation-mode: linear
+    controls: true
 ---
 
-# Hello There
+# Reproducible Manuscripts {background-color="#FFCD00"}
 
-yoohoo
+# Introduction
+
+## Why This Workshop?
+
+::: columns
+::: {.column width="50%"}
+
+From Journal Articles...
+
+![](https://d13i5xhouzkrd.cloudfront.net/154580739552/previews/article-1.png)
+
+:::
+::: {.column width="50%" .fragment}
+
+...To Research Compendiums.
+
+![](https://the-turing-way.netlify.app/_images/research-compendium.svg)
+:::
+:::
+
+## More Specifically...
+
+We want _Dynamic Document Generation_, where we can:
+
+- combine narrative with code
+
+- automatically generate figures and tables
+
+- automatically render results in text
+
+- format the content into a scientific paper (including citations!)
+
+- rinse & repeat
+
+## Advantages
+
+- One major benefit is the elimination of human error in copying and pasting results, as automated methods can update results, figures, and tables with major revisions. 
+
+_Using an automated method for scraping APA-formatted stats out of PDFs, Nuijten et al. (⊕2016) found that over 10% of p-values in published papers were inconsistent with the reported details of the statistical test, and 1.6% were what they called “grossly” inconsistent, e.g. difference between the p-value and the test statistic meant that one implied statistical significance and the other did not. Nearly half of all papers had errors in them._
+
+## Advantages
+
+- The use of reproducible documents also allows for easy revisions and specification of desired figures and tables.
+
+_When revisions are requested, one might have to tweak tables and figures by hand constantly, leading to a major incentive never to rerun analyses because it would mean re-pasting and re-illustratoring all the numbers and figures in a paper._
+
+## Advantages
+
+- Furthermore, computational reproducibility is promoted, which allows others to easily verify and replicate research findings. 
+
+While programming environments may seem counter-intuitive for writing papers, they ultimately prevent mistakes and save time.
+
+## How Do We Pull This off?
+
+Enter **Quarto**...
+
+- Quarto® is an open-source scientific and technical publishing system built on Pandoc.
+
+- It's the 'new generation' of R Markdown, designed to work multiple programming languages + tools in an aligned way.
+
+- Quarto can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books and more.
+
+# Let's Get Started!
+
+## Your Turn!
+
+- Go to the _Getting Started_ chapter of the workshop book and follow the instructions for your programming language.
+
+```{r}
+library(countdown)
+
+countdown(minutes = 10,
+          color_background = "#FFCD00")
+```
+
+
+## Output
+
+![](../images/quarto-default-template.PNG)
+
+## Anatomy of a Quarto Document
+
+-   Metadata & Header (YAML)
+
+``` yaml
+---
+format: html
+---
+```
+
+. . .
+
+-   Code
+
+```{r}
+#| echo: fenced
+#| eval: true
+library(dplyr)
+mtcars %>% 
+  group_by(cyl) %>%
+  summarize(mean = mean(mpg), .groups = "drop")
+```
+
+. . .
+
+-   Text
+
+``` markdown
+# Heading 1
+This is a sentence with some **bold text**, some *italic text* and an [image](image.png).
+```
+
+
 

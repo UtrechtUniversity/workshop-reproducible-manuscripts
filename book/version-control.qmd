@@ -1,4 +1,0 @@
-# Version Control {.unnumbered}
-
-Basic info about git, just a sneak peek
-but we can use the browser to drag and drop files

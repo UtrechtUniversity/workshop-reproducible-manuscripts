@@ -87,7 +87,10 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/quarto-hex-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Writing Reproducible Manuscripts in R &amp; Python</a> 
         <div class="sidebar-tools-main">
@@ -213,35 +216,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Rendering</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Bonus</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dependency-management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dependency Managment</span></a>
+  <a href="./what-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What Next?</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./version-control.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Version Control</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./archiving-and-publishing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archiving &amp; Publishing</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -254,7 +234,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#relevant-reading" id="toc-relevant-reading" class="nav-link active" data-scroll-target="#relevant-reading">Relevant Reading:</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/introduction.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -276,13 +262,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<ul>
-<li>talk about research compendiums and executable articles</li>
-<li>links to the relevant articles: this could also be given as pre-workshop reading</li>
-</ul>
-<iframe width="1050" height="700" src="slides/introduction.html"></iframe>
+<iframe width="650" height="500" src="slides/introduction.html"></iframe>
+<section id="relevant-reading" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading:</h2>
+<ol type="1">
+<li><p>Lasser, J. Creating an executable paper is a journey through Open Science. Commun Phys 3, 143 (2020). https://doi.org/10.1038/s42005-020-00403-4</p></li>
+<li><p>Composing reproducible manuscripts using R Markdown: https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown</p></li>
+<li><p>Van Lissa, C. J., Brandmaier, A. M., Brinkman, L., Lamprecht, A., Peikert, A., , Struiksma, M. E., &amp; Vreede, B. WORCS: A Workflow for Open Reproducible Code in Science. Data Science, 2021. Data Science, vol.&nbsp;4, no. 1, pp.&nbsp;29-49. DOI: https://doi.org/10.3233/DS-210031</p></li>
+<li><p>Research Compendia: https://the-turing-way.netlify.app/reproducible-research/compendia</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -534,4 +525,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/introduction.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>
+</body></html>

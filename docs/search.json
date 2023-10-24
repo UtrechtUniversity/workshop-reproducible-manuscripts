@@ -11,7 +11,7 @@
     "href": "acknowledgements.html",
     "title": "Acknowledgements",
     "section": "",
-    "text": "These materials were drafted with the help from the following contributors:\n\nNeha Moopen\nDorien Huijser\n[ADD YOUR NAME]"
+    "text": "These materials were drafted with the help from the following contributors:\n\nNeha Moopen\nDorien Huijser\n\nOur materials have borrowed liberally from the following sources:\n\nGetting Started with Quarto (2-hour webinar) by Thomas Mock (CC-BY 4.0)\nGetting Started with Quarto (rstudio::conf 2022 workshop) by Thomas Mock (CC-BY 4.0)\nRMarkdown for writing reproducible scientific papers by Mike Frank & Chris Hartgerink (CC0)"
   },
   {
     "objectID": "schedule.html",
@@ -74,21 +74,21 @@
     "href": "workshop-materials.html",
     "title": "Workshop Materials",
     "section": "",
-    "text": "Here we will put instructions for downloading the workshop materials."
+    "text": "The workshop materials consist of dummy scripts that will be used during the session.\n\nRight-click on the following link and select Save Link As…: workshop-materials.zip\nExtract the contents of the zipped file.\nCopy either the do-addition.py or do-addition.R scripts (depends of the programming language you use) into the scripts folder of your new project."
   },
   {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
+    "objectID": "introduction.html#relevant-reading",
+    "href": "introduction.html#relevant-reading",
     "title": "Introduction",
-    "section": "",
-    "text": "talk about research compendiums and executable articles\nlinks to the relevant articles: this could also be given as pre-workshop reading"
+    "section": "Relevant Reading:",
+    "text": "Relevant Reading:\n\nLasser, J. Creating an executable paper is a journey through Open Science. Commun Phys 3, 143 (2020). https://doi.org/10.1038/s42005-020-00403-4\nComposing reproducible manuscripts using R Markdown: https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown\nVan Lissa, C. J., Brandmaier, A. M., Brinkman, L., Lamprecht, A., Peikert, A., , Struiksma, M. E., & Vreede, B. WORCS: A Workflow for Open Reproducible Code in Science. Data Science, 2021. Data Science, vol. 4, no. 1, pp. 29-49. DOI: https://doi.org/10.3233/DS-210031\nResearch Compendia: https://the-turing-way.netlify.app/reproducible-research/compendia"
   },
   {
     "objectID": "getting-started.html",
     "href": "getting-started.html",
     "title": "Getting Started",
     "section": "",
-    "text": "RPython\n\n\n1. Create a Project in RStudio\n\nIn RStudio, click File -&gt; New Project -&gt; New Directory -&gt; New Project.\nGive your project directory a clear name, without using spaces. For example, my-reproducible-manuscript.\nMake sure your project will be created (as a subdirectory) in an accessible place on your system.\nCheck the Open in new session option.\nClick Create Project.\n\n2. Structure your Project for reproducible work\n\nGenerate a directory structure by running the following piece of code in the Console of RStudio:\n\n\ndir.create(\"data\", recursive = TRUE)\ndir.create(\"docs\", recursive = TRUE)\ndir.create(\"results\", recursive = TRUE)\ndir.create(\"R\", recursive = TRUE)\n\n# install.packages(\"usethis\")\nlibrary(usethis)\n\nusethis::use_readme_md(open = rlang::is_interactive())\nusethis::use_mit_license(copyright_holder = NULL)\n\n3. Get the data for your Project\n\nObtain the data and place it in the correct folder by running the following piece of code in the Console of RStudio:\n\n\n# install.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\n\nwrite.csv(palmerpenguins::penguins_raw, \"data/data.csv\")\n\n4. Create a Quarto document for your manuscript.\n\nIn RStudio, click File -&gt; New File -&gt; Quarto Document\nGive your document a Title, such as My Reproducible Manuscript.\nDeselect the Use visual markdown editor option.\nClick Create.\n\n6. Render the Quarto document to HTML\n\nClick the Render button in the menu bar.\nGive the Quarto document a clear name, without using spaces. For example, my-reproducible-manuscript.\nSave the Quarto document in the `docs folder you recently created.\nOnce everything has been saved correctly, click the Render button in the menu bar again.\nThe rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio."
+    "text": "RPython\n\n\n1. Create a Project in RStudio\n\nIn RStudio, click File -&gt; New Project -&gt; New Directory -&gt; New Project.\nGive your project directory a clear name, without using spaces. For example, my-reproducible-manuscript.\nMake sure your project will be created (as a subdirectory) in an accessible place on your system.\nCheck the Open in new session option.\nClick Create Project.\n\n2. Structure your Project for reproducible work\n\nGenerate a directory structure by running the following piece of code in the Console of RStudio:\n\n\ndir.create(\"data\", recursive = TRUE)\ndir.create(\"docs\", recursive = TRUE)\ndir.create(\"results\", recursive = TRUE)\ndir.create(\"R\", recursive = TRUE)\n\n# install.packages(\"usethis\")\nlibrary(usethis)\n\nusethis::use_readme_md(open = rlang::is_interactive())\nusethis::use_mit_license(copyright_holder = NULL)\n\n3. Get the data for your Project\n\nObtain the data and place it in the correct folder by running the following piece of code in the Console of RStudio:\n\n\n# install.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\n\nwrite.csv(palmerpenguins::penguins_raw, \"data/data.csv\")\n\n4. Create a Quarto document for your manuscript.\n\nIn RStudio, click File -&gt; New File -&gt; Quarto Document\nGive your document a Title, such as My Reproducible Manuscript.\nDeselect the Use visual markdown editor option.\nClick Create.\n\n6. Render the Quarto document to HTML\n\nClick the Render button in the menu bar.\nGive the Quarto document a clear name, without using spaces. For example, my-reproducible-manuscript.\nSave the Quarto document in the docs folder you recently created.\nOnce everything has been saved correctly, click the Render button in the menu bar again.\nThe rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio.\n\n\nDownload Other Workshop Materials\n\n\nRight-click on the following link and select Save Link As…: workshop-materials.zip\nExtract the contents of the zipped file.\nCopy only the do-addition.R script into the scripts folder of your new project.\n\n\n\n\nCreate a new folder on your computer\n\n\nName this folder my-reproducible-manuscript and make sure it is in an accessible location on your system.\n\n\nOpen the newly created folder in Visual Studio Code\n\n\nIn VS Code, click File -&gt; Open Folder… -&gt; my-reproducible-manuscript\n\n\nStructure your Project for reproducible work\n\n\nIn VS Code, click Terminal -&gt; New Terminal\nIn the Terminal, type python. If you see &gt;&gt;&gt; pop up in the Terminal, then you can proceed.\nGenerate a directory structure by running the following piece of code in the Terminal:\n\nimport os\n\nos.mkdir(\"data\")\nos.mkdir(\"docs\")\nos.mkdir(\"results\")\nos.mkdir(\"scripts\")\nYou might want to run it line-by-line.\n\nGet the data for your Project\n\n\nObtain the data and place it in the correct folder by running the following piece of code in the Terminal:\n\npip install palmerpenguins\n\nimport pandas as pd\n\nfrom palmerpenguins import load_penguins\n\npenguins = load_penguins()\n\npenguins.to_csv('data/data.csv')\n\nCreate a Quarto document for your manuscript.\n\n\nIn the Command Palette of VS Code, type &gt; Quarto: New Document.\nGive your new document a Title, such as My Reproducible Manuscript.\n\n\nCopy the following block of text + code into your Quarto document.\n\n## Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see &lt;https://quarto.org&gt;.\n\n## Running Code\n\nWhen you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n```{python}\n1 + 1\n```\n\nYou can add options to executable code like this\n\n```{python}\n#| echo: false\n2 * 2\n```\n\nThe `echo: false` option disables the printing of code (only output is displayed).\n\nRender the Quarto document to HTML\n\n\nSave the Quarto document in the docs folder you recently created.\nGive the Quarto document a clear name, without using spaces. For example, my-reproducible-manuscript.\nIn VS Code, click Terminal -&gt; Split Terminal\nIn the newly created Terminal, run the following command:\n\nquarto render my-reproducible-manuscript.qmd\n\nThe rendered, HTML copy of your document will appear in your web browser or alongside the editor in VS Code.\n\n\nDownload Other Workshop Materials\n\n\nRight-click on the following link and select Save Link As…: workshop-materials.zip\nExtract the contents of the zipped file.\nCopy only the do-addition.py script into the scripts folder of your new project."
   },
   {
     "objectID": "markdown-syntax.html#slides",
@@ -102,35 +102,21 @@
     "href": "markdown-syntax.html#exercise",
     "title": "Markdown Syntax",
     "section": "Exercise",
-    "text": "Exercise\nRecreate the following paragraph1 in your Quarto document using Markdown:\n\nIntroduction\nWhy use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:\n\nMarkdown can be used for everything. People use it to create websites, documents, notes, books, presentations, email messages, and technical documentation.\nMarkdown is portable.\n\nFiles containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application.\nThat’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.\n\nMarkdown is platform independent. You can create Markdown-formatted text on any device running any operating system.\nMarkdown is future proof. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your Markdown-formatted text using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.\nMarkdown is everywhere. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.\n\nHere is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)"
+    "text": "Exercise\nRecreate the following paragraph in your Quarto document using Markdown:\nMeet Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\nMeet the penguins\n\nIllustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst.\n\nhttps://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\n\nData\n\nData were collected and made available by Dr. Kristen Gorman https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php and the Palmer Station, Antarctica LTER, https://pallter.marine.rutgers.edu/ a member of the Long Term Ecological Research Network. https://lternet.edu/"
   },
   {
-    "objectID": "markdown-syntax.html#footnotes",
-    "href": "markdown-syntax.html#footnotes",
+    "objectID": "markdown-syntax.html#what-it-should-look-like",
+    "href": "markdown-syntax.html#what-it-should-look-like",
     "title": "Markdown Syntax",
-    "section": "",
-    "text": "Source: Markdown Guide↩︎"
+    "section": "What It Should Look Like",
+    "text": "What It Should Look Like\n\n\n\nquarto-penguins"
   },
   {
     "objectID": "referencing.html",
     "href": "referencing.html",
     "title": "Referencing",
     "section": "",
-    "text": "Referencing\nNow that we know how to write in Markdown and run analyses in code chunks, let’s learn about referencing using BibTex keys!"
-  },
-  {
-    "objectID": "referencing.html#working-with-bibtex-keys",
-    "href": "referencing.html#working-with-bibtex-keys",
-    "title": "Referencing",
-    "section": "Working with BibTex keys",
-    "text": "Working with BibTex keys\nWe will work with with bibliographies in the form of .bib files. .bib files stand for BibTeX Bibliographical Database files. They are text files which contain a list of references in the form of BibTex keys.\nA typical BibTex key might look like the following:\n@article{nash51,\n  author  = \"Nash, John\",\n  title   = \"Non-cooperative Games\",\n  journal = \"Annals of Mathematics\",\n  year    = 1951,\n  volume  = \"54\",\n  number  = \"2\",\n  pages   = \"286--295\"\n}\nHere is an example BibTex key for a reference used in this workshop:\n@misc{RMarkdownWritingReproducible,\n    title = {{RMarkdown} for writing reproducible scientific papers},\n    url = {https://libscie.github.io/rmarkdown-workshop/handout.html},\n    urldate = {2023-04-18},\n    file = {RMarkdown for writing reproducible scientific papers:C\\:\\\\Users\\\\Moope001\\\\Zotero\\\\storage\\\\SJITSZZI\\\\handout.html:text/html},\n}\nIn practice, your .bib file should be updated along the way to include the BibTex keys for all your references. You can cite a specific reference using the the @ character with the key/idenitifier in the first line of the entry.\nFor the above examples, it would be @nash51 and @RMarkdownWritingReproducible\n\nExercise\nFor this exercise, we will update our .bib file manually and making a citation. Note that this workflow can be made more efficient using Zotero and BetterBibTex for Zotero as described in the section after the exercise.\n\nSearch for the paper related to the Palmer Penguins data in Google Scholar:\n\nHorst, A. M., Hill, A. P., & Gorman, K. B. (2022). Palmer Archipelago Penguins Data in the palmerpenguins R Package-An Alternative to Anderson’s Irises. R JOURNAL, 14(1), 244-254.\n\nFind the BibTex key for this paper and copy it into your existing .bib file.\nCite the Palmer Penguins paper in your manuscript.\nRender the document and see how it looks."
-  },
-  {
-    "objectID": "referencing.html#using-zotero-better-bibtex-for-zotero",
-    "href": "referencing.html#using-zotero-better-bibtex-for-zotero",
-    "title": "Referencing",
-    "section": "Using Zotero & Better BibTex for Zotero",
-    "text": "Using Zotero & Better BibTex for Zotero\n\nSet up Zotero\n\nInstall Zotero on your computer\nInstall the Zotero connector with Chrome (unless you want to input your papers manually)\nCreate a Zotero account (Zotero webpage)\nSync your account with your local Zotero installation (in Zotero preferences -&gt; sync)\n\nInstall the “Better Bibtex” plugin\n\nDownload the Zotero-better-bibtex-6.7.75.xpi file from here: https://github.com/retorquere/zotero-better-bibtex/releases/tag/v6.7.75\nFollow the installation instructions here: https://retorque.re/zotero-better-bibtex/installation/\n\nSet up your library and collect bibliography material\n\nCreate a new folder inside your Zotero library to collect all the materials relevant to your study\nCollect studies in your new folder using Zotero connector or adding the material manually to your library\n\nCreate a .bib file (bibliography file)\n\nIn your Zotero local app, right click on your new folder -&gt; Export Collection\nChoose format BibText and click Okay\nChoose a destination folder. The destination folder MUST be the same of your R Markdown file\n\nInclude the .bib file into your R Markdown and quote studies\n\nIn the YAML lines (the ones between ———) of your R markdown template look for the keyword “bibliography”. Write your just created .bib file (without quotes) after “:”\nWhen you need to quote a material, look inside the bib file, look at the first line after the very first left curly bracket “{“ and, in the markdown text, write @, where  is the line of text after “{“. NOTE: this very first line of text does not appear in the bibliography printed on your final paper, it is a sort of nickname you use to quote paper and it can be set up to whatever word/sentence you like (but try to avoid empty space and use underscores _ instead)\nAlternatively, when using the Visual Editor option - you can use the citation dialog/option to insert citations directly."
+    "text": "Exercise\nWe’re assuming installation of Zotero Desktop, Zotero Connector, and Better BibTex for Zotero were completed successfully.\n\nOpen Zotero Desktop\n\n\nlog into your account\ncreate a new collection for your project, for example: my-reproducible-manuscript\n\n\nOpen your Web Browser\n\n\ndouble-check that you can find the Zotero Connector in your browser\nrun a web / Google Scholar search for “Allison Horst PalmerPenguins Package”\nuse the Zotero Connector to save the reference to your collection\n\n\nIn Zotero Desktop,\n\n\nright-click your collection and select Export Collection\nfor the Format, select Better BibTex\nclick the option to Keep updated\nprovide the file name as references and save it in the same folder as your Quarto document\n\n\nIn RStudio or VS Code,\n\n\nupdate the YAML to include the bibliography:\n\n---\ntitle: \"My Reproducible Manuscript\"\nformat: html\nbibliography: references.bib\n---\n\nInsert a Citation\n\n\nin the text of your Quarto document, insert the PalmerPenguins citation (hint: refer to the slides and your .bib file to figure how to format the citation)\nalternatively, when using the Visual Editor option - you can use the citation dialog/option to insert citations directly.\nrender the document\n\n\nRepetition\n\n\nrepeat Step 2 with another reference\nrepeat Step 5 to insert the new reference\nif you did a brackted citation before, do an in-text citation this time (or vice versa)\n\n**Note:* Steps 1, 3, 4 can be skipped. These were a one-time thing."
   },
   {
     "objectID": "code-chunks.html#exercise",
@@ -154,80 +140,38 @@
     "text": "Exercise\nTake a couple of minutes to play around with the possibilities of inline code:\n\nDo a simple calculation such as r knitr::inline_expr(\"25 + 25\") within your text.\nReport the number of “Gentoo” and/or “Chinstrap” species of penguins within the data (hint: refer to the example in the slides).\nTry out one other (simple) computation or calculation!"
   },
   {
-    "objectID": "sourcing-code.html#what-can-you-do-in-quarto",
-    "href": "sourcing-code.html#what-can-you-do-in-quarto",
-    "title": "Sourcing Code",
-    "section": "What can you do in Quarto?",
-    "text": "What can you do in Quarto?\n\nRun a script before or after rendering a Quarto document to a manuscript.\nUse (parts of) a script within the Quarto document, for example to use objects that were created within that script.\nUse code chunks from existing Quarto documents or Jupyter notebooks.\nInclude entire Quarto documents or Jupyter notebooks within your current Quarto document."
-  },
-  {
-    "objectID": "sourcing-code.html#use-an-external-script",
-    "href": "sourcing-code.html#use-an-external-script",
-    "title": "Sourcing Code",
-    "section": "1. Use an external script",
-    "text": "1. Use an external script\n\nRPython\n\n\nYou can include the code from an existing script in your Quarto document by using the #| file: chunk option. This includes the code in the Quarto document, which can then be used further.\n```{{r}}\n#| file: \"your-script.R\"\n#| eval: true \n```\n\nRun sections of code one by one\nIn R, it is also possible to use specific sections from a script. This is handy when the script contains multiple functions or anaysis steps that you want to execute step by step.\nThe following instructions were adjusted from the R markdown cookbook:\n\nInclude section indicators in your code. These section indicators allow us to select which parts of the R script to run in a specific Quarto code chunk:\n\n# Content of your-script-with-chunks.R\n## ---- test-a --------\n1 + 1\n\n## ---- test-b --------\nif (TRUE) {\n  plot(cars)\n}\n\nRead the chunks from the script into your Quarto file:\n\n```{r}\n#| include: false\n#| cache: false\nknitr::read_chunk('your-script-with-chunks.R')\n```\n\nExecute the chunks that you want to execute from the external script in an empty labelled code chunk:\n\n```{r}\n#| label: test-a\n```\n\n\n\n\n\n\nIf your external code also contains functions, instead of only directly executable code, you should in step 2 source the file instead of reading the individual chunks!\n```{r}\n#| file: \"scripts/plot-data.R\"\n```\n\n\n\n\n\n\nYou can include the code from an existing script in your Quarto document by using the #| file: chunk option. This includes the code in the Quarto document, which can then be used further.\n```{python}\n#| file: \"your-script.py\"\n```"
-  },
-  {
-    "objectID": "sourcing-code.html#run-a-script-before-or-after-rendering",
-    "href": "sourcing-code.html#run-a-script-before-or-after-rendering",
-    "title": "Sourcing Code",
-    "section": "2. Run a script before or after rendering",
-    "text": "2. Run a script before or after rendering\nYou can run a script before or after rendering a Quarto document or project in 2 ways:\n\nRun a script via the terminal:\n\nquarto run your-script.py\n\nInclude the script(s) in the project yaml:\n\nproject:\n  type: website\n  pre-render: prepare.py\n  post-render: \n    - compress.ts\n    - fix-links.py\n\n\n\n\n\n\nThese kinds of scripts should perform some independent preparatory or finishing work, for which the objects do not have to be available in the Quarto document itself. If you want to use objects from an R or Python script within the Quarto document, proceed to the next step!"
-  },
-  {
-    "objectID": "sourcing-code.html#use-code-chunks-from-another-quarto-document",
-    "href": "sourcing-code.html#use-code-chunks-from-another-quarto-document",
-    "title": "Sourcing Code",
-    "section": "3. Use code chunks from another Quarto document",
-    "text": "3. Use code chunks from another Quarto document\nYou can also reuse code chunks from existing Quarto files (.qmd) or Jupyter notebooks (.ipynb). This feature is new Quarto v1.4, so make sure you have the newest version of Quarto installed. The basic code to do so is:\n{{&lt; embed sourcequartofile.qmd#code-chunk-label &gt;}}.\nor (source)\n{{&lt; embed source.ipynb#code-chunk-label &gt;}}.\n\n\n\n\n\n\nThis does not yet work in the current Quarto version, because Quarto v1.4 is still just a prerelease!"
-  },
-  {
-    "objectID": "sourcing-code.html#include-child-quarto-documents",
-    "href": "sourcing-code.html#include-child-quarto-documents",
-    "title": "Sourcing Code",
-    "section": "4. Include child Quarto documents",
-    "text": "4. Include child Quarto documents\nYou can include child Quarto documents within a “master” document to keep things separate (source).\n{{&lt; include _childdocument.qmd &gt;}}\nThese child documents can also include computational chunks, as long as they use the same engine (e.g. knitr or jupyter).\nFor a Jupyter notebook, simply paste:\n{{&lt; embed source.ipynb &gt;}}"
-  },
-  {
     "objectID": "sourcing-code.html#exercises",
     "href": "sourcing-code.html#exercises",
     "title": "Sourcing Code",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\nThe R script do_addition.R and the Python script do_addition.py in the scripts folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.\n\nComplete the following code to include the do_addition function into your Quarto document:\n\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n# Replace this line with your answer\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n# Replace this line with your answer\n```\n\n\n\n\nUse the do_addition function to add two numbers of your choice to test whether your answer in a was correct!\n\n\nRPython\n\n\n```{r}\n#| label: perform an addition to check whether the sourcing worked\n# Replace this line with your answer\n```\n\n\n```{python}\n#| label: perform an addition to check whether the sourcing worked\n# Replace this line with your answer\n```\n\n\n\n\n\nExercise 2\nInclude the fig-scatter chunk from the source_r.qmd or source_py.qmd file in this Quarto file.\n{{&lt; YOUR-CODE-HERE &gt; }}"
+    "text": "Exercises\nThe R script do_addition.R and the Python script do_addition.py in the scripts folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.\n\nComplete the following code to include the do_addition function into your Quarto document:\n\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n# Replace this line with your answer\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n# Replace this line with your answer\n```\n\n\n\n\nUse the do_addition function to add two numbers of your choice to test whether your answer in a was correct!\n\n\nR\n\n\n```{r}\n#| label: perform an addition to check whether the sourcing worked\n# Replace this line with your answer\n```\n\nPython\n```{python}\n#| label: perform an addition to check whether the sourcing worked\n# Replace this line with your answer\n```"
   },
   {
-    "objectID": "sourcing-code.html#answers",
-    "href": "sourcing-code.html#answers",
+    "objectID": "sourcing-code.html#solutions",
+    "href": "sourcing-code.html#solutions",
     "title": "Sourcing Code",
-    "section": "Answers",
-    "text": "Answers\n\nExercise 1\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n#| file: \"scripts/do_addition.R\"\n```\nand\n```{r}\n#| label: perform an addition to check whether the sourcing worked\na &lt;- 4\nb &lt;- 3\ndo_addition(a, b)\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n#| file: \"scripts/do_addition.py\"\n```\nand\n```{python}\n#| label: perform an addition to check whether the sourcing worked\na = 4\nb = 3\ndo_addition(a, b)\n```\n\n\n\n\n\nExercise 2\n\nRPython\n\n\n{{&lt; embed scripts/source_r.qmd#fig-scatter&gt; }}\n\n\n{{&lt; embed scripts/source_py.qmd#fig-scatter&gt; }}"
+    "section": "Solutions",
+    "text": "Solutions\n\nRPython\n\n\n```{r}\n#| label: Include the do_addition.R function in the current file\n#| file: \"scripts/do_addition.R\"\n```\nand\n```{r}\n#| label: perform an addition to check whether the sourcing worked\na &lt;- 4\nb &lt;- 3\ndo_addition(a, b)\n```\n\n\n```{python}\n#| label: Include the do_addition.py function in the current file\n#| file: \"scripts/do_addition.py\"\n```\nand\n```{python}\n#| label: perform an addition to check whether the sourcing worked\na = 4\nb = 3\ndo_addition(a, b)\n```"
   },
   {
-    "objectID": "rendering.html#rendering",
-    "href": "rendering.html#rendering",
+    "objectID": "rendering.html#exercise",
+    "href": "rendering.html#exercise",
     "title": "Rendering",
-    "section": "Rendering",
-    "text": "Rendering\nYou can render the R Markdown document to it’s specified output format using the Knit button in RStudio’s editor toolbar.\nYou can also use the render function documented in the following page: https://pkgs.rstudio.com/rmarkdown/reference/render.html"
+    "section": "Exercise",
+    "text": "Exercise\n\nRender your Quarto document to docx using both:\n\n\nthe quarto R package\nthe Terminal\n\n\nAdjust the YAML to include both html & docx and re-render the document.\n\nOPTIONAL:\n\nRender your Quarto document to pdf.\nTry out the PLOS Journal Template.\n\n\nsimply obtain the template and render it, no need to make changes to the content."
   },
   {
-    "objectID": "dependency-management.html",
-    "href": "dependency-management.html",
-    "title": "Dependency Managment",
-    "section": "",
-    "text": "something about dependency management, think along the whole reproducibility spectrum\nbasic: declaring dependencies using things like sessionInfo() and annotater package - both in R, conda/pip enviornments\nmore advanced…just let them know if they’re interested"
+    "objectID": "what-next.html#what-to-learn",
+    "href": "what-next.html#what-to-learn",
+    "title": "What Next?",
+    "section": "What To Learn?",
+    "text": "What To Learn?\nDynamic Document Generation is one of the first steps towards reproducible manuscripts. The following topics are worth exploring to round of this area knowledge and skill:\n\nDependency Management\n\n\n\n\n9. Dependencies from Barboletas on Vimeo.\n\n\nVersion Control\n\n\n\n\nArchiving & Publishing\n\n\n\n\n11. Archive with Zenodo from Barboletas on Vimeo."
   },
   {
-    "objectID": "version-control.html",
-    "href": "version-control.html",
-    "title": "Version Control",
-    "section": "",
-    "text": "Basic info about git, just a sneak peek but we can use the browser to drag and drop files"
-  },
-  {
-    "objectID": "archiving-and-publishing.html",
-    "href": "archiving-and-publishing.html",
-    "title": "Archiving & Publishing",
-    "section": "",
-    "text": "archive on github and publish via Zenodo/OSF"
+    "objectID": "what-next.html#where-to-find-us",
+    "href": "what-next.html#where-to-find-us",
+    "title": "What Next?",
+    "section": "Where To Find Us",
+    "text": "Where To Find Us\n\nProgramming Café: A community event where you can work on your own projects for a large part of the session. Somewhere in between, we will do a small tutorial on useful programming tips/trick/practices. The Programming Café occurs on a monthly basis, usually the first Thursday of every month.\nWalk-In Hours for Data & Software Support: This takes place every Monday from 15:00 to 17:00 at the University Library in the Science Park. We are available to help with any questions related to research data management and/or programming.\nYou can check out our other workshops on the RDM Support website."
   }
 ]

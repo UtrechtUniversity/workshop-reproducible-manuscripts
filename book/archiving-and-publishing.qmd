@@ -1,3 +1,0 @@
-# Archiving & Publishing {.unnumbered}
-
-archive on github and publish via Zenodo/OSF

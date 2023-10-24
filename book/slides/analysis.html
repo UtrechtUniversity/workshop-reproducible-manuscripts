@@ -1686,19 +1686,20 @@ class CountdownTimer {
     <div class="slides">
 
 
-<section>
 <section id="analysis" class="title-slide slide level1 center" data-background-color="#FFCD00">
 <h1>Analysis</h1>
 
 </section>
-<section id="topics" class="slide level2">
-<h2>Topics</h2>
+
+<section id="topics" class="title-slide slide level1 center">
+<h1>Topics</h1>
 <ol type="1">
 <li>Code Chunks</li>
 <li>Inline Code</li>
 <li>Sourcing Scripts</li>
 </ol>
-</section></section>
+</section>
+
 <section>
 <section id="code-chunks" class="title-slide slide level1 center">
 <h1>Code Chunks</h1>
@@ -1772,6 +1773,7 @@ class CountdownTimer {
 <li><p><strong>RStudio</strong>: Using the <em>Ctrl+Alt+I</em> keyboard shortcut.</p></li>
 <li><p><strong>VS Code</strong>: Using the <em>Ctrl+Shift+I</em> keyboard shortcut.</p></li>
 </ul>
+<p>If you work with a Visual Editor, you can simply click <code>Insert</code> &gt; <code>Code cell</code> &gt; <code>[your programming language]</code> to add a code chunk to your document.</p>
 </section>
 <section id="learn-more" class="slide level2">
 <h2>Learn More…</h2>
@@ -1791,7 +1793,7 @@ class CountdownTimer {
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_abc82db3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_5ab880d0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1840,17 +1842,85 @@ class CountdownTimer {
 <h2>Exercise</h2>
 <p>Take a couple of minutes to play around with the possibilities of <em>inline code</em>:</p>
 <ul>
-<li><p>Try out a simple calculation such as 50.</p></li>
-<li></li>
+<li><p>Do a simple calculation such as <code>r 25 + 25</code> within your text.</p></li>
+<li><p>Report the number of “Gentoo” and/or “Chinstrap” species of penguins within the data (hint: refer to the example in the slides).</p></li>
+<li><p>Try out one other (simple) computation or calculation!</p></li>
 </ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_5303655b" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="sourcing-scripts" class="title-slide slide level1 center">
 <h1>Sourcing Scripts</h1>
 
 </section>
+<section id="the-what-why" class="slide level2">
+<h2>The What &amp; Why</h2>
+<p>Quarto has the option to include code from external files, such as R and Python scripts, <code>.qmd</code> or <code>.ipynb</code> files.</p>
+<p>Separating scripts from the manuscript can help with:</p>
+<ul>
+<li>preventing manual, error-prone work copy-pasting code from one file to another,</li>
+<li>easier debugging of code,</li>
+<li>making the Quarto document easier to digest,</li>
+<li>adhering to good coding practices to work in a modular fashion.</li>
+</ul>
+</section>
+<section id="possible-workflows" class="slide level2">
+<h2>Possible Workflows</h2>
+<ol type="1">
+<li>Use (parts of) an external script <em>within</em> the Quarto document, for example to use objects that were created within that script.</li>
+<li>Run a script before or after rendering a Quarto document to a manuscript.</li>
+<li>Use code chunks from existing Quarto documents or Jupyter notebooks.</li>
+<li>Include entire Quarto documents or Jupyter notebooks within your current Quarto document.</li>
+</ol>
+</section>
+<section id="working-with-external-scripts" class="slide level2 smaller">
+<h2>Working With External Scripts</h2>
+<p>Code from an external script can be incorporated into your Quarto document by using the <code>#| file:</code> chunk option. Once included in the Quarto document, the functions or variables created in the script can be used further.</p>
+<ul>
+<li><strong>R:</strong></li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| file: &quot;your-script.R&quot;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true </span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Python:</strong></li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| file: &quot;your-script.py&quot;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="exercise-2" class="slide level2">
 <h2>Exercise</h2>
+<p>The R script <code>do_addition.R</code> and the Python script <code>do_addition.py</code> in the <code>scripts</code> folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.</p>
+<ol type="1">
+<li><p>Complete the provided code (in the course book) to include the <code>do_addition</code> function into your Quarto document.</p></li>
+<li><p>Use the <code>do_addition</code> function to add two numbers of your choice to test whether your previous code was correct!</p></li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_b37aadb8" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="learn-more-1" class="slide level2">
+<h2>Learn More…</h2>
+<ol type="1">
+<li>Use (parts of) an external script <em>within</em> the Quarto document, for example to use objects that were created within that script.</li>
+<li>Run a script before or after rendering a Quarto document to a manuscript: <a href="https://quarto.org/docs/projects/scripts.html">Quarto Docs: Project Scripts</a></li>
+<li>Use code chunks from existing Quarto documents or Jupyter notebooks: <a href="https://cwickham.github.io/whats-new-in-quarto/#/embed-outputs-from-other-documents-1">Quarto v1.4 Release</a>]</li>
+<li>Include entire Quarto documents or Jupyter notebooks within your current Quarto document: <a href="https://quarto.org/docs/authoring/includes.html">Quarto Docs: Includes</a></li>
+</ol>
 <div class="footer footer-default">
 
 </div>
@@ -2697,7 +2767,7 @@ window.QuartoSupport = function () {
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
@@ -2708,7 +2778,7 @@ window.QuartoSupport = function () {
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -2725,7 +2795,7 @@ window.QuartoSupport = function () {
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

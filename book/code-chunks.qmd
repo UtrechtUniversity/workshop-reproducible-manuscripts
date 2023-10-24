@@ -1,7 +1,7 @@
 # Code Chunks {.unnumbered}
 
 ```{=html}
-<iframe width="700" height="650" src="slides/analysis.html"></iframe>
+<iframe width="650" height="500" src="slides/analysis.html"></iframe>
 ```
 
 ## Exercise

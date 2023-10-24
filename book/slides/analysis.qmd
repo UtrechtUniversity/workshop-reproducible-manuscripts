@@ -3,11 +3,14 @@ format:
   revealjs:
     theme: default
     embed-resources: true
+    slide-number: true
+    navigation-mode: linear
+    controls: true
 ---
 
 # Analysis {background-color="#FFCD00"}
 
-## Topics
+# Topics
 
 1. Code Chunks
 2. Inline Code
@@ -205,5 +208,64 @@ countdown(minutes = 10,
 
 # Sourcing Scripts
 
+## The What & Why
+
+Quarto has the option to include code from external files, such as R and Python scripts, `.qmd` or `.ipynb` files.
+
+Separating scripts from the manuscript can help with:
+
+-   preventing manual, error-prone work copy-pasting code from one file to another,
+-   easier debugging of code,
+-   making the Quarto document easier to digest,
+-   adhering to good coding practices to work in a modular fashion.
+
+## Possible Workflows
+
+1. Use (parts of) an external script *within* the Quarto document, for example to use objects that were created within that script.
+2. Run a script before or after rendering a Quarto document to a manuscript.
+3. Use code chunks from existing Quarto documents or Jupyter notebooks.
+4. Include entire Quarto documents or Jupyter notebooks within your current Quarto document.
+
+## Working With External Scripts { .smaller}
+
+Code from an external script can be incorporated into your Quarto document by using the `#| file:` chunk option. Once included in the Quarto document, the functions or variables created in the script can be used further.
+
+- **R:**
+
+````
+```{{r}}
+#| file: "your-script.R"
+#| eval: true 
+```
+````
+
+- **Python:**
+
+````
+```{{python}}
+#| file: "your-script.py"
+```
+````
+
 ## Exercise
 
+The R script `do_addition.R` and the Python script `do_addition.py` in the `scripts` folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.
+
+1.  Complete the provided code (in the course book) to include the `do_addition` function into your Quarto document.
+
+2.  Use the `do_addition` function to add two numbers of your choice to test whether your previous code was correct!
+
+```{r}
+library(countdown)
+
+countdown(minutes = 10,
+          color_background = "#FFCD00")
+```
+
+
+## Learn More...
+
+1. Use (parts of) an external script *within* the Quarto document, for example to use objects that were created within that script.
+2. Run a script before or after rendering a Quarto document to a manuscript: [Quarto Docs: Project Scripts](https://quarto.org/docs/projects/scripts.html)
+3. Use code chunks from existing Quarto documents or Jupyter notebooks: [Quarto v1.4 Release](https://cwickham.github.io/whats-new-in-quarto/#/embed-outputs-from-other-documents-1)]
+4. Include entire Quarto documents or Jupyter notebooks within your current Quarto document: [Quarto Docs: Includes ](https://quarto.org/docs/authoring/includes.html)
