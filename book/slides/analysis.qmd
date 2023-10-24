@@ -241,9 +241,15 @@ Code from an external script can be incorporated into your Quarto document by us
 
 - **Python:**
 
+````md
+```{{.python include="do_addition.py"}}
+```
 ````
-```{{python}}
-#| file: "your-script.py"
+
+````md
+```{{python}
+#| echo: false
+%run do_addition.py
 ```
 ````
 
