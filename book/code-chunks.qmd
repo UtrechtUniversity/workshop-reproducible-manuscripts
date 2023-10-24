@@ -6,7 +6,7 @@
 
 ## Exercise
 
-Refer to the dummy R & Python scripts that have been provided in the `workshop-materials`: 
+Refer to the `dummy.R` or `dummy.py` script that has been provided in the `workshop-materials`: 
 
 - Insert a setup code chunk at the beginning of your document (i.e. below the YAML header) to load the necessary packages.
 
