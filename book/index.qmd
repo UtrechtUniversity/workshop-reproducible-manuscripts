@@ -1,5 +1,17 @@
-# Welcome {.unnumbered}
+# Welcome! {.unnumbered}
 
-This is a Quarto book.
+Open Science practices are becoming central to the way research is conducted. In this workshop, you will learn to set up a reproducible workflow to create a publication-ready manuscript that combines data, R or Python code, text, and references.  
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+We will use the Quarto publishing system in conjunction with R or Python to create a publication-ready manuscript that combines data, code, text, and references. More specifically, you will learn how to: 
+
+- Create a reproducible project (folder) structure
+- Use Markdown syntax effectively for writing text
+- Run analyses in code chunks or cells
+- Manage references using Zotero and Better BibTex for Zotero
+- Render your Quarto project to docx, HTML, and pdf files 
+
+This workflow reduces the amount of human error, improves computational reproducibility and makes updating your scientific manuscript more efficient. 
+
+By the end of the workshop, you will be sufficiently familiar with the tools and components behind a reproducible manunscript, so you can implement the workflow in your own research projects.   
+
+Our workshop material is licensed under a Creative Commons Attribution 4.0 International License. You can view the license on our [GitHub repository](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts).

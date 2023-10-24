@@ -1,7 +1,143 @@
 # Installation & Setup {.unnumbered}
 
-- Quarto (do the full installation just to be safe, not just via RStudio)
-- Quarto & RStudio
-- Quarto & VSCode (there are extensions)
-- Quarto & JupyterLab, no clue just yet
+The installation procedure will differ depending on how you choose to work with the Quarto publishing system. Below we go into the following 2 situations:
 
+1. Using Quarto with Python or R in Visual Studio Code
+2. Using Quarto with R in RStudio
+
+It is also possible to use Quarto with Python in Jupyter notebooks. We do not go into that situation in this workshop for now. Just know that it is possible by installing a Python installation, Jupyter lab (e.g., via Anaconda) and Quarto ([see Quarto documentation](https://quarto.org/docs/get-started/hello/jupyter.html)).
+
+:::{.callout-note}
+Besides R and Python, Quarto can also work with other programming languages, such as Julia or Observable, and it can interact with other software as well, like Neovim and simple Text editors.
+:::
+
+::: panel-tabset 
+
+# 1. Quarto in VS Code (R or Python)
+
+## 1. Install Visual Studio Code
+Install Visual Studio Code (VS Code) using the [set-up instructions for your operating system](https://code.visualstudio.com/docs/setup/setup-overview).
+
+1. Download VS Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
+2. Walk through the installation steps. The default installation location is usually fine. If you have administrator rights, we recommend to Add VS Code to the PATH if you're using Windows.
+
+## 2. Set up Python and/or R for use in VS Code
+1. R: Follow [the instructions here](https://code.visualstudio.com/docs/languages/r#_getting-started) for installing R and using it in VS Code. 
+   a. In VS Code, you can open an R terminal to install the `languageserver` package.
+2. Python: Follow [the instructions here](https://code.visualstudio.com/docs/python/python-tutorial#_install-a-python-interpreter) for installing a Python interpreter, or see the [installation instructions](https://utrechtuniversity.github.io/workshop-introduction-to-python/installation-and-setup.html#install-python) in our Introduction to Python workshop.
+   a. Be sure to also install the Jupyter extension in VS Code if you wish to work with Jupyter notebooks (`.ipynb`).
+
+## 3. Install Quarto
+1. Download Quarto from [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
+2. Open the msi/executable file. Answer "Yes" to the pop-up question "Do you want to allow this app to make changes to your device?". Then start the set-up wizard.
+3. Choose `Install for all users`. If you do not have administrator rights, select `Install just for you`.
+4. Choose the installation location, usually the default proposed location is fine.
+5. Installation will start. After installation, click Finish.
+
+## 4. Make VS Code, Quarto and R/Python talk to each other
+Now that everything is installed, we need to make sure VS Code can use Quarto and Python/R. 
+
+1. Open VS Code.
+2. Open the Extensions view in VS Code (`Ctrl+Shift+X` on Windows and Linux, `Cmd+Shift+X` on macOS)
+3. Install the [Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) from the Extensions view in VS Code.
+4. If you want to use Python in VS Code: 
+   a. From the Extensions view in VS Code, install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
+   b. Set the Python interpreter: Open the command palette in VS Code (`Ctrl+Shift+P` on Windows and Linux, `Cmd+Shift+P` on macOS), type "Python: Select Interpreter", and select the relevant Python interpreter from the interpreters that VS Code can find.
+5. If you want to use R in VS Code: install the [R extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) from the extensions view in VS Code.
+6. Check whether Quarto is detected:
+   a. Open a new terminal: Terminal > New terminal.
+   b. Type `quarto --version`
+   c. If a version number appears, Quarto is detected.
+7. Check whether Python is detected: 
+   a. Open a new terminal or use the one that you used in step 6a.
+   b. Type `python --version`
+   c. If a version number appears, Python is detected.
+8. Check whether R is detected: if you can open an R terminal, it shows you the R version and R is detected successfully.
+
+# 2. Quarto in Rstudio (R)
+
+## 1. Install R and Rstudio
+
+If you do not yet have an installation for R and Rstudio, you need to install them on your device.
+
+1. If you have a personal device with administrator/installation rights:
+   a. Install R from [https://cran.rstudio.com/](https://cran.rstudio.com/)
+   b. Install Rstudio from [https://posit.co/download/rstudio-desktop/#download](https://posit.co/download/rstudio-desktop/#download)
+2. If you have a Utrecht University managed device:
+   a. Install the `R for Windows` suite from the Software Center. It should contain both R and Rstudio. 
+   b. Check the installation. R packages on a UU laptop are usually installed on a so-called 'mounted' drive. This causes problems with the performance. Check the installation as follows:
+      - Open RStudio.
+      - Write the following line of code in your console: `.libPaths()`, and press enter to execute.
+      - If the response starts with `//` or `\\`, you are installing on a mounted drive. Follow the [steps below](#mounted-drive) to change the installation location.
+3. If you already have an existing R and RStudio installation:
+   a. Check which version of RStudio you have installed: Go to `Help` > `About RStudio`.
+   b. If your RStudio version is older than `v2022.07`, then you should update it. Quarto recommends using the latest version of RStudio (currently v.2023.06). 
+
+## 2. Install Quarto and R Markdown
+
+1. In the RStudio console, type `install.packages("rmarkdown")` and `install.packages("quarto")`
+2. Load both packages with `library(rmarkdown)` and `library(quarto)`
+3. Restart RStudio. 
+4. Check whether Quarto is detected: go to the Terminal (next to the Console) and type `quarto --version`. Alternatively, go to `File` > `New project` > `New directory` and check whether the Quarto outputs are presented as options (Quarto project, Quarto website, Quarto blog, Quarto book)
+
+## Troubleshooting
+
+### Packages are being installed on a mounted drive {#mounted-drive}
+
+This can cause various errors, and even if everything goes right, installing new packages takes ages.
+
+Solution 1: There is a solution to prevent problems with mounted drives for applications 
+like R, RStudio and Office. Read more about the solution on [intranet](https://intranet.uu.nl/en/current-affairs/announcements/would-you-make-your-solis-laptop-work-more-efficiently).
+
+Solution 2:
+
+- Create a folder `R-packages` on a local drive. 
+- Copy the location to that drive. For example: `C:/Users/User/R-packages`.
+- Run the following line of code: `file.edit(file.path("~", ".Rprofile"))`
+- Paste `.libPaths("C:/Users/User/R-packages")` in the editor and save the file.
+- Restart your R session
+- Click on `Packages`>`Install`. Is `Install to library` pointing to 
+`C:/Users/User/R-packages`?
+- If not: check if the path is correctly spelled. Try inverting the slashes 
+(`\` instead of `/`). You may need to use double slashes (`\\` or `//`).
+- Tick 'source on save', click save, and check `Packages`>`Install` again. 
+
+### "Unable to move temporary installation" (Windows error)
+
+Do you get issues like this: 
+
+```
+> install.packages("tibble")
+Installing package into ‘C:/Users/UserName/R’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.4/tibble_1.4.2.zip'
+Content type 'application/zip' length 172649 bytes (168 KB)
+downloaded 168 KB
+
+package ‘tibble’ successfully unpacked and MD5 sums checked
+Warning in install.packages :
+  unable to move temporary installation ‘C:\Users\UserName\R\file18b813387562\tibble’ to ‘C:\Users\UserName\R\tibble’
+The downloaded binary packages are in
+C:\Users\UserName\AppData\Local\Temp\RtmpYh5ogU\downloaded_packages
+```
+
+Check for the line **unable to move temporary installation**. Your virus 
+scanner might be blocking the installation of tidyverse.
+
+The solution 
+([found here](https://code.adonline.id.au/unable-to-move-temporary-installation-r/)) 
+is to enter:
+
+```trace(utils:::unpackPkgZip, edit=TRUE)```
+
+You should see:
+```
+Tracing function "unpackPkgZip" in package "utils (not-exported)"
+[1] "unpackPkgZip"
+```
+
+And a file should open. Change `0.5` in line 142 to `2.5`, save the file, and try 
+installing the package again.
+
+
+:::

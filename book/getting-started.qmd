@@ -1,20 +1,24 @@
 # Getting Started {.unnumbered}
 
-**1. Create a project in RStudio or VSCode**
+::: {.panel-tabset}
 
-- In RStudio, click File -> New Project -> New Directory -> New Project. 
+## R
 
-- Give your project directory a clear name, preferably without spaces.
+**1. Create a Project in RStudio**
 
-- Make sure your project directory folder is created (as a subdirectory) in an accessible place on your system.
+- In RStudio, click _File_ -> _New Project_ -> _New Directory_ -> _New Project_. 
 
-- Select `Open project in a new session`.
+- Give your project directory a clear name, without using spaces. For example, `my-reproducible-manuscript`.
 
-**2. Create a project structure suited for reproducible work**
+- Make sure your project will be created (as a subdirectory) in an accessible place on your system.
 
-- You can generate a directory structure by running the following piece of code in you R console:
+- Check the _Open in new session_ option.
 
-This is RSTudio:
+- Click _Create Project_.
+
+**2. Structure your Project for reproducible work**
+
+- Generate a directory structure by running the following piece of code in the _Console_ of RStudio:
 
 ```{r}
 #| eval: false
@@ -24,32 +28,153 @@ dir.create("docs", recursive = TRUE)
 dir.create("results", recursive = TRUE)
 dir.create("R", recursive = TRUE)
 
+# install.packages("usethis")
 library(usethis)
 
 usethis::use_readme_md(open = rlang::is_interactive())
 usethis::use_mit_license(copyright_holder = NULL)
 ```
 
-**3. Place your data in the correct folder**
+**3. Get the data for your Project**
+
+- Obtain the data and place it in the correct folder by running the following piece of code in the _Console_ of RStudio:
 
 ```{r}
 #| eval: false
 
+# install.packages("palmerpenguins")
 library(palmerpenguins)
 
 write.csv(palmerpenguins::penguins_raw, "data/data.csv")
 ```
 
-**4. Create a R Markdown document for your manuscript.**
+**4. Create a Quarto document for your manuscript.**
 
-- In RStudio, click File -> New File -> R Markdown
+- In RStudio, click _File_ -> _New File_ -> _Quarto Document_
 
-- Click on 'From Template' and scroll through the available options and select the **MDPI Journal Article**
+- Give your document a Title, such as `My Reproducible Manuscript`.
 
-- Name the directory for this document (and associated files) as `manuscript` and ensure that it will be located in the `docs` folder.
+- Deselect the _Use visual markdown editor_ option.
 
-**5. Familiarize yourself with the R Markdown document and associated files**
+- Click _Create_.
 
-- YAML Header
-- Sections
-- Bibliography 
+**6. Render the Quarto document to HTML**
+
+- Click the _Render_ button in the menu bar.
+
+- Give the Quarto document a clear name, without using spaces. For example, `my-reproducible-manuscript`.
+
+- Save the Quarto document in the `docs` folder you recently created.
+
+- Once everything has been saved correctly, click the _Render_ button in the menu bar again.
+
+- The rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio.
+
+7. **Download Other Workshop Materials**
+
+- Right-click on the following link and select _Save Link As..._: [workshop-materials.zip](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip)
+
+- Extract the contents of the zipped file.
+
+- Copy only the `do-addition.R` script into the `scripts` folder of your new project.
+
+## Python
+
+1. **Create a new folder on your computer**
+
+- Name this folder `my-reproducible-manuscript` and make sure it is in an accessible location on your system. 
+
+2. **Open the newly created folder in Visual Studio Code**
+
+- In VS Code, click _File_ -> _Open Folder..._ -> `my-reproducible-manuscript`
+
+3. **Structure your Project for reproducible work**
+
+- In VS Code, click _Terminal_ -> _New Terminal_
+
+- In the Terminal, type `python`. If you see `>>>` pop up in the Terminal, then you can proceed.
+
+- Generate a directory structure by running the following piece of code in the Terminal:
+
+```
+import os
+
+os.mkdir("data")
+os.mkdir("docs")
+os.mkdir("results")
+os.mkdir("scripts")
+```
+You might want to run it line-by-line.
+
+4. **Get the data for your Project**
+
+- Obtain the data and place it in the correct folder by running the following piece of code in the Terminal:
+
+```
+pip install palmerpenguins
+
+import pandas as pd
+
+from palmerpenguins import load_penguins
+
+penguins = load_penguins()
+
+penguins.to_csv('data/data.csv')
+```
+
+5. **Create a Quarto document for your manuscript.**
+
+- In the Command Palette of VS Code, type `> Quarto: New Document`.
+
+- Give your new document a Title, such as `My Reproducible Manuscript`.
+
+6. **Copy the following block of text + code into your Quarto document.**
+
+````md
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{{python}}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{{python}}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+````
+
+7. **Render the Quarto document to HTML**
+
+- Save the Quarto document in the `docs` folder you recently created.
+
+- Give the Quarto document a clear name, without using spaces. For example, `my-reproducible-manuscript`.
+
+- In VS Code, click _Terminal_ -> _Split Terminal_
+
+- In the newly created Terminal, run the following command:
+
+```
+quarto render my-reproducible-manuscript.qmd
+```
+
+- The rendered, HTML copy of your document will appear in your web browser or alongside the editor in VS Code.
+
+8. **Download Other Workshop Materials**
+
+- Right-click on the following link and select _Save Link As..._: [workshop-materials.zip](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip)
+
+- Extract the contents of the zipped file.
+
+- Copy only the `do-addition.py` script into the `scripts` folder of your new project.
+
+:::

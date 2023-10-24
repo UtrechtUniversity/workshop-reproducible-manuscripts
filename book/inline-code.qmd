@@ -1,0 +1,17 @@
+# Inline Code {.unnumbered}
+
+## Slides
+
+```{=html}
+<iframe width="650" height="500" src="slides/analysis.html"></iframe>
+```
+
+## Exercise
+
+Take a couple of minutes to play around with the possibilities of _inline code_:
+
+- Do a simple calculation such as `r knitr::inline_expr("25 + 25")` within your text.
+
+- Report the number of "Gentoo" and/or "Chinstrap" species of penguins within the data (hint: refer to the example in the slides).
+
+- Try out one other (simple) computation or calculation!

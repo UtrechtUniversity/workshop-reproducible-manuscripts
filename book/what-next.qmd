@@ -1,0 +1,27 @@
+# What Next? {.unnumbered}
+
+## What To Learn?
+
+Dynamic Document Generation is one of the first steps towards reproducible manuscripts. The following topics are worth exploring to round of this area knowledge and skill:
+
+- **Dependency Management**
+
+<iframe src="https://player.vimeo.com/video/464028630?h=dfa4f034e6" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/464028630">9. Dependencies</a> from <a href="https://vimeo.com/user524978">Barboletas</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+- **Version Control**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qXfbnz2id8A?si=GDgzVclEGr3347sm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+- **Archiving & Publishing**
+
+<iframe src="https://player.vimeo.com/video/463947879?h=21dc14e191" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/463947879">11. Archive with Zenodo</a> from <a href="https://vimeo.com/user524978">Barboletas</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+## Where To Find Us
+
+-	[Programming Café](https://www.uu.nl/en/research/research-data-management/walk-in-hours-workshops/programming-cafe): A community event where you can work on your own projects for a large part of the session. Somewhere in between, we will do a small tutorial on useful programming tips/trick/practices. The Programming Café occurs on a monthly basis, usually the first Thursday of every month. 
+ 
+- [Walk-In Hours for Data & Software Support](https://www.uu.nl/en/research/research-data-management/walk-in-hours-workshops/walk-in-hours-research-data-software): This takes place every Monday from 15:00 to 17:00 at the University Library in the Science Park. We are available to help with any questions related to research data management and/or programming. 
+
+- You can check out our other workshops on the [RDM Support website](https://www.uu.nl/en/research/research-data-management/walk-in-hours-workshops/programming-cafe). 

@@ -1,0 +1,23 @@
+# Code Chunks {.unnumbered}
+
+```{=html}
+<iframe width="650" height="500" src="slides/analysis.html"></iframe>
+```
+
+## Exercise
+
+Refer to the dummy R & Python scripts that have been provided in the `workshop-materials`: 
+
+- Insert a setup code chunk at the beginning of your document (i.e. below the YAML header) to load the necessary packages.
+
+- Create a code chunk in the `Results` section of your document
+
+- Copy a piece/section of the dummy script and paste it into the code chunk.
+
+- Run the code chunk and see if it works alright.
+
+- Repeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.
+
+- Render the document and check the output.
+
+- Play around with the code chunk options and re-render the document.

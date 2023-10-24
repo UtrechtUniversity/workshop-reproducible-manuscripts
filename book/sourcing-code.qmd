@@ -1,0 +1,87 @@
+# Sourcing Code {.unnumbered}
+
+```{=html}
+<iframe width="650" height="500" src="slides/analysis.html"></iframe>
+```
+
+## Exercises
+
+The R script `do_addition.R` and the Python script `do_addition.py` in the `scripts` folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.
+
+1.  Complete the following code to include the `do_addition` function into your Quarto document:
+
+::: panel-tabset
+
+### R
+````
+```{{r}}
+#| label: Include the do_addition.R function in the current file
+# Replace this line with your answer
+```
+````
+### Python
+````
+```{{python}}
+#| label: Include the do_addition.py function in the current file
+# Replace this line with your answer
+```
+````
+:::
+
+2.  Use the `do_addition` function to add two numbers of your choice to test whether your answer in a was correct!
+
+::: panel-tabset
+
+### R
+````
+```{{r}}
+#| label: perform an addition to check whether the sourcing worked
+# Replace this line with your answer
+```
+````
+#### Python
+````
+```{{python}}
+#| label: perform an addition to check whether the sourcing worked
+# Replace this line with your answer
+```
+````
+:::
+
+## Solutions
+
+::: panel-tabset
+### R
+````
+```{{r}}
+#| label: Include the do_addition.R function in the current file
+#| file: "scripts/do_addition.R"
+```
+```` 
+and
+````
+```{{r}}
+#| label: perform an addition to check whether the sourcing worked
+a <- 4
+b <- 3
+do_addition(a, b)
+```
+````
+
+### Python
+````
+```{{python}}
+#| label: Include the do_addition.py function in the current file
+#| file: "scripts/do_addition.py"
+```
+```` 
+and
+````
+```{{python}}
+#| label: perform an addition to check whether the sourcing worked
+a = 4
+b = 3
+do_addition(a, b)
+```
+````
+:::

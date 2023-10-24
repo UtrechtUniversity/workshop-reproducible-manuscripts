@@ -1,92 +1,56 @@
 # Referencing {.unnumbered}
 
-# Referencing
-
-Now that we know how to write in Markdown and run analyses in code chunks, let's learn about referencing using BibTex keys!
-
-## Working with BibTex keys
-
-We will work with with bibliographies in the form of .bib files. .bib files stand for _BibTeX Bibliographical Database_ files. They are text files which contain a list of references in the form of BibTex keys.
-
-A typical BibTex key might look like the following:
-
+```{=html}
+<iframe width="650" height="500" src="slides/writing.html"></iframe>
 ```
-@article{nash51,
-  author  = "Nash, John",
-  title   = "Non-cooperative Games",
-  journal = "Annals of Mathematics",
-  year    = 1951,
-  volume  = "54",
-  number  = "2",
-  pages   = "286--295"
-}
-```
-
-Here is an example BibTex key for a reference used in this workshop:
-
-```
-@misc{RMarkdownWritingReproducible,
-	title = {{RMarkdown} for writing reproducible scientific papers},
-	url = {https://libscie.github.io/rmarkdown-workshop/handout.html},
-	urldate = {2023-04-18},
-	file = {RMarkdown for writing reproducible scientific papers:C\:\\Users\\Moope001\\Zotero\\storage\\SJITSZZI\\handout.html:text/html},
-}
-```
-
-In practice, your .bib file should be updated along the way to include the BibTex keys for all your references. You can cite a specific reference using the the `@` character with the key/idenitifier in the first line of the entry. 
-
-For the above examples, it would be `@nash51` and `@RMarkdownWritingReproducible`
 
 ### Exercise
 
-For this exercise, we will update our .bib file manually and making a citation. Note that this workflow can be made more efficient using Zotero and BetterBibTex for Zotero as described in the section after the exercise.
+We're assuming installation of Zotero Desktop, Zotero Connector, and Better BibTex for Zotero were completed successfully.
 
-- Search for the paper related to the Palmer Penguins data in Google Scholar:
+1. Open **Zotero Desktop**
 
-_Horst, A. M., Hill, A. P., & Gorman, K. B. (2022). Palmer Archipelago Penguins Data in the palmerpenguins R Package-An Alternative to Anderson’s Irises. R JOURNAL, 14(1), 244-254._
+- log into your account
+- create a new collection for your project, for example: `my-reproducible-manuscript`
 
-- Find the BibTex key for this paper and copy it into your existing .bib file.
+2. Open your **Web Browser**
 
-- Cite the Palmer Penguins paper in your manuscript.
+- double-check that you can find the **Zotero Connector** in your browser
+- run a web / Google Scholar search for "Allison Horst PalmerPenguins Package"
+- use the Zotero Connector to save the reference to your collection
 
-- Render the document and see how it looks.
+3. In **Zotero Desktop**,
 
-## Using Zotero & Better BibTex for Zotero
+- right-click your collection and select _Export Collection_
+- for the **Format**, select _Better BibTex_
+- click the option to _Keep updated_
+- provide the file name as `references` and **save it in the same folder as your Quarto document**
 
-1. **Set up Zotero**
+4. In **RStudio** or **VS Code**,
 
-    - Install Zotero on your computer
+- update the YAML to include the bibliography:
 
-    - Install the Zotero connector with Chrome (unless you want to input your papers manually)
+```
+---
+title: "My Reproducible Manuscript"
+format: html
+bibliography: references.bib
+---
+```
 
-    - Create a Zotero account (Zotero webpage)
+5. **Insert a Citation**
 
-    - Sync your account with your local Zotero installation (in Zotero preferences -> sync)
+- in the text of your Quarto document, insert the _PalmerPenguins_ citation (hint: refer to the slides and your .bib file to figure how to format the citation)
 
-2. **Install the “Better Bibtex” plugin**
+- alternatively, when using the Visual Editor option - you can use the citation dialog/option to insert citations directly.
 
-    - Download the Zotero-better-bibtex-6.7.75.xpi file from here: [https://github.com/retorquere/zotero-better-bibtex/releases/tag/v6.7.75](https://github.com/retorquere/zotero-better-bibtex/releases/tag/v6.7.75)
-    
-    - Follow the installation instructions here: [https://retorque.re/zotero-better-bibtex/installation/](https://retorque.re/zotero-better-bibtex/installation/)
+- render the document
 
-3. **Set up your library and collect bibliography material**
+6. **Repetition**
 
-    - Create a new folder inside your Zotero library to collect all the materials relevant to your study
-    
-    - Collect studies in your new folder using Zotero connector or adding the material manually to your library
+- repeat Step 2 with another reference
+- repeat Step 5 to insert the new reference
+- if you did a brackted citation before, do an in-text citation this time (or vice versa)
 
-4. **Create a .bib file (bibliography file)**
+**Note:* Steps 1, 3, 4 can be skipped. These were a one-time thing.
 
-    - In your Zotero local app, right click on your new folder -> Export Collection
-    
-    - Choose format BibText and click Okay
-
-    - Choose a destination folder. The destination folder MUST be the same of your R Markdown file
-
-5. **Include the .bib file into your R Markdown and quote studies**
-
-    - In the YAML lines (the ones between ———) of your R markdown template look for the keyword “bibliography”. Write your just created .bib file (without quotes) after “:”
-
-    - When you need to quote a material, look inside the bib file, look at the first line after the very first left curly bracket “{“ and, in the markdown text, write @<quote_reference>, where <quote_reference> is the line of text after “{“. NOTE: this very first line of text does not appear in the bibliography printed on your final paper, it is a sort of nickname you use to quote paper and it can be set up to whatever word/sentence you like (but try to avoid empty space and use underscores _ instead)
-
-    - Alternatively, when using the Visual Editor option - you can use the citation dialog/option to insert citations directly.

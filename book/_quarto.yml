@@ -8,24 +8,31 @@ book:
   date: last-modified
   chapters:
     - index.qmd
-    - installation-and-setup.qmd
+    - acknowledgements.qmd
+    - schedule.qmd
+    - part: Preparation
+      chapters:
+        - installation-and-setup.qmd
+        - workshop-materials.qmd
     - introduction.qmd
     - getting-started.qmd
     - part: Writing
       chapters:
-        - writing.qmd
+        - markdown-syntax.qmd
         - referencing.qmd
-    - part: Analysis
+    - part: Code
       chapters:
-        - analysis.qmd
-    - part: Bonus
-      chapters:
-        - dependency-management.qmd
-        - version-control.qmd
-        - archiving-and-publishing.qmd
+        - code-chunks.qmd 
+        - inline-code.qmd
+        - sourcing-code.qmd
+    - rendering.qmd
+    - what-next.qmd
     - references.qmd
   repo-url: https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts
   repo-actions: [edit]
+
+  sidebar:
+    logo: images/quarto-hex-logo.png
 
 bibliography: references.bib
 

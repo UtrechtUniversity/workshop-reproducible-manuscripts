@@ -1,8 +1,15 @@
 # Introduction {.unnumbered}
 
-- talk about research compendiums and executable articles
-- links to the relevant articles: this could also be given as pre-workshop reading 
-
 ```{=html}
-<iframe width="1050" height="700" src="slides/test-prez.html"></iframe>
+<iframe width="650" height="500" src="slides/introduction.html"></iframe>
 ```
+
+## Relevant Reading:
+
+1. Lasser, J. Creating an executable paper is a journey through Open Science. Commun Phys 3, 143 (2020). https://doi.org/10.1038/s42005-020-00403-4
+
+2. Composing reproducible manuscripts using R Markdown: https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown
+
+3. Van Lissa, C. J., Brandmaier, A. M., Brinkman, L., Lamprecht, A., Peikert, A., , Struiksma, M. E., & Vreede, B. WORCS: A Workflow for Open Reproducible Code in Science. Data Science, 2021. Data Science, vol. 4, no. 1, pp. 29-49. DOI: https://doi.org/10.3233/DS-210031
+
+4. Research Compendia: https://the-turing-way.netlify.app/reproducible-research/compendia

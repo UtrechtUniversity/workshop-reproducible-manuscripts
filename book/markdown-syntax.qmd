@@ -1,0 +1,33 @@
+# Markdown Syntax {.unnumbered}
+
+## Slides
+
+```{=html}
+<iframe width="650" height="500" src="slides/writing.html"></iframe>
+```
+
+## Exercise
+
+Recreate the following paragraph in your Quarto document using Markdown:
+
+```
+Meet Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.
+
+Meet the penguins
+
+Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst.
+
+https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png
+
+The penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
+
+Data
+
+Data were collected and made available by Dr. Kristen Gorman https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php and the Palmer Station, Antarctica LTER, https://pallter.marine.rutgers.edu/ a member of the Long Term Ecological Research Network. https://lternet.edu/
+```
+
+## What It Should Look Like
+
+![quarto-penguins](https://quarto.org/docs/get-started/hello/images/rstudio-text.png)

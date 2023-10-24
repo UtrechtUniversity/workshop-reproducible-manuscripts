@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./writing.html" rel="next">
+<link href="./markdown-syntax.html" rel="next">
 <link href="./introduction.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -121,7 +121,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/quarto-hex-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Writing Reproducible Manuscripts in R &amp; Python</a> 
         <div class="sidebar-tools-main">
@@ -139,15 +142,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome</span></a>
+ <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
         <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Preparation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./installation-and-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installation &amp; Setup</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop-materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop Materials</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./introduction.html" class="sidebar-item-text sidebar-link">
@@ -162,17 +194,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Writing</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Writing</span></a>
+  <a href="./markdown-syntax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown Syntax</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -185,25 +217,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Analysis</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Analysis</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Bonus</span></a>
+ <span class="menu-text">Code</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -211,24 +226,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dependency-management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dependency Managment</span></a>
+  <a href="./code-chunks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./version-control.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Version Control</span></a>
+  <a href="./inline-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inline Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./archiving-and-publishing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archiving &amp; Publishing</span></a>
+  <a href="./sourcing-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sourcing Code</span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rendering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rendering</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./what-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What Next?</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -263,47 +290,165 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p><strong>1. Create a project in RStudio or VSCode</strong></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><strong>1. Create a Project in RStudio</strong></p>
 <ul>
-<li><p>In RStudio, click File -&gt; New Project -&gt; New Directory -&gt; New Project.</p></li>
-<li><p>Give your project directory a clear name, preferably without spaces.</p></li>
-<li><p>Make sure your project directory folder is created (as a subdirectory) in an accessible place on your system.</p></li>
-<li><p>Select <code>Open project in a new session</code>.</p></li>
+<li><p>In RStudio, click <em>File</em> -&gt; <em>New Project</em> -&gt; <em>New Directory</em> -&gt; <em>New Project</em>.</p></li>
+<li><p>Give your project directory a clear name, without using spaces. For example, <code>my-reproducible-manuscript</code>.</p></li>
+<li><p>Make sure your project will be created (as a subdirectory) in an accessible place on your system.</p></li>
+<li><p>Check the <em>Open in new session</em> option.</p></li>
+<li><p>Click <em>Create Project</em>.</p></li>
 </ul>
-<p><strong>2. Create a project structure suited for reproducible work</strong></p>
+<p><strong>2. Structure your Project for reproducible work</strong></p>
 <ul>
-<li>You can generate a directory structure by running the following piece of code in you R console:</li>
+<li>Generate a directory structure by running the following piece of code in the <em>Console</em> of RStudio:</li>
 </ul>
-<p>This is RSTudio:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"data"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"docs"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"results"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"R"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_readme_md</span>(<span class="at">open =</span> rlang<span class="sc">::</span><span class="fu">is_interactive</span>())</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_mit_license</span>(<span class="at">copyright_holder =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("usethis")</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_readme_md</span>(<span class="at">open =</span> rlang<span class="sc">::</span><span class="fu">is_interactive</span>())</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_mit_license</span>(<span class="at">copyright_holder =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>3. Place your data in the correct folder</strong></p>
+<p><strong>3. Get the data for your Project</strong></p>
+<ul>
+<li>Obtain the data and place it in the correct folder by running the following piece of code in the <em>Console</em> of RStudio:</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(palmerpenguins<span class="sc">::</span>penguins_raw, <span class="st">"data/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("palmerpenguins")</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(palmerpenguins<span class="sc">::</span>penguins_raw, <span class="st">"data/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>4. Create a R Markdown document for your manuscript.</strong></p>
+<p><strong>4. Create a Quarto document for your manuscript.</strong></p>
 <ul>
-<li><p>In RStudio, click File -&gt; New File -&gt; R Markdown</p></li>
-<li><p>Click on ‘From Template’ and scroll through the available options and select the <strong>MDPI Journal Article</strong></p></li>
-<li><p>Name the directory for this document (and associated files) as <code>manuscript</code> and ensure that it will be located in the <code>docs</code> folder.</p></li>
+<li><p>In RStudio, click <em>File</em> -&gt; <em>New File</em> -&gt; <em>Quarto Document</em></p></li>
+<li><p>Give your document a Title, such as <code>My Reproducible Manuscript</code>.</p></li>
+<li><p>Deselect the <em>Use visual markdown editor</em> option.</p></li>
+<li><p>Click <em>Create</em>.</p></li>
 </ul>
-<p><strong>5. Familiarize yourself with the R Markdown document and associated files</strong></p>
+<p><strong>6. Render the Quarto document to HTML</strong></p>
 <ul>
-<li>YAML Header</li>
-<li>Sections</li>
-<li>Bibliography</li>
+<li><p>Click the <em>Render</em> button in the menu bar.</p></li>
+<li><p>Give the Quarto document a clear name, without using spaces. For example, <code>my-reproducible-manuscript</code>.</p></li>
+<li><p>Save the Quarto document in the <code>docs</code> folder you recently created.</p></li>
+<li><p>Once everything has been saved correctly, click the <em>Render</em> button in the menu bar again.</p></li>
+<li><p>The rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio.</p></li>
 </ul>
+<ol start="7" type="1">
+<li><strong>Download Other Workshop Materials</strong></li>
+</ol>
+<ul>
+<li><p>Right-click on the following link and select <em>Save Link As…</em>: <a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip">workshop-materials.zip</a></p></li>
+<li><p>Extract the contents of the zipped file.</p></li>
+<li><p>Copy only the <code>do-addition.R</code> script into the <code>scripts</code> folder of your new project.</p></li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li><strong>Create a new folder on your computer</strong></li>
+</ol>
+<ul>
+<li>Name this folder <code>my-reproducible-manuscript</code> and make sure it is in an accessible location on your system.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Open the newly created folder in Visual Studio Code</strong></li>
+</ol>
+<ul>
+<li>In VS Code, click <em>File</em> -&gt; <em>Open Folder…</em> -&gt; <code>my-reproducible-manuscript</code></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Structure your Project for reproducible work</strong></li>
+</ol>
+<ul>
+<li><p>In VS Code, click <em>Terminal</em> -&gt; <em>New Terminal</em></p></li>
+<li><p>In the Terminal, type <code>python</code>. If you see <code>&gt;&gt;&gt;</code> pop up in the Terminal, then you can proceed.</p></li>
+<li><p>Generate a directory structure by running the following piece of code in the Terminal:</p></li>
+</ul>
+<pre><code>import os
+
+os.mkdir("data")
+os.mkdir("docs")
+os.mkdir("results")
+os.mkdir("scripts")</code></pre>
+<p>You might want to run it line-by-line.</p>
+<ol start="4" type="1">
+<li><strong>Get the data for your Project</strong></li>
+</ol>
+<ul>
+<li>Obtain the data and place it in the correct folder by running the following piece of code in the Terminal:</li>
+</ul>
+<pre><code>pip install palmerpenguins
+
+import pandas as pd
+
+from palmerpenguins import load_penguins
+
+penguins = load_penguins()
+
+penguins.to_csv('data/data.csv')</code></pre>
+<ol start="5" type="1">
+<li><strong>Create a Quarto document for your manuscript.</strong></li>
+</ol>
+<ul>
+<li><p>In the Command Palette of VS Code, type <code>&gt; Quarto: New Document</code>.</p></li>
+<li><p>Give your new document a Title, such as <code>My Reproducible Manuscript</code>.</p></li>
+</ul>
+<ol start="6" type="1">
+<li><strong>Copy the following block of text + code into your Quarto document.</strong></li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <span class="ot">&lt;https://quarto.org&gt;</span>.</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Running Code</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>You can add options to executable code like this</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>The <span class="in">`echo: false`</span> option disables the printing of code (only output is displayed).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="7" type="1">
+<li><strong>Render the Quarto document to HTML</strong></li>
+</ol>
+<ul>
+<li><p>Save the Quarto document in the <code>docs</code> folder you recently created.</p></li>
+<li><p>Give the Quarto document a clear name, without using spaces. For example, <code>my-reproducible-manuscript</code>.</p></li>
+<li><p>In VS Code, click <em>Terminal</em> -&gt; <em>Split Terminal</em></p></li>
+<li><p>In the newly created Terminal, run the following command:</p></li>
+</ul>
+<pre><code>quarto render my-reproducible-manuscript.qmd</code></pre>
+<ul>
+<li>The rendered, HTML copy of your document will appear in your web browser or alongside the editor in VS Code.</li>
+</ul>
+<ol start="8" type="1">
+<li><strong>Download Other Workshop Materials</strong></li>
+</ol>
+<ul>
+<li><p>Right-click on the following link and select <em>Save Link As…</em>: <a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip">workshop-materials.zip</a></p></li>
+<li><p>Extract the contents of the zipped file.</p></li>
+<li><p>Copy only the <code>do-addition.py</code> script into the <code>scripts</code> folder of your new project.</p></li>
+</ul>
+</div>
+</div>
+</div>
 
 
 
@@ -548,8 +693,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./writing.html" class="pagination-link">
-        <span class="nav-page-text">Writing</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./markdown-syntax.html" class="pagination-link">
+        <span class="nav-page-text">Markdown Syntax</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

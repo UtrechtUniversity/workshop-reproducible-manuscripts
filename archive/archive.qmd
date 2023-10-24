@@ -1,0 +1,124 @@
+# Archived Notes About Sourcing Code
+
+## 1. Use an external script
+
+::: panel-tabset
+
+### R
+
+You can include the code from an existing script in your Quarto document by using the `#| file:` chunk option. This includes the code in the Quarto document, which can then be used further.
+
+```{{{r}}}
+#| file: "your-script.R"
+#| eval: true 
+```
+
+#### Run sections of code one by one
+
+In R, it is also possible to use specific *sections* from a script. This is handy when the script contains multiple functions or anaysis steps that you want to execute step by step.
+
+The following instructions were adjusted from the [R markdown cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/read-chunk.html):
+
+1.  **Include section indicators in your code.** These section indicators allow us to select which parts of the R script to run in a specific Quarto code chunk:
+```r
+# Content of your-script-with-chunks.R
+## ---- test-a --------
+1 + 1
+
+## ---- test-b --------
+if (TRUE) {
+  plot(cars)
+}
+```
+
+2.  **Read the chunks from the script into your Quarto file:**
+````
+```{{r}}
+#| include: false
+#| cache: false
+knitr::read_chunk('your-script-with-chunks.R')
+```
+````
+3.  **Execute the chunks that you want to execute from the external script in an empty labelled code chunk:**
+````
+```{{r}}
+#| label: test-a
+```
+````
+::: callout-tip
+If your external code also contains *functions*, instead of only directly executable code, you should in step 2 `source` the file instead of reading the individual chunks!
+````
+```{{r}}
+#| file: "scripts/plot-data.R"
+```
+````
+:::
+
+### Python
+
+You can include the code from an existing script in your Quarto document by using the `#| file:` chunk option. This includes the code in the Quarto document, which can then be used further.
+````
+```{{python}}
+#| file: "your-script.py"
+```
+````
+:::
+
+## 2. Run a script before or after rendering
+
+You can run a script before or after rendering a Quarto document or project [in 2 ways](https://quarto.org/docs/projects/scripts.html):
+
+1.  Run a script via the terminal:
+
+```shell
+quarto run your-script.py
+```
+
+2.  Include the script(s) in the project yaml:
+
+```yaml        
+project:
+  type: website
+  pre-render: prepare.py
+  post-render: 
+    - compress.ts
+    - fix-links.py
+```
+
+::: callout-note
+These kinds of scripts should perform some *independent* preparatory or finishing work, for which the objects do not have to be available in the Quarto document itself. 
+If you want to use objects from an R or Python script within the Quarto document, proceed to the next step!
+:::
+
+## 3. Use code chunks from another Quarto document
+
+You can also reuse code chunks from existing *Quarto* files (`.qmd`) or *Jupyter notebooks* (`.ipynb`). This feature is [new Quarto v1.4](https://cwickham.github.io/whats-new-in-quarto/#/embed-outputs-from-other-documents-1), so **make sure you have the newest version of Quarto installed**. The basic code to do so is:
+
+```         
+{{< embed sourcequartofile.qmd#code-chunk-label >}}.
+```
+
+or ([source](https://quarto.org/docs/authoring/notebook-embed.html))
+
+```         
+{{< embed source.ipynb#code-chunk-label >}}.
+```
+
+::: callout-warning
+This does not yet work in the current Quarto  version, because Quarto v1.4 is still just a prerelease!
+:::
+
+## 4. Include child Quarto documents
+
+You can include child Quarto documents within a "master" document to keep things separate ([source](https://quarto.org/docs/authoring/includes.html)).
+
+```
+{{< include _childdocument.qmd >}}
+```
+
+These child documents can also include computational chunks, as long as they use the same engine (e.g. knitr or jupyter).
+
+For a Jupyter notebook, simply paste:
+
+```         
+{{< embed source.ipynb >}}

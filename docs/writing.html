@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Writing Reproducible Manuscripts in R &amp; Python - Writing</title>
+<title>Writing Reproducible Manuscripts in R &amp; Python - Writing with Markdown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./writing.html">Writing</a></li><li class="breadcrumb-item"><a href="./writing.html">Writing</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./writing.html">Writing</a></li><li class="breadcrumb-item"><a href="./writing.html">Writing with Markdown</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -105,15 +105,44 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome</span></a>
+ <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
         <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Preparation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./installation-and-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installation &amp; Setup</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop-materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop materials</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./introduction.html" class="sidebar-item-text sidebar-link">
@@ -128,17 +157,17 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Writing</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./writing.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Writing</span></a>
+ <span class="menu-text">Writing with Markdown</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -151,30 +180,48 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Analysis</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Analysis</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Bonus</span></a>
+ <span class="menu-text">Analysis</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code chunks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inline-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inline code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sourcing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sourcing external code</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rendering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rendering your manuscript</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Bonus</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dependency-management.html" class="sidebar-item-text sidebar-link">
@@ -211,13 +258,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#writing" id="toc-writing" class="nav-link active" data-scroll-target="#writing">Writing</a>
-  <ul class="collapse">
-  <li><a href="#markdown-syntax" id="toc-markdown-syntax" class="nav-link" data-scroll-target="#markdown-syntax">Markdown Syntax</a></li>
-  <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering">Rendering</a></li>
-  <li><a href="#output-formats" id="toc-output-formats" class="nav-link" data-scroll-target="#output-formats">Output Formats</a></li>
+  <li><a href="#markdown-syntax" id="toc-markdown-syntax" class="nav-link active" data-scroll-target="#markdown-syntax">Markdown Syntax</a></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/writing.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
@@ -226,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing</h1>
+<h1 class="title">Writing with Markdown</h1>
 </div>
 
 
@@ -241,36 +283,52 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="writing" class="level1">
-<h1>Writing</h1>
-<p>The body of the document is where you will do your writing, which will primarily be in the <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> format (LaTeX and HTML would also work, depending on the output format).</p>
+<p>The body of the document is where you will do your writing. Writing will happen primarily in the <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> format (LaTeX and HTML would also work, depending on the output format).</p>
+<blockquote class="blockquote">
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. - <em><a href="https://www.markdownguide.org/getting-started/">Markdown Guide</a></em></p>
+</blockquote>
 <section id="markdown-syntax" class="level2">
 <h2 class="anchored" data-anchor-id="markdown-syntax">Markdown Syntax</h2>
 <p>If you’re not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: <a href="https://learnxinyminutes.com/docs/markdown/">https://learnxinyminutes.com/docs/markdown/</a>.</p>
-<p>Additionally, you can use the <a href="https://rstudio.github.io/visual-markdown-editing/">Visual Editor</a> option in RStudio to see Markdown syntax previewed in it’s final format as you write.</p>
+<p>Additionally, you can use the Visual Editor, either in <a href="https://quarto.org/docs/visual-editor/vscode/">VS Code</a> or <a href="https://quarto.org/docs/visual-editor/">RStudio</a>, to see Markdown syntax previewed in it’s final format as you write. The Visual Editor also has some common Word-like shortcuts, such as <code>CTRL+b</code> to make text bold.</p>
 <p>Some things you can do with Markdown:</p>
 <ul>
-<li><p>Headings can be created for sections and subsections using the <code>#</code> hashtag character. So <code># Heading 1</code> for a top-level heading and <code>## Heading 2</code> for a second-level heading and so on.</p></li>
-<li><p>Text can be formatted in <em>italic</em> or <strong>bold</strong> using the <code>*</code> asterisk character.</p></li>
-<li><p>Bullet point lists can be created with a <code>-</code> hyphen or <code>*</code> asterisk for each line in the list.</p></li>
-<li><p>Links can be embedded by writing in the following way: <a href="insert link to website">insert text which should be hyperlinked</a></p></li>
-<li><p>Plain code can be embedded in text using the ``` backtick character. R code can be embedded as well, but we will cover that in the next section.</p></li>
+<li>Headings can be created for sections and subsections using the <code>#</code> hashtag character. So <code># Heading 1</code> for a top-level heading and <code>## Heading 2</code> for a second-level heading and so on.</li>
+<li>Text can be formatted in <em>italic</em> or <strong>bold</strong> using the <code>*</code> asterisk character. <code>**This text would become bold**</code></li>
+<li>Bullet point lists can be created with a <code>-</code> hyphen or <code>*</code> asterisk for each line in the list.</li>
+<li>Links can be embedded by writing in the following way: <code>[text to hyperlink](link)</code></li>
+<li>Plain code can be embedded in text using the ` backtick character. Code can be embedded as well, but we will cover that in the next section.</li>
+<li>Images can be included using <code>![Image title](path/to/img.png)</code></li>
 </ul>
-</section>
-<section id="rendering" class="level2">
-<h2 class="anchored" data-anchor-id="rendering">Rendering</h2>
-<p>You can render the R Markdown document to it’s specified output format using the <em>Knit</em> button in RStudio’s editor toolbar.</p>
-<p>You can also use the <code>render</code> function documented in the following page: <a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html">https://pkgs.rstudio.com/rmarkdown/reference/render.html</a></p>
-</section>
-<section id="output-formats" class="level2">
-<h2 class="anchored" data-anchor-id="output-formats">Output Formats</h2>
-<p>output formats may have to be a whole other chapter</p>
 </section>
 <section id="exercise" class="level2">
 <h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>Recreate the following paragraph<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> using markdown:</p>
+<blockquote class="blockquote">
+<h3 id="introduction" class="anchored">Introduction</h3>
+<p>Why use Markdown when you can press buttons in an interface to format your text? As it turns out, there are several reasons why people use Markdown:</p>
+<ul>
+<li>Markdown can be used for everything. People use it to create websites, <a href="https://www.markdownguide.org/getting-started/#documents">documents</a>, notes, books, presentations, email messages, and technical documentation.</li>
+<li>Markdown is portable.
+<ol type="1">
+<li>Files containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application.</li>
+<li>That’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.</li>
+</ol></li>
+<li>Markdown is <strong>platform independent</strong>. You can create Markdown-formatted text on any device running any operating system.</li>
+<li>Markdown is <em>future proof</em>. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your <code>Markdown-formatted text</code> using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.</li>
+<li><strong><em>Markdown is everywhere</em></strong>. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.</li>
+</ul>
+<p>Here is the Markdown logo (link: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" class="img-fluid"></p>
+</blockquote>
 
 
 </section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Source: <a href="https://www.markdownguide.org/getting-started/">Markdown Guide</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

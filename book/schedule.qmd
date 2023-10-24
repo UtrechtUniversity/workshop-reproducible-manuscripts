@@ -1,0 +1,12 @@
+# Schedule {.unnumbered}
+
+| Time | Activity |
+|---|---|
+| 09:00 | Walk-in, tech support |
+| 09:30 | Introduction |
+| 09:45 | Getting started |
+| 10:00 | Writing |
+| 10:45 | Analysis |
+| 11:30 | Coffee break |
+| 11:45 | Rendering your manuscript |
+| 12:30 | Recap & Questions |
