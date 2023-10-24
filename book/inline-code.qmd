@@ -3,7 +3,7 @@
 ## Slides
 
 ```{=html}
-<iframe width="650" height="500" src="slides/analysis.html"></iframe>
+<iframe width="650" height="500" src="slides/analysis.html#/inline-code"></iframe>
 ```
 
 ## Exercise

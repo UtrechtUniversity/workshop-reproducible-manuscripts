@@ -1,7 +1,7 @@
 # Sourcing Code {.unnumbered}
 
 ```{=html}
-<iframe width="650" height="500" src="slides/analysis.html"></iframe>
+<iframe width="650" height="500" src="slides/analysis.html#/sourcing-scripts"></iframe>
 ```
 
 ## Exercises

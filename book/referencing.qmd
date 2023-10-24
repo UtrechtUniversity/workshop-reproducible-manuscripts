@@ -1,7 +1,7 @@
 # Referencing {.unnumbered}
 
 ```{=html}
-<iframe width="650" height="500" src="slides/writing.html"></iframe>
+<iframe width="650" height="500" src="slides/writing.html#/referencing"></iframe>
 ```
 
 ### Exercise

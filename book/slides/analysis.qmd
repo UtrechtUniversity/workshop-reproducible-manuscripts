@@ -16,7 +16,7 @@ format:
 2. Inline Code
 3. Sourcing Scripts
 
-# Code Chunks
+# Code Chunks {background-color="#FFCD00"}
 
 ## What are Code Chunks? {.smaller}
 
@@ -133,7 +133,7 @@ countdown(minutes = 15,
           color_background = "#FFCD00")
 ```
 
-# Inline Code 
+# Inline Code {background-color="#FFCD00"}
 
 ## What is Inline Code?
 
@@ -206,7 +206,7 @@ countdown(minutes = 10,
           color_background = "#FFCD00")
 ```
 
-# Sourcing Scripts
+# Sourcing Scripts {background-color="#FFCD00"}
 
 ## The What & Why
 

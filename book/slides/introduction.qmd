@@ -90,7 +90,7 @@ countdown(minutes = 10,
 
 ![](../images/quarto-default-template.PNG)
 
-## Anatomy of a Quarto Document
+## Anatomy of a Quarto Document { .scrollable}
 
 -   Metadata & Header (YAML)
 

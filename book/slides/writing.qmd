@@ -10,9 +10,12 @@ format:
 
 # Writing {background-color="#FFCD00"}
 
-# Text
+# Topics
 
-## Markdown Syntax
+- Markdown Syntax
+- Referencing
+
+## Markdown Syntax 
 
 The body of the document is where you will do your writing. Writing will happen primarily in the [Markdown](https://daringfireball.net/projects/markdown/syntax) format (LaTeX and HTML would also work, depending on the output format). 
 
@@ -153,7 +156,7 @@ countdown(minutes = 10,
           color_background = "#FFCD00")
 ```
 
-# Referencing
+# Referencing {background-color="#FFCD00"}
 
 ## BibText Keys
 
