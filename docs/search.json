@@ -102,14 +102,14 @@
     "href": "markdown-syntax.html#exercise",
     "title": "Markdown Syntax",
     "section": "Exercise",
-    "text": "Exercise\nRecreate the following paragraph in your Quarto document using Markdown:\nMeet Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\nMeet the penguins\n\nIllustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst.\n\nhttps://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\n\nData\n\nData were collected and made available by Dr. Kristen Gorman https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php and the Palmer Station, Antarctica LTER, https://pallter.marine.rutgers.edu/ a member of the Long Term Ecological Research Network. https://lternet.edu/"
+    "text": "Exercise\nRecreate the following paragraph in your Quarto document using Markdown:\nMeet Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. \nTo learn more about Quarto see https://quarto.org.\n\nMeet the penguins\n\nThe penguins data from the palmerpenguins package contains size measurements for \n344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica. \n\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nWhat It Should Look Like\n\n\n\nLinks you need\n\nYou can find the illustration of the three species of Palmer Archipelago penguins (Chinstrap, Gentoo, and Adelie) here: https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png.\nThe link to the Palmer Penguins package is here: https://allisonhorst.github.io/palmerpenguins/."
   },
   {
     "objectID": "markdown-syntax.html#what-it-should-look-like",
     "href": "markdown-syntax.html#what-it-should-look-like",
     "title": "Markdown Syntax",
     "section": "What It Should Look Like",
-    "text": "What It Should Look Like\n\n\n\nquarto-penguins"
+    "text": "What It Should Look Like\n\n\n\nquarto-penguins\n\n\nYou can find the illustration of the three species of Palmer Archipelago penguins (Chinstrap, Gentoo, and Adelie) here: https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png\nRead more about the Palmerpenguins dataset here."
   },
   {
     "objectID": "referencing.html",
