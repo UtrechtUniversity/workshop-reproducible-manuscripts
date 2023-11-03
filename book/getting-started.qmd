@@ -76,9 +76,11 @@ write.csv(palmerpenguins::penguins_raw, "data/data.csv")
 
 - Extract the contents of the zipped file.
 
+<!-- TO DO: CHANGE -->
 - Copy only the `do-addition.R` script into the `scripts` folder of your new project.
 
 ## Python
+<!-- TO DO: CHANGE -->
 
 1. **Create a new folder on your computer**
 
@@ -178,3 +180,5 @@ quarto render my-reproducible-manuscript.qmd
 - Copy only the `do-addition.py` script into the `scripts` folder of your new project.
 
 :::
+
+<!-- TO DO: ADD ZOTERO installation instructions: Zotero Desktop, Zotero Connector, Better BibTex for Zotero -->
