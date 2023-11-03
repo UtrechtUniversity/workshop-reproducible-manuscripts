@@ -6,6 +6,8 @@ format:
     slide-number: true
     navigation-mode: linear
     controls: true
+    code-overflow: wrap
+    incremental: true
 ---
 
 # Analysis {background-color="#FFCD00"}
@@ -20,23 +22,31 @@ format:
 
 ## What are Code Chunks? {.smaller}
 
-In contrast to regular R or Python scripts, code in Quarto documents are run within so-called _code chunks_ to separate text from code.
+Code in Quarto documents is run within _code chunks_ to separate text from code.
+
+. . .
 
 Code Chunks are executable pieces of code that can be weaved between text within a document. 
+
+. . .
 
 Depending on the content of your code, they may print output into the document or create new variables, for example.
 
 <br>
 
-````md
+. . .
+
+
+````
 ```{{r}}
 #| echo: true
 1993 + 2023
 ```
 ````
 
-```
-[1] 4016
+```{r}
+#| echo: false
+1993 + 2023
 ```
 
 ## Anatomy of a Code Chunk
@@ -45,9 +55,9 @@ Depending on the content of your code, they may print output into the document o
 
 ::: {.column width="50%"}
 
-- Code Chunks have 3x _backticks_ on each end: ```` ``` ````  
-- The _engine_ should be specified between curly braces, for example: `{r}` or `{python}`  
-- The options are specified below the engine, with the _hashpipe_: `#|`  
+- On each end of the code chunk: 3 _backticks_: ```` ``` ````  
+- _Engine_ specified between curly brackets: `{r}` or `{python}`  
+- Code chunk options directly at the top of the chunk, with the _hashpipe_: `#|`  
 
 :::
 
@@ -75,7 +85,7 @@ distinct_cyl = mtcars.drop_duplicates(subset=['cyl'])
 
 ## Code Chunk Options {.smaller}
 
-Code Chunks can be customized with special comments, denoted with `#|` at the top of each code chunk. The arguments you provide to the options are typically `true` or `false`. 
+Code Chunks have customization options, denoted with `#|`. 
 
 The following [code chunk options](https://quarto.org/docs/computations/execution-options.html) are useful:
 
@@ -90,7 +100,7 @@ The following [code chunk options](https://quarto.org/docs/computations/executio
 
 If you have a code chunk that creates a figure, you can also set several options for the looks of the figure, such as:
 
-- `#| fig.cap: "your figure's caption"` : caption of the figure
+- `#| fig-cap: "your figure's caption"` : caption of the figure
 - `#| fig-width: 8` : width of the figure
 - `#| fig-height: 6` : height of the figure
 
@@ -99,32 +109,34 @@ If you have a code chunk that creates a figure, you can also set several options
 Code Chunks can be inserted in the following ways:
 
 - **RStudio**: Using the _Ctrl+Alt+I_ keyboard shortcut.
-
 - **VS Code**: Using the _Ctrl+Shift+I_ keyboard shortcut.
 
 If you work with a Visual Editor, you can simply click `Insert` > `Code cell` > `[your programming language]` to add a code chunk to your document.
 
-## Learn More...
+## Code Chunk Options
 
-...from the Quarto Documentation on Execution Options: [https://quarto.org/docs/computations/execution-options.html](https://quarto.org/docs/computations/execution-options.html)
+If you want to specify options for *all* code chunks in your document, 
+you can include the options in your document `yaml`, at the top of the document.
 
-## Exercise {.smaller}
+. . .
 
-Refer to the dummy R & Python scripts that have been provided in the `workshop-materials`: 
+For example: do not show the code in the document:
 
-- Insert a setup code chunk at the beginning of your document (i.e. below the YAML header) to load the necessary packages.
+```yaml
+---
+format: html
+execute:
+  echo: false
+---
+```
 
-- Create a code chunk in the `Results` section of your document
+More info on Execution Options: [https://quarto.org/docs/computations/execution-options.html](https://quarto.org/docs/computations/execution-options.html)
 
-- Copy a piece/section of the dummy script and paste it into the code chunk.
+## Exercise
 
-- Run the code chunk and see if it works alright.
+Go to the _Code Chunks_ chapter in the workshop book and do the exercise.
 
-- Repeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.
-
-- Render the document and check the output.
-
-- Play around with the code chunk options and re-render the document.
+You will be pasting some code from a `dummy` script into code chunks in your document!
 
 ```{r}
 library(countdown)
@@ -133,15 +145,20 @@ countdown(minutes = 15,
           color_background = "#FFCD00")
 ```
 
+
 # Inline Code {background-color="#FFCD00"}
 
 ## What is Inline Code?
 
-_Inline Code_ allows you to insert results or (quick) calculations directly into the text of a Quarto document, i.e. within Markdown outside of code chunks. 
+_Inline Code_ allows you to insert results or (quick) calculations directly into the text of a Quarto document. Inline code gets *no additional text formatting*, making it is indistinguishable from surrounding text
 
-This is useful when you need to report and describe results in your manuscript in a reproducible way. 
+. . .
 
-It minimizes errors because you're not copying-and-pasting results, plus the values will be automatically updated in case of changes to the data or code.
+This is useful because:
+
+- it allows you to report and describe results in a reproducible way
+- it minimizes errors: no manual copy-pasting results
+- values will be automatically updated in case of changes to the data or code
 
 ## In R: 
 
@@ -149,20 +166,17 @@ It minimizes errors because you're not copying-and-pasting results, plus the val
 #| label: Load the penguins dataset
 #| echo: false
 library(palmerpenguins)
-penguins_data <- penguins
 ```
 
-> There are `r sum(penguins_data$species=="Adelie")` penguins of the "Adelie" species in the dataset.
+> There are `r sum(penguins$species=="Adelie")` penguins of the "Adelie" species in the dataset.
 
 This line was created as follows:
 
 ````md
-There are `r knitr::inline_expr("sum(penguins_data$species=='Adelie')")` penguins of the Adelie species in the dataset.
+There are `r knitr::inline_expr("sum(penguins_data$species=='Adelie')")` 
+penguins of the Adelie species in the dataset.
 ````
-<br>
-By enclosing the inline code with `` `r ` ``, the code is executed when the document is rendered, displaying the results of the computation. 
 
-There will be no additional text formatting either, which makes the inline code output indistinguishable from surrounding text.
 
 ## In Python
 
@@ -176,7 +190,7 @@ x = 5 + 5
 ````md
 The answer of 5 + 5 is `{python} x`
 ````
-For earlier Quarto versions, the solution is a bit overly complicated and does not always seem to work as well:
+For earlier Quarto versions, the solution is a bit more complicated:
 
 ````
 ```{{python}}
@@ -191,13 +205,9 @@ The radius of the circle is {radius}.
 
 ## Exercise
 
-Take a couple of minutes to play around with the possibilities of _inline code_:
+Take a couple of minutes to play around with the possibilities of _inline code_!
 
-- Do a simple calculation such as `r knitr::inline_expr("25 + 25")` within your text.
-
-- Report the number of "Gentoo" and/or "Chinstrap" species of penguins within the data (hint: refer to the example in the slides).
-
-- Try out one other (simple) computation or calculation!
+Go to the _Inline code_ chapter in the workshop handbook to complete the exercise.
 
 ```{r}
 library(countdown)
@@ -210,27 +220,20 @@ countdown(minutes = 10,
 
 ## The What & Why
 
-Quarto has the option to include code from external files, such as R and Python scripts, `.qmd` or `.ipynb` files.
+Quarto allows including *code from external files*, such as R and Python scripts, `.qmd` or `.ipynb` files.
 
 Separating scripts from the manuscript can help with:
 
--   preventing manual, error-prone work copy-pasting code from one file to another,
--   easier debugging of code,
--   making the Quarto document easier to digest,
--   adhering to good coding practices to work in a modular fashion.
-
-## Possible Workflows
-
-1. Use (parts of) an external script *within* the Quarto document, for example to use objects that were created within that script.
-2. Run a script before or after rendering a Quarto document to a manuscript.
-3. Use code chunks from existing Quarto documents or Jupyter notebooks.
-4. Include entire Quarto documents or Jupyter notebooks within your current Quarto document.
+-   preventing manual, error-prone work copy-pasting code
+-   easier debugging of code
+-   making the Quarto document easier to digest
+-   adhering to good coding practices to work in a modular fashion
 
 ## Working With External Scripts { .smaller}
 
 Code from an external script can be incorporated into your Quarto document by using the `#| file:` chunk option. Once included in the Quarto document, the functions or variables created in the script can be used further.
 
-- **R:**
+**R:**
 
 ````
 ```{{r}}
@@ -239,27 +242,28 @@ Code from an external script can be incorporated into your Quarto document by us
 ```
 ````
 
-- **Python:**
+**Python:**
 
-````md
-```{{.python include="do_addition.py"}}
+````
+```{{.python include="your-script.py"}}
 ```
 ````
 
-````md
+followed by
+
+````
 ```{{python}
 #| echo: false
-%run do_addition.py
+%run your-script.py
 ```
 ````
 
 ## Exercise
 
-The R script `do_addition.R` and the Python script `do_addition.py` in the `scripts` folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.
+The `workshop-materials` contain 2 example scripts: `do_addition.R` and `do_addition.py`.
+You will use one of them to include the code in your Quarto document.
 
-1.  Complete the provided code (in the course book) to include the `do_addition` function into your Quarto document.
-
-2.  Use the `do_addition` function to add two numbers of your choice to test whether your previous code was correct!
+Go to the _Sourcing code_ chapter in the workshop book and complete the exercise!
 
 ```{r}
 library(countdown)
@@ -268,10 +272,11 @@ countdown(minutes = 10,
           color_background = "#FFCD00")
 ```
 
+## Other options
 
-## Learn More...
+Other options not discussed here:
 
-1. Use (parts of) an external script *within* the Quarto document, for example to use objects that were created within that script.
+1. Use *parts of* an external script within the Quarto document, for example to only run a few selected lines.
 2. Run a script before or after rendering a Quarto document to a manuscript: [Quarto Docs: Project Scripts](https://quarto.org/docs/projects/scripts.html)
-3. Use code chunks from existing Quarto documents or Jupyter notebooks: [Quarto v1.4 Release](https://cwickham.github.io/whats-new-in-quarto/#/embed-outputs-from-other-documents-1)]
-4. Include entire Quarto documents or Jupyter notebooks within your current Quarto document: [Quarto Docs: Includes ](https://quarto.org/docs/authoring/includes.html)
+3. Use code chunks from existing Quarto documents or Jupyter notebooks: [Quarto v1.4 Release](https://cwickham.github.io/whats-new-in-quarto/#/embed-outputs-from-other-documents-1)
+4. Include entire Quarto documents or Jupyter notebooks within your current Quarto document: [Quarto Docs: Includes](https://quarto.org/docs/authoring/includes.html)
