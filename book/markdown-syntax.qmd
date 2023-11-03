@@ -10,24 +10,25 @@
 
 Recreate the following paragraph in your Quarto document using Markdown:
 
-```
+```markdown
 Meet Quarto
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.
+Quarto enables you to weave together content and executable code into a finished document. 
+To learn more about Quarto see https://quarto.org.
 
 Meet the penguins
 
-Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst.
+The penguins data from the palmerpenguins package contains size measurements for 
+344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica. 
 
-https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png
-
-The penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
-
-Data
-
-Data were collected and made available by Dr. Kristen Gorman https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php and the Palmer Station, Antarctica LTER, https://pallter.marine.rutgers.edu/ a member of the Long Term Ecological Research Network. https://lternet.edu/
+The plot below shows the relationship between flipper and bill lengths of these penguins.
 ```
 
-## What It Should Look Like
+### What It Should Look Like
 
-![quarto-penguins](https://quarto.org/docs/get-started/hello/images/rstudio-text.png)
+![](https://quarto.org/docs/get-started/hello/images/rstudio-text.png)
+
+### Links you need
+
+- You can find the illustration of the three species of Palmer Archipelago penguins (Chinstrap, Gentoo, and Adelie) here: [https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png).
+- The link to the Palmer Penguins package is here: [https://allisonhorst.github.io/palmerpenguins/](https://allisonhorst.github.io/palmerpenguins/).
