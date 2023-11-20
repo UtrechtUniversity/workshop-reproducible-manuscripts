@@ -1,9 +1,7 @@
 # Workshop Materials {.unnumbered}
 
-The workshop materials consist of dummy scripts that will be used during the session.
+The workshop materials consist of a project structure and dummy scripts that will be used during the session.
 
-- Right-click on the following link and select _Save Link As..._: [workshop-materials.zip](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip)
-
-- Extract the contents of the zipped file.
-
-- Copy either the `do-addition.py` or `do-addition.R` scripts (depends of the programming language you use) into the `scripts` folder of your new project.
+1. Right-click on the following link and select _Save Link As..._: [my-reproducible-manuscript.zip](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/my-reproducible-manuscript.zip)
+2. Save the zip file in a location that you can easily access. We recommend to **not** use the default download location of your browser.
+3. Extract the contents of the zipped file.
