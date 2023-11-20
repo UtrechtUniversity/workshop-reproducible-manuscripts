@@ -4,36 +4,23 @@
 
 ## R
 
-**1. Create a Project in RStudio**
+**1. Create an RStudio Project**
 
-- In RStudio, click _File_ -> _New Project_ -> _New Directory_ -> _New Project_. 
-
-- Give your project directory a clear name, without using spaces. For example, `my-reproducible-manuscript`.
-
-- Make sure your project will be created (as a subdirectory) in an accessible place on your system.
-
+- In RStudio, click _File_ > _New Project_ > _Existing Directory_. 
+- Browse to your folder `my-reproducible-manuscript` in which you have saved the workshop materials.
 - Check the _Open in new session_ option.
+- Click _Create Project_. This will create a `my-reproducible-manuscript.Rproj` file.
 
-- Click _Create Project_.
+**2. Document your project for reproducibility**
 
-**2. Structure your Project for reproducible work**
+Your project already contains pre-made folders, a README file and a License.
 
-- Generate a directory structure by running the following piece of code in the _Console_ of RStudio:
+- Open the `README.md` file and fill it with a few relevant details, for example
+  - Purpose and contents of the project
+  - Your name (Author)
+  - The date of creation
+  - Etc.
 
-```{r}
-#| eval: false
-
-dir.create("data", recursive = TRUE)
-dir.create("docs", recursive = TRUE)
-dir.create("results", recursive = TRUE)
-dir.create("R", recursive = TRUE)
-
-# install.packages("usethis")
-library(usethis)
-
-usethis::use_readme_md(open = rlang::is_interactive())
-usethis::use_mit_license(copyright_holder = NULL)
-```
 
 **3. Get the data for your Project**
 
@@ -69,15 +56,6 @@ write.csv(palmerpenguins::penguins_raw, "data/data.csv")
 - Once everything has been saved correctly, click the _Render_ button in the menu bar again.
 
 - The rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio.
-
-7. **Download Other Workshop Materials**
-
-- Right-click on the following link and select _Save Link As..._: [workshop-materials.zip](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip)
-
-- Extract the contents of the zipped file.
-
-<!-- TO DO: CHANGE -->
-- Copy only the `do-addition.R` script into the `scripts` folder of your new project.
 
 ## Python
 <!-- TO DO: CHANGE -->
