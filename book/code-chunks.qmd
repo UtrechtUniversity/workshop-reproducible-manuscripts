@@ -6,18 +6,11 @@
 
 ## Exercise
 
-Refer to the `dummy.R` or `dummy.py` script that has been provided in the `workshop-materials`: 
+Open to the `dummy.R` (if you're using R) or `dummy.py` (if you're using Python) script from the `scripts` folder.
 
-- Insert a setup code chunk at the beginning of your document (i.e. below the YAML header) to load the necessary packages.
-
-- Create a code chunk in the `Results` section of your document
-
-- Copy a piece/section of the dummy script and paste it into the code chunk.
-
-- Run the code chunk and see if it works alright.
-
-- Repeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.
-
-- Render the document and check the output.
-
-- Play around with the code chunk options and re-render the document.
+1. Insert a code chunk at the beginning of your document (i.e. below the YAML header) and insert the relevant code from the script to load the necessary packages.
+2. Insert a code chunk in the `Results` section of your document and copy a piece/section of the dummy script into it.
+3. Run the code chunk and see if it works alright.
+4. Repeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.
+5. Render the document and check the output.
+6. Play around with the code chunk options and re-render the document.
