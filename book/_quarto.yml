@@ -35,6 +35,9 @@ book:
     logo: images/quarto-hex-logo.png
 
 bibliography: references.bib
+biblio-style: apalike
+nocite: |
+  @*
 
 format:
   html:
