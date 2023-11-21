@@ -8,10 +8,10 @@
 
 The R script `do_addition.R` and the Python script `do_addition.py` in the `scripts` folder contain a function to perform simple addition. The function takes two numbers as arguments, adds them together, and outputs the result to the console.
 
-1.  Complete the following code to include the `do_addition` function into your Quarto document.
-
+1.  Add a new code chunk to your manuscript that includes the `do_addition` function into your Quarto document.
 2.  Use the `do_addition` function to add two numbers of your choice to test whether your answer in a was correct!
 
+<!-- Commenting this out because we don't give the solutions to other exercises either 
 ## Solutions
 
 ::: panel-tabset
@@ -54,3 +54,4 @@ do_addition(a, b)
 ```
 ````
 :::
+-->
