@@ -6,7 +6,7 @@
 
 ## Exercise
 
-Open to the `dummy.R` (if you're using R) or `dummy.py` (if you're using Python) script from the `scripts` folder.
+Open the `dummy.R` (if you're using R) or `dummy.py` (if you're using Python) script from the `scripts` folder.
 
 1. Insert a code chunk at the beginning of your document (i.e. below the YAML header) and insert the relevant code from the script to load the necessary packages.
 2. Insert a code chunk in the `Results` section of your document and copy a piece/section of the dummy script into it.
