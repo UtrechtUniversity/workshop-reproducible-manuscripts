@@ -1,6 +1,6 @@
 # Getting Started {.unnumbered}
 
-Once you have followed all the steps for [Installation and setup](#installation-and-setup),
+Once you have followed all the steps for [Installation and setup](installation-and-setup.html),
 you can start to create the Quarto document that you will be working in during the workshop.
 
 ::: {.panel-tabset}
