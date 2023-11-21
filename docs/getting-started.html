@@ -54,7 +54,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -290,167 +309,123 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<p>Once you have followed all the steps for <a href="installation-and-setup.html">Installation and setup</a>, you can start to create the Quarto document that you will be working in during the workshop.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><strong>1. Create a Project in RStudio</strong></p>
+<p><strong>1. Create an RStudio Project</strong></p>
 <ul>
-<li><p>In RStudio, click <em>File</em> -&gt; <em>New Project</em> -&gt; <em>New Directory</em> -&gt; <em>New Project</em>.</p></li>
-<li><p>Give your project directory a clear name, without using spaces. For example, <code>my-reproducible-manuscript</code>.</p></li>
-<li><p>Make sure your project will be created (as a subdirectory) in an accessible place on your system.</p></li>
-<li><p>Check the <em>Open in new session</em> option.</p></li>
-<li><p>Click <em>Create Project</em>.</p></li>
+<li>In RStudio, click <em>File</em> &gt; <em>New Project</em> &gt; <em>Existing Directory</em>.</li>
+<li>Browse to your folder <code>my-reproducible-manuscript</code> in which you have saved the workshop materials.</li>
+<li>Check the <em>Open in new session</em> option.</li>
+<li>Click <em>Create Project</em>. This will create a <code>my-reproducible-manuscript.Rproj</code> file.</li>
 </ul>
-<p><strong>2. Structure your Project for reproducible work</strong></p>
+<p><strong>2. Document your project for reproducibility</strong></p>
+<p>Your project already contains pre-made folders, a README file and a License. Open the <code>README.md</code> file and fill it with a few relevant details, for example:</p>
 <ul>
-<li>Generate a directory structure by running the following piece of code in the <em>Console</em> of RStudio:</li>
+<li>Purpose and contents of the project</li>
+<li>Your name (Author)</li>
+<li>The date of creation</li>
+<li>Etc.</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"data"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"docs"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"results"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"R"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("usethis")</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_readme_md</span>(<span class="at">open =</span> rlang<span class="sc">::</span><span class="fu">is_interactive</span>())</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_mit_license</span>(<span class="at">copyright_holder =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>3. Get the data for your Project</strong></p>
+<p><strong>3. Create a Quarto document for your manuscript.</strong></p>
 <ul>
-<li>Obtain the data and place it in the correct folder by running the following piece of code in the <em>Console</em> of RStudio:</li>
+<li>In RStudio, click <em>File</em> -&gt; <em>New File</em> -&gt; <em>Quarto Document</em></li>
+<li>Give your document a title, such as <code>My Reproducible Manuscript</code>.</li>
+<li>Add yourself as an author.</li>
+<li>For now, the default output format (HTML) and engine (knitr) are fine.</li>
+<li>Uncheck the <em>Use visual markdown editor</em> option.</li>
+<li>Click <em>Create</em>. A new Quarto document opens.</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("palmerpenguins")</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(palmerpenguins<span class="sc">::</span>penguins_raw, <span class="st">"data/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>4. Create a Quarto document for your manuscript.</strong></p>
+<p><strong>4. Render the Quarto document to HTML</strong></p>
 <ul>
-<li><p>In RStudio, click <em>File</em> -&gt; <em>New File</em> -&gt; <em>Quarto Document</em></p></li>
-<li><p>Give your document a Title, such as <code>My Reproducible Manuscript</code>.</p></li>
-<li><p>Deselect the <em>Use visual markdown editor</em> option.</p></li>
-<li><p>Click <em>Create</em>.</p></li>
-</ul>
-<p><strong>6. Render the Quarto document to HTML</strong></p>
-<ul>
-<li><p>Click the <em>Render</em> button in the menu bar.</p></li>
-<li><p>Give the Quarto document a clear name, without using spaces. For example, <code>my-reproducible-manuscript</code>.</p></li>
-<li><p>Save the Quarto document in the <code>docs</code> folder you recently created.</p></li>
-<li><p>Once everything has been saved correctly, click the <em>Render</em> button in the menu bar again.</p></li>
-<li><p>The rendered, HTML copy of your document will appear in your web browser or alongside the editor in RStudio.</p></li>
-</ul>
-<ol start="7" type="1">
-<li><strong>Download Other Workshop Materials</strong></li>
-</ol>
-<ul>
-<li><p>Right-click on the following link and select <em>Save Link As…</em>: <a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip">workshop-materials.zip</a></p></li>
-<li><p>Extract the contents of the zipped file.</p></li>
-<li><p>Copy only the <code>do-addition.R</code> script into the <code>scripts</code> folder of your new project.</p></li>
+<li>Save the Quarto document in the <code>docs</code> folder within the <code>my-reproducible-manuscript</code> folder.<br>
+Give the file a clear name, without using spaces. For example, <code>my-reproducible-manuscript.qmd</code>.</li>
+<li>Once everything has been saved correctly, click the <em>Render</em> button in the menu bar.</li>
+<li>The rendered HTML copy of your document will appear in your web browser or alongside the editor in RStudio. You will also see a <code>my-reproducible-manuscript.html</code> file appear in the <code>docs</code> folder.</li>
 </ul>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<ol type="1">
-<li><strong>Create a new folder on your computer</strong></li>
-</ol>
+<p><strong>1. Open the <code>my-reproducible-manuscript</code> folder in Visual Studio Code</strong></p>
+<p>In VS Code, click <em>File</em> &gt; <em>Open Folder…</em> &gt; <code>my-reproducible-manuscript</code> &gt; <em>Select folder</em>.</p>
+<p><strong>2. Document your project for reproducibility</strong></p>
+<p>Your project already contains pre-made folders, a README file and a License. Open the <code>README.md</code> file and fill it with a few relevant details, for example:</p>
 <ul>
-<li>Name this folder <code>my-reproducible-manuscript</code> and make sure it is in an accessible location on your system.</li>
+<li>Purpose and contents of the project</li>
+<li>Your name (Author)</li>
+<li>The date of creation</li>
+<li>Etc.</li>
 </ul>
-<ol start="2" type="1">
-<li><strong>Open the newly created folder in Visual Studio Code</strong></li>
-</ol>
+<p><strong>3. Create a Quarto document for your manuscript.</strong></p>
 <ul>
-<li>In VS Code, click <em>File</em> -&gt; <em>Open Folder…</em> -&gt; <code>my-reproducible-manuscript</code></li>
+<li>In the Command Palette of VS Code (usually at the top of the screen, looks like a search bar), type <code>&gt; Quarto: New Document</code>. This will open up a new empty Quarto document.</li>
+<li>Give your new document a Title, such as <code>My Reproducible Manuscript</code>.</li>
+<li>Copy the following block of text and code into your Quarto document:</li>
 </ul>
-<ol start="3" type="1">
-<li><strong>Structure your Project for reproducible work</strong></li>
-</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <span class="ot">&lt;https://quarto.org&gt;</span>.</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Running Code</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>You can add options to executable code like this</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>The <span class="in">`echo: false`</span> option disables the printing of code (only output is displayed).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>4. Render the Quarto document to HTML</strong></p>
 <ul>
-<li><p>In VS Code, click <em>Terminal</em> -&gt; <em>New Terminal</em></p></li>
-<li><p>In the Terminal, type <code>python</code>. If you see <code>&gt;&gt;&gt;</code> pop up in the Terminal, then you can proceed.</p></li>
-<li><p>Generate a directory structure by running the following piece of code in the Terminal:</p></li>
-</ul>
-<pre><code>import os
-
-os.mkdir("data")
-os.mkdir("docs")
-os.mkdir("results")
-os.mkdir("scripts")</code></pre>
-<p>You might want to run it line-by-line.</p>
-<ol start="4" type="1">
-<li><strong>Get the data for your Project</strong></li>
-</ol>
-<ul>
-<li>Obtain the data and place it in the correct folder by running the following piece of code in the Terminal:</li>
-</ul>
-<pre><code>pip install palmerpenguins
-
-import pandas as pd
-
-from palmerpenguins import load_penguins
-
-penguins = load_penguins()
-
-penguins.to_csv('data/data.csv')</code></pre>
-<ol start="5" type="1">
-<li><strong>Create a Quarto document for your manuscript.</strong></li>
-</ol>
-<ul>
-<li><p>In the Command Palette of VS Code, type <code>&gt; Quarto: New Document</code>.</p></li>
-<li><p>Give your new document a Title, such as <code>My Reproducible Manuscript</code>.</p></li>
-</ul>
-<ol start="6" type="1">
-<li><strong>Copy the following block of text + code into your Quarto document.</strong></li>
-</ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <span class="ot">&lt;https://quarto.org&gt;</span>.</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Running Code</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>You can add options to executable code like this</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>The <span class="in">`echo: false`</span> option disables the printing of code (only output is displayed).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="7" type="1">
-<li><strong>Render the Quarto document to HTML</strong></li>
-</ol>
-<ul>
-<li><p>Save the Quarto document in the <code>docs</code> folder you recently created.</p></li>
-<li><p>Give the Quarto document a clear name, without using spaces. For example, <code>my-reproducible-manuscript</code>.</p></li>
-<li><p>In VS Code, click <em>Terminal</em> -&gt; <em>Split Terminal</em></p></li>
-<li><p>In the newly created Terminal, run the following command:</p></li>
+<li>Save the Quarto document in the <code>docs</code> folder within the <code>my-reproducible-manuscript</code> folder.<br>
+Give the file a clear name, without using spaces. For example, <code>my-reproducible-manuscript.qmd</code>.</li>
+<li>In VS Code, click <em>Terminal</em> -&gt; <em>Split Terminal</em></li>
+<li>In the newly created Terminal, run the following command:</li>
 </ul>
 <pre><code>quarto render my-reproducible-manuscript.qmd</code></pre>
-<ul>
-<li>The rendered, HTML copy of your document will appear in your web browser or alongside the editor in VS Code.</li>
-</ul>
-<ol start="8" type="1">
-<li><strong>Download Other Workshop Materials</strong></li>
-</ol>
-<ul>
-<li><p>Right-click on the following link and select <em>Save Link As…</em>: <a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/workshop-materials.zip">workshop-materials.zip</a></p></li>
-<li><p>Extract the contents of the zipped file.</p></li>
-<li><p>Copy only the <code>do-addition.py</code> script into the <code>scripts</code> folder of your new project.</p></li>
-</ul>
+<p>The rendered HTML copy of your document will appear in your web browser or alongside the editor in VS Code. You will also see a <code>my-reproducible-manuscript.html</code> file appear in the <code>docs</code> folder.</p>
 </div>
 </div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-frankRMarkdownWritingReproducible2017" class="csl-entry" role="listitem">
+Frank, Mike, and Chris Hartgerink. 2017. <span>“<span>RMarkdown</span> for Writing Reproducible Scientific Papers.”</span> https://libscie.github.io/rmarkdown-workshop/handout.html.
+</div>
+<div id="ref-hartgerinkComposingReproducibleManuscripts2017" class="csl-entry" role="listitem">
+Hartgerink, Chris. 2017. <span>“Composing Reproducible Manuscripts Using <span>R Markdown</span>.”</span> <em>eLife</em>. https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown; <span>eLife Sciences Publications Limited</span>.
+</div>
+<div id="ref-knuthLiterateProgramming1984" class="csl-entry" role="listitem">
+Knuth, D. E. 1984. <span>“Literate <span>Programming</span>.”</span> <em>The Computer Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+<div id="ref-lasserCreatingExecutablePaper2020" class="csl-entry" role="listitem">
+Lasser, Jana. 2020. <span>“Creating an Executable Paper Is a Journey Through <span>Open Science</span>.”</span> <em>Communications Physics</em> 3 (1): 1–5. <a href="https://doi.org/10.1038/s42005-020-00403-4">https://doi.org/10.1038/s42005-020-00403-4</a>.
+</div>
+<div id="ref-mockGetStartedQuarto2022a" class="csl-entry" role="listitem">
+Mock, Tom. 2022a. <span>“Get <span>Started</span> with <span>Quarto</span> - <span>Getting Started</span> with <span>Quarto</span>.”</span> https://jthomasmock.github.io/quarto-2hr-webinar/.
+</div>
+<div id="ref-mockGetStartedQuarto2022" class="csl-entry" role="listitem">
+———. 2022b. <span>“Get <span>Started</span> with <span>Quarto</span> - Rstudio::conf 2022 <span>Workshop</span>.”</span> https://rstudio-conf-2022.github.io/get-started-quarto/.
+</div>
+<div id="ref-quartoQuartoGuide" class="csl-entry" role="listitem">
+Quarto. n.d. <span>“Quarto - <span>Guide</span>.”</span> <em>Quarto</em>. https://quarto.org/docs/guide/. Accessed November 21, 2023.
+</div>
+<div id="ref-theturingwaycommunityResearchCompendia" class="csl-entry" role="listitem">
+The Turing Way Community. n.d. <span>“Research <span>Compendia</span>.”</span> <em>The Turing Way</em>. https://the-turing-way.netlify.app/reproducible-research/compendia. Accessed November 21, 2023.
+</div>
+<div id="ref-vanlissaWORCSWorkflowOpen2021" class="csl-entry" role="listitem">
+Van Lissa, Caspar J., Andreas M. Brandmaier, Loek Brinkman, Anna-Lena Lamprecht, Aaron Peikert, Marijn E. Struiksma, and Barbara M. I. Vreede. 2021. <span>“<span>WORCS</span>: <span>A</span> Workflow for Open Reproducible Code in Science.”</span> <em>Data Science</em> 4 (1): 29–49. <a href="https://doi.org/10.3233/DS-210031">https://doi.org/10.3233/DS-210031</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

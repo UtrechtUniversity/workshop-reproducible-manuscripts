@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -265,18 +284,46 @@ ul.task-list li input[type="checkbox"] {
 <iframe width="650" height="500" src="slides/analysis.html"></iframe>
 <section id="exercise" class="level2">
 <h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
-<p>Refer to the <code>dummy.R</code> or <code>dummy.py</code> script that has been provided in the <code>workshop-materials</code>:</p>
-<ul>
-<li><p>Insert a setup code chunk at the beginning of your document (i.e.&nbsp;below the YAML header) to load the necessary packages.</p></li>
-<li><p>Create a code chunk in the <code>Results</code> section of your document</p></li>
-<li><p>Copy a piece/section of the dummy script and paste it into the code chunk.</p></li>
-<li><p>Run the code chunk and see if it works alright.</p></li>
-<li><p>Repeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.</p></li>
-<li><p>Render the document and check the output.</p></li>
-<li><p>Play around with the code chunk options and re-render the document.</p></li>
-</ul>
+<p>Open the <code>dummy.R</code> (if you’re using R) or <code>dummy.py</code> (if you’re using Python) script from the <code>scripts</code> folder.</p>
+<ol type="1">
+<li>Insert a code chunk at the beginning of your document (i.e.&nbsp;below the YAML header) and insert the relevant code from the script to load the necessary packages.</li>
+<li>Insert a code chunk in the <code>Results</code> section of your document and copy a piece/section of the dummy script into it.</li>
+<li>Run the code chunk and see if it works alright.</li>
+<li>Repeat the previous three steps until the whole dummy script has been incorporated within code chunks in your manuscript.</li>
+<li>Render the document and check the output.</li>
+<li>Play around with the code chunk options and re-render the document.</li>
+</ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-frankRMarkdownWritingReproducible2017" class="csl-entry" role="listitem">
+Frank, Mike, and Chris Hartgerink. 2017. <span>“<span>RMarkdown</span> for Writing Reproducible Scientific Papers.”</span> https://libscie.github.io/rmarkdown-workshop/handout.html.
+</div>
+<div id="ref-hartgerinkComposingReproducibleManuscripts2017" class="csl-entry" role="listitem">
+Hartgerink, Chris. 2017. <span>“Composing Reproducible Manuscripts Using <span>R Markdown</span>.”</span> <em>eLife</em>. https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown; <span>eLife Sciences Publications Limited</span>.
+</div>
+<div id="ref-knuthLiterateProgramming1984" class="csl-entry" role="listitem">
+Knuth, D. E. 1984. <span>“Literate <span>Programming</span>.”</span> <em>The Computer Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+<div id="ref-lasserCreatingExecutablePaper2020" class="csl-entry" role="listitem">
+Lasser, Jana. 2020. <span>“Creating an Executable Paper Is a Journey Through <span>Open Science</span>.”</span> <em>Communications Physics</em> 3 (1): 1–5. <a href="https://doi.org/10.1038/s42005-020-00403-4">https://doi.org/10.1038/s42005-020-00403-4</a>.
+</div>
+<div id="ref-mockGetStartedQuarto2022a" class="csl-entry" role="listitem">
+Mock, Tom. 2022a. <span>“Get <span>Started</span> with <span>Quarto</span> - <span>Getting Started</span> with <span>Quarto</span>.”</span> https://jthomasmock.github.io/quarto-2hr-webinar/.
+</div>
+<div id="ref-mockGetStartedQuarto2022" class="csl-entry" role="listitem">
+———. 2022b. <span>“Get <span>Started</span> with <span>Quarto</span> - Rstudio::conf 2022 <span>Workshop</span>.”</span> https://rstudio-conf-2022.github.io/get-started-quarto/.
+</div>
+<div id="ref-quartoQuartoGuide" class="csl-entry" role="listitem">
+Quarto. n.d. <span>“Quarto - <span>Guide</span>.”</span> <em>Quarto</em>. https://quarto.org/docs/guide/. Accessed November 21, 2023.
+</div>
+<div id="ref-theturingwaycommunityResearchCompendia" class="csl-entry" role="listitem">
+The Turing Way Community. n.d. <span>“Research <span>Compendia</span>.”</span> <em>The Turing Way</em>. https://the-turing-way.netlify.app/reproducible-research/compendia. Accessed November 21, 2023.
+</div>
+<div id="ref-vanlissaWORCSWorkflowOpen2021" class="csl-entry" role="listitem">
+Van Lissa, Caspar J., Andreas M. Brandmaier, Loek Brinkman, Anna-Lena Lamprecht, Aaron Peikert, Marijn E. Struiksma, and Barbara M. I. Vreede. 2021. <span>“<span>WORCS</span>: <span>A</span> Workflow for Open Reproducible Code in Science.”</span> <em>Data Science</em> 4 (1): 29–49. <a href="https://doi.org/10.3233/DS-210031">https://doi.org/10.3233/DS-210031</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

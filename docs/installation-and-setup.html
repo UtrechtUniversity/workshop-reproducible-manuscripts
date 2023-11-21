@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -234,7 +253,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#a.-install-quarto-and-your-programming-language" id="toc-a.-install-quarto-and-your-programming-language" class="nav-link active" data-scroll-target="#a.-install-quarto-and-your-programming-language">A. Install Quarto and your programming language</a></li>
+  <li><a href="#b.-zotero-for-reproducible-citations" id="toc-b.-zotero-for-reproducible-citations" class="nav-link" data-scroll-target="#b.-zotero-for-reproducible-citations">B. Zotero for reproducible citations</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/installation-and-setup.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -272,6 +298,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<section id="a.-install-quarto-and-your-programming-language" class="level2">
+<h2 class="anchored" data-anchor-id="a.-install-quarto-and-your-programming-language">A. Install Quarto and your programming language</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">1. Quarto in VS Code (R or Python)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">2. Quarto in Rstudio (R)</a></li></ul>
 <div class="tab-content">
@@ -417,8 +445,50 @@ C:\Users\UserName\AppData\Local\Temp\RtmpYh5ogU\downloaded_packages</code></pre>
 </div>
 </div>
 </div>
+</section>
+<section id="b.-zotero-for-reproducible-citations" class="level2">
+<h2 class="anchored" data-anchor-id="b.-zotero-for-reproducible-citations">B. Zotero for reproducible citations</h2>
+<ol type="1">
+<li>Install Zotero.
+<ol type="a">
+<li>If you work on a Utrecht University-managed laptop, you can install Zotero from the Software Center.</li>
+<li>If you work on a private device, follow the <a href="https://www.zotero.org/support/installation">installation instructions</a> on the Zotero installation page.</li>
+</ol></li>
+<li>Install the Zotero connector <a href="https://www.zotero.org/download/">for your browser</a>. This connector makes sure you can directly save a reference to Zotero from your browser.</li>
+<li><a href="https://retorque.re/zotero-better-bibtex/installation/">Install the Better BibTex extension</a> for Zotero. This makes sure your references are saved in a format that Quarto can work with.</li>
+</ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-frankRMarkdownWritingReproducible2017" class="csl-entry" role="listitem">
+Frank, Mike, and Chris Hartgerink. 2017. <span>“<span>RMarkdown</span> for Writing Reproducible Scientific Papers.”</span> https://libscie.github.io/rmarkdown-workshop/handout.html.
+</div>
+<div id="ref-hartgerinkComposingReproducibleManuscripts2017" class="csl-entry" role="listitem">
+Hartgerink, Chris. 2017. <span>“Composing Reproducible Manuscripts Using <span>R Markdown</span>.”</span> <em>eLife</em>. https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown; <span>eLife Sciences Publications Limited</span>.
+</div>
+<div id="ref-knuthLiterateProgramming1984" class="csl-entry" role="listitem">
+Knuth, D. E. 1984. <span>“Literate <span>Programming</span>.”</span> <em>The Computer Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+<div id="ref-lasserCreatingExecutablePaper2020" class="csl-entry" role="listitem">
+Lasser, Jana. 2020. <span>“Creating an Executable Paper Is a Journey Through <span>Open Science</span>.”</span> <em>Communications Physics</em> 3 (1): 1–5. <a href="https://doi.org/10.1038/s42005-020-00403-4">https://doi.org/10.1038/s42005-020-00403-4</a>.
+</div>
+<div id="ref-mockGetStartedQuarto2022a" class="csl-entry" role="listitem">
+Mock, Tom. 2022a. <span>“Get <span>Started</span> with <span>Quarto</span> - <span>Getting Started</span> with <span>Quarto</span>.”</span> https://jthomasmock.github.io/quarto-2hr-webinar/.
+</div>
+<div id="ref-mockGetStartedQuarto2022" class="csl-entry" role="listitem">
+———. 2022b. <span>“Get <span>Started</span> with <span>Quarto</span> - Rstudio::conf 2022 <span>Workshop</span>.”</span> https://rstudio-conf-2022.github.io/get-started-quarto/.
+</div>
+<div id="ref-quartoQuartoGuide" class="csl-entry" role="listitem">
+Quarto. n.d. <span>“Quarto - <span>Guide</span>.”</span> <em>Quarto</em>. https://quarto.org/docs/guide/. Accessed November 21, 2023.
+</div>
+<div id="ref-theturingwaycommunityResearchCompendia" class="csl-entry" role="listitem">
+The Turing Way Community. n.d. <span>“Research <span>Compendia</span>.”</span> <em>The Turing Way</em>. https://the-turing-way.netlify.app/reproducible-research/compendia. Accessed November 21, 2023.
+</div>
+<div id="ref-vanlissaWORCSWorkflowOpen2021" class="csl-entry" role="listitem">
+Van Lissa, Caspar J., Andreas M. Brandmaier, Loek Brinkman, Anna-Lena Lamprecht, Aaron Peikert, Marijn E. Struiksma, and Barbara M. I. Vreede. 2021. <span>“<span>WORCS</span>: <span>A</span> Workflow for Open Reproducible Code in Science.”</span> <em>Data Science</em> 4 (1): 29–49. <a href="https://doi.org/10.3233/DS-210031">https://doi.org/10.3233/DS-210031</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -670,4 +740,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/edit/main/installation-and-setup.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>
+</body></html>
