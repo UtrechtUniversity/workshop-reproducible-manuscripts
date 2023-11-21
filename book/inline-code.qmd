@@ -10,8 +10,6 @@
 
 Take a couple of minutes to play around with the possibilities of _inline code_:
 
-- Do a simple calculation such as `25 + 25` within your text.
-
-- Report the number of "Gentoo" and/or "Chinstrap" species of penguins within the data (hint: refer to the example in the slides).
-
-- Try out one other (simple) computation or calculation!
+1. Do a simple calculation such as `25 + 25` within your text.
+2. Report the number of "Gentoo" and/or "Chinstrap" species of penguins within the data (hint: refer to the example in the slides).
+3. Try out one other (simple) in-line computation or calculation!
