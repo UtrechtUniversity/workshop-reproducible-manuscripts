@@ -52,4 +52,4 @@ bibliography: references.bib
 - repeat Step 5 to insert the new reference
 - if you did a bracketed citation before, do an in-text citation this time (or vice versa)
 
-**Note:* Steps 1, 3, 4 can be skipped. These were a one-time thing.
+**Note:** Steps 1, 3, 4 can be skipped. These were a one-time thing.
