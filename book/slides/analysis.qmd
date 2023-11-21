@@ -173,7 +173,7 @@ library(palmerpenguins)
 This line was created as follows:
 
 ````md
-There are `r knitr::inline_expr("sum(penguins_data$species=='Adelie')")` 
+There are `r knitr::inline_expr("sum(penguins$Species=='Adelie')")` 
 penguins of the Adelie species in the dataset.
 ````
 
@@ -188,9 +188,9 @@ x = 5 + 5
 ```
 ````
 ````md
-The answer of 5 + 5 is `{python} x`
+The answer to 5 + 5 is `{python} x`
 ````
-For earlier Quarto versions, the solution is a bit more complicated:
+For earlier Quarto versions, the solution is a bit more complicated (note that the text is included within the Python code chunk):
 
 ````
 ```{{python}}
@@ -207,7 +207,7 @@ The radius of the circle is {radius}.
 
 Take a couple of minutes to play around with the possibilities of _inline code_!
 
-Go to the _Inline code_ chapter in the workshop handbook to complete the exercise.
+Go to the _Inline code_ chapter in the workshop book to complete the exercise.
 
 ```{r}
 library(countdown)
