@@ -6,6 +6,8 @@ format:
     slide-number: true
     navigation-mode: linear
     controls: true
+    incremental: true
+    code-overflow: wrap
 ---
 
 # Reproducible Manuscripts {background-color="#FFCD00"}
@@ -46,21 +48,24 @@ We want _Dynamic Document Generation_, where we can:
 
 ## Advantages
 
-- One major benefit is the elimination of human error in copying and pasting results, as automated methods can update results, figures, and tables with major revisions. 
+**(1) Eliminate human error in copying and pasting results**
 
-_Using an automated method for scraping APA-formatted stats out of PDFs, Nuijten et al. (⊕2016) found that over 10% of p-values in published papers were inconsistent with the reported details of the statistical test, and 1.6% were what they called “grossly” inconsistent, e.g. difference between the p-value and the test statistic meant that one implied statistical significance and the other did not. Nearly half of all papers had errors in them._
-
-## Advantages
-
-- The use of reproducible documents also allows for easy revisions and specification of desired figures and tables.
-
-_When revisions are requested, one might have to tweak tables and figures by hand constantly, leading to a major incentive never to rerun analyses because it would mean re-pasting and re-illustratoring all the numbers and figures in a paper._
+_We found that half of all published psychology papers that use null-hypothesis significance testing (NHST) contained at least one p-value that was inconsistent with its test statistic and degrees of freedom. One in eight papers contained a grossly inconsistent p-value that may have affected the statistical conclusion_
+_([Nuijten et al., 2016](https://doi.org/10.3758/s13428-015-0664-2))_
 
 ## Advantages
 
-- Furthermore, computational reproducibility is promoted, which allows others to easily verify and replicate research findings. 
+**(2) Easy revisions and specification of desired figures and tables**
 
-While programming environments may seem counter-intuitive for writing papers, they ultimately prevent mistakes and save time.
+_When revisions are requested, one might have to tweak tables and figures by hand constantly, leading to a major incentive never to rerun analyses because it would mean re-pasting and re-illustrating all the numbers and figures in a paper._
+
+## Advantages
+
+**(3) Promote computational reproducibility **
+
+- Easy verification and replication of research findings
+
+- While programming environments may seem counter-intuitive for writing papers, they ultimately prevent mistakes and save time.
 
 ## How Do We Pull This off?
 
@@ -76,7 +81,8 @@ Enter **Quarto**...
 
 ## Your Turn!
 
-- Go to the _Getting Started_ chapter of the workshop book and follow the instructions for your programming language.
+- Open the workshop materials: **[https://edu.nl/ffhra](https://edu.nl/ffhra)**
+- Go to the _Getting Started_ chapter and follow the instructions for your programming language.
 
 ```{r}
 library(countdown)
@@ -92,7 +98,7 @@ countdown(minutes = 10,
 
 ## Anatomy of a Quarto Document { .scrollable}
 
--   Metadata & Header (YAML)
+**Metadata & Header (yaml)**
 
 ``` yaml
 ---
@@ -102,7 +108,7 @@ format: html
 
 . . .
 
--   Code
+**Code**
 
 ```{r}
 #| echo: fenced
@@ -112,15 +118,13 @@ mtcars %>%
   group_by(cyl) %>%
   summarize(mean = mean(mpg), .groups = "drop")
 ```
-
 . . .
 
--   Text
+**Text**
 
 ``` markdown
 # Heading 1
-This is a sentence with some **bold text**, some *italic text* and an [image](image.png).
+This is a sentence with some **bold text**, 
+some *italic text* and 
+an [image](image.png).
 ```
-
-
-

@@ -1705,25 +1705,23 @@ class CountdownTimer {
 </section>
 <section id="how-to-render" class="slide level2">
 <h2>How To Render</h2>
-<p>Rendering can be done in various ways:</p>
-<p><strong>RStudio</strong>:</p>
-<ul>
-<li><p>Clicking the <em>Render</em> button.</p></li>
-<li><p>Using the <code>quarto</code> R package:</p></li>
-</ul>
+<p><strong>1. In RStudio</strong>:</p>
+<p>Click the <em>Render</em> button OR use the <code>quarto</code> R package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(quarto)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">quarto_render</span>(<span class="st">&quot;my-reproducible-manuscript.qmd&quot;</span>) <span class="co"># defaults to html</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">quarto_render</span>(<span class="st">&quot;my-reproducible-manuscript&quot;</span>, <span class="at">output_format =</span> <span class="st">&quot;pdf&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">quarto_render</span>(<span class="st">&quot;my-reproducible-manuscript.qmd&quot;</span>, <span class="at">output_format =</span> <span class="st">&quot;pdf&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Terminal</strong>: Via the <code>quarto render</code> command and <code>--to</code> flag to specify output format.</p>
-<pre><code>quarto render my-reproducible-manuscript.qmd # defaults to html
-quarto render my-reproducible-manuscript.qmd --to pdf
-quarto render my-reproducible-manuscript.qmd --to docx</code></pre>
+<p><br></p>
+<p><strong>2. Terminal</strong>: <code>quarto render</code> (<code>--to [output format]</code>)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">quarto</span> render</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">quarto</span> render my-reproducible-manuscript.qmd <span class="co"># defaults to html</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="ex">quarto</span> render my-reproducible-manuscript.qmd <span class="at">--to</span> pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="rendering-to-multiple-formats" class="slide level2">
 <h2>Rendering to Multiple Formats</h2>
-<p>Time to adapt the YAML metadata!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="pp">---</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;My Reproducible Manuscript&quot;</span></span>
@@ -1739,12 +1737,15 @@ quarto render my-reproducible-manuscript.qmd --to docx</code></pre>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="fu">quarto_render</span>(<span class="st">&quot;my-reproducible-manuscript.qmd&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>OR</p>
-<pre><code>quarto render my-reproducible-manuscript.qmd</code></pre>
-<p>This means you don’t have to run separate commands and specify the desired format with the <code>--to</code> flag everytime. <strong>Note:</strong> the <em>Render</em> button will not work for multiple formats.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">quarto</span> render my-reproducible-manuscript.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You don’t have to run separate commands with the <code>--to</code> flag.</p>
+<p><strong>Note:</strong> the <em>Render</em> button will not work for multiple formats.</p>
 </section>
 <section id="journal-formats" class="slide level2">
 <h2>Journal Formats</h2>
-<p>In addition to the default <code>html</code>/<code>pdf</code>/<code>docx</code> templates, Quarto offers a number of Journal templates. Currently, this includes:</p>
+<p>Besides default <code>html</code>/<code>pdf</code>/<code>docx</code>, Quarto offers journal templates. See also <a href="https://quarto.org/docs/journals/">Quarto Documentation: Journals</a>.</p>
 <ul>
 <li><code>acm</code>: Association of Computing Machinery (ACM)</li>
 <li><code>plos</code>: Public Library of Science (PLOS)</li>
@@ -1754,44 +1755,31 @@ quarto render my-reproducible-manuscript.qmd --to docx</code></pre>
 <li><code>acs</code>: American Chemical Society (ACS)</li>
 <li><code>jss</code>: Journal of Statistical Software (JSS)</li>
 </ul>
-<p>Previews of the templates are available on the <a href="https://quarto.org/docs/journals/">Quarto Documentation: Journals</a> page. Keep an eye out for new templates!</p>
 </section>
 <section id="journal-formats-1" class="slide level2">
 <h2>Journal Formats</h2>
-<p>You can utilize a journal template by running the following command:</p>
-<p><code>quarto use template quarto-journals/&lt;template-name&gt;</code></p>
-<p>For example,</p>
-<p><code>quarto use template quarto-journals/plos</code></p>
-<p>This command will create a new Quarto document, it would be best to use it at the beginning of your project.</p>
+<p>Use a journal template <strong>from the start of your project</strong> (will create a new document):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">quarto</span> use template quarto-journals/<span class="op">&lt;</span>template-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p>For example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">quarto</span> use template quarto-journals/plos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="exercise" class="slide level2">
 <h2>Exercise</h2>
-<ol type="1">
-<li>Render your Quarto document to <code>docx</code> using both:</li>
-</ol>
-<ul>
-<li>the <code>quarto</code> R package</li>
-<li>the <em>Terminal</em></li>
-</ul>
-<ol start="2" type="1">
-<li>Adjust the YAML to include both <code>html</code> &amp; <code>docx</code> and re-render the document.</li>
-</ol>
+<p>Go to the <em>Rendering</em> chapter in the workshop book and refer to the instructions in the <em>Exercise</em> section.</p>
+<p>You will render your document into html and docx formats.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_dc7bebda" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_faf77900" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
-<p>OPTIONAL:</p>
-<ol start="3" type="1">
-<li><p>Render your Quarto document to <code>pdf</code>.</p></li>
-<li><p>Try out the PLOS Journal Template.</p></li>
-</ol>
-<ul>
-<li>simply obtain the template and render it, no need to make changes to the content.</li>
-</ul>
 <div class="footer footer-default">
 
 </div>

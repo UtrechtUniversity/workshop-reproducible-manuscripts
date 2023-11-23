@@ -11,6 +11,8 @@ It is also possible to use Quarto with Python in Jupyter notebooks. We do not go
 Besides R and Python, Quarto can also work with other programming languages, such as Julia or Observable, and it can interact with other software as well, like Neovim and simple Text editors.
 :::
 
+## A. Install Quarto and your programming language
+
 ::: panel-tabset 
 
 # 1. Quarto in VS Code (R or Python)
@@ -141,3 +143,11 @@ installing the package again.
 
 
 :::
+
+## B. Zotero for reproducible citations
+
+1. Install Zotero. 
+   a. If you work on a Utrecht University-managed laptop, you can install Zotero from the Software Center.
+   b. If you work on a private device, follow the [installation instructions](https://www.zotero.org/support/installation) on the Zotero installation page.
+2. Install the Zotero connector [for your browser](https://www.zotero.org/download/). This connector makes sure you can directly save a reference to Zotero from your browser.
+3. [Install the Better BibTex extension](https://retorque.re/zotero-better-bibtex/installation/) for Zotero. This makes sure your references are saved in a format that Quarto can work with.

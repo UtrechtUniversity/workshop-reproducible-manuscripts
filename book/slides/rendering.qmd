@@ -26,33 +26,31 @@ Quarto provides the following output formats:
 
 ## How To Render 
 
-Rendering can be done in various ways:
+**1. In RStudio**: 
 
-**RStudio**: 
-
-- Clicking the _Render_ button.
-
-- Using the `quarto` R package:
+Click the _Render_ button OR use the `quarto` R package:
 
 ```{r}
 #| eval: false
 #| echo: true
 library(quarto)
 quarto_render("my-reproducible-manuscript.qmd") # defaults to html
-quarto_render("my-reproducible-manuscript", output_format = "pdf")
+quarto_render("my-reproducible-manuscript.qmd", output_format = "pdf")
 ```
+  
+<br>
 
-**Terminal**: Via the `quarto render` command and `--to` flag to specify output format.
+**2. Terminal**: `quarto render` (`--to [output format]`)
 
-```
+```{bash}
+#| eval: false
+#| echo: true
+quarto render
 quarto render my-reproducible-manuscript.qmd # defaults to html
 quarto render my-reproducible-manuscript.qmd --to pdf
-quarto render my-reproducible-manuscript.qmd --to docx
 ```
 
 ## Rendering to Multiple Formats 
-
-Time to adapt the YAML metadata! 
 
 ```{yaml}
 #| eval: false
@@ -77,15 +75,20 @@ quarto_render("my-reproducible-manuscript.qmd")
 
 OR
 
-```
+```{bash}
+#| eval: false
+#| echo: true
 quarto render my-reproducible-manuscript.qmd
 ```
 
-This means you don't have to run separate commands and specify the desired format with the `--to` flag everytime. **Note:** the _Render_ button will not work for multiple formats.
+You don't have to run separate commands with the `--to` flag.
+
+**Note:** the _Render_ button will not work for multiple formats.
 
 ## Journal Formats
 
-In addition to the default `html`/`pdf`/`docx` templates, Quarto offers a number of Journal templates. Currently, this includes:
+Besides default `html`/`pdf`/`docx`, Quarto offers journal templates. 
+See also [Quarto Documentation: Journals](https://quarto.org/docs/journals/).
 
 - `acm`: Association of Computing Machinery (ACM)
 - `plos`: Public Library of Science (PLOS) 
@@ -95,28 +98,31 @@ In addition to the default `html`/`pdf`/`docx` templates, Quarto offers a number
 - `acs`: American Chemical Society (ACS) 
 - `jss`: Journal of Statistical Software (JSS)
 
-Previews of the templates are available on the [Quarto Documentation: Journals](https://quarto.org/docs/journals/) page. Keep an eye out for new templates!
-
 ## Journal Formats
 
-You can utilize a journal template by running the following command:
+Use a journal template **from the start of your project** (will create a new document):
 
-`quarto use template quarto-journals/<template-name>`
+```{bash}
+#| eval: false
+#| echo: true
+quarto use template quarto-journals/<template-name>
+```
 
-For example,
+<br>
 
-`quarto use template quarto-journals/plos`
+For example:
 
-This command will create a new Quarto document, it would be best to use it at the beginning of your project.
+```{bash}
+#| eval: false
+#| echo: true
+quarto use template quarto-journals/plos
+```
 
 ## Exercise
 
-1. Render your Quarto document to `docx` using both:
+Go to the _Rendering_ chapter in the workshop book and refer to the instructions in the _Exercise_ section.
 
-- the `quarto` R package
-- the _Terminal_
-
-2. Adjust the YAML to include both `html` & `docx` and re-render the document.
+You will render your document into html and docx formats.
 
 ```{r}
 library(countdown)
@@ -124,12 +130,3 @@ library(countdown)
 countdown(minutes = 10,
           color_background = "#FFCD00")
 ```
-
-
-OPTIONAL:
-
-3. Render your Quarto document to `pdf`.
-
-4. Try out the PLOS Journal Template.
-
-- simply obtain the template and render it, no need to make changes to the content.

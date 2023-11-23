@@ -6,6 +6,8 @@ format:
     slide-number: true
     navigation-mode: linear
     controls: true
+    code-overflow: wrap
+    code-line-numbers: false
 ---
 
 # Writing {background-color="#FFCD00"}
@@ -17,17 +19,25 @@ format:
 
 ## Markdown Syntax 
 
-The body of the document is where you will do your writing. Writing will happen primarily in the [Markdown](https://daringfireball.net/projects/markdown/syntax) format (LaTeX and HTML would also work, depending on the output format). 
+When writing the body of your document, you will use the [Markdown](https://daringfireball.net/projects/markdown/syntax) format.
+
+. . .
 
 > Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. 
 > - *[Markdown Guide](https://www.markdownguide.org/getting-started/)*
 
+. . .
+
+When you render your Quarto document, Quarto converts the Markdown-formatted text
+into HTML, LaTeX, etc., depending on the output format you chose.
+
 ## Learning Markdown
 
-If you're not familiar with Markdown, you can familiarize yourself with it in a couple of minutes using the following link: [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/).
+You can familiarize yourself with Markdown in a couple of minutes using the following link: [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/).
 
-<br>
-You can also use the Visual Editor in [VS Code](https://quarto.org/docs/visual-editor/vscode/) or [RStudio](https://quarto.org/docs/visual-editor/), to see Markdown syntax previewed in it's final format as you write. The Visual Editor also has some common Word-like shortcuts, such as `Ctrl + B` to make text bold.
+. . .
+
+You can also use the **Visual Editor** in [VS Code](https://quarto.org/docs/visual-editor/vscode/) or [RStudio](https://quarto.org/docs/visual-editor/), to see Markdown syntax previewed in it's final format as you write. The Visual Editor also has some common Word-like shortcuts, such as `Ctrl + B` to make text bold.
 
 ## Markdown Sneak Peek: Text Formatting
 
@@ -43,7 +53,7 @@ You can also use the Visual Editor in [VS Code](https://quarto.org/docs/visual-e
 |     `verbatim code`               | `verbatim code`               |
 +-----------------------------------+-------------------------------+
 
-## Markdown Sneak Peek: Headers  { .smaller}
+## Markdown Sneak Peek: Headers
 
 +---------------------+-----------------+
 | Markdown Syntax     | Output          |
@@ -56,68 +66,145 @@ You can also use the Visual Editor in [VS Code](https://quarto.org/docs/visual-e
 +---------------------+-----------------+
 |     #### Header 4   | #### Header 4   |
 +---------------------+-----------------+
-|     ##### Header 5  | ##### Header 5  |
-+---------------------+-----------------+
-|     ###### Header 6 | ###### Header 6 |
-+---------------------+-----------------+
 
-## Markdown Sneak Peek: Lists  { .scrollable .smaller}
-
-+-------------------------------------+---------------------------------+
-| Markdown Syntax                     | Output                          |
-+=====================================+=================================+
-|     * unordered list                | -   unordered list              |
-|         + sub-item 1                |                                 |
-|         + sub-item 2                |     -   sub-item 1              |
-|             - sub-sub-item 1        |                                 |
-|                                     |     -   sub-item 2              |
-|                                     |                                 |
-|                                     |         -   sub-sub-item 1      |
-+-------------------------------------+---------------------------------+
-|     *   item 2                      | -   item 2                      |
-|                                     |                                 |
-|         Continued (indent 4 spaces) |     Continued (indent 4 spaces) |
-+-------------------------------------+---------------------------------+
-|     1. ordered list                 | 1.  ordered list                |
-|     2. item 2                       |                                 |
-|         i) sub-item 1               | 2.  item 2                      |
-|              A.  sub-sub-item 1     |                                 |
-|                                     |     i.  sub-item 1              |
-|                                     |                                 |
-|                                     |         A.  sub-sub-item 1      |
-+-------------------------------------+---------------------------------+
-|     (@)  A list whose numbering     | 1.  A list whose numbering      |
-|                                     |                                 |
-|     continues after                 | continues after                 |
-|                                     |                                 |
-|     (@)  an interruption            | 2.  an interruption             |
-+-------------------------------------+---------------------------------+
-|     term                            | **term**                        |
-|     : definition                    |                                 |
-|                                     | :   definition                  |
-+-------------------------------------+---------------------------------+
-
-## Markdown Sneak Peek: Links { .smaller}
-
-There are several types of "links" or hyperlinks.
+## Markdown Sneak Peek: Lists {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
-### Markdown
+
 ```markdown
-You can embed [named hyperlinks](https://quarto.org/),
-direct urls like <https://quarto.org/>, and links to 
-[other places](#quarto-anatomy) in 
-the document. The syntax is similar for embedding an
-inline image: ![penguins](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png).
+* unordered list
+  + sub-item 1
+    - sub-sub-item 1
+  + sub-item 2
 ```
 :::
-::: {.column width="50%" .fragment}
-### Output
-You can embed [named hyperlinks](https://quarto.org/),
-direct urls like <https://quarto.org/>, and links to  [other places](#quarto-anatomy) in 
-the document. The syntax is similar for embedding an inline image:  
-![penguins](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png){style="width:250px;"}
+::: {.column width="50%"}
+* unordered list
+  + sub-item 1
+    - sub-sub-item 1
+  + sub-item 2
+:::
+:::
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+```markdown
+1. ordered list
+2. item 2
+   i. sub-item 1
+      A.  sub-sub-item 1
+```
+:::
+::: {.column width="50%"}
+1. ordered list
+2. item 2
+   i. sub-item 1
+      A.  sub-sub-item 1
+:::
+:::
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+```markdown
+*   item 2
+    
+    Continued (indent 4 spaces)
+```
+:::
+::: {.column width="50%"}
+*   item 2
+    
+    Continued (indent 4 spaces)
+:::
+:::
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+```markdown
+term
+: definition
+```
+:::
+::: {.column width="50%"}
+term
+: definition
+:::
+:::
+
+## Markdown Sneak Peek: Links { .smaller}
+
+::: columns
+::: {.column width="50%"}
+```markdown
+
+You can embed [named hyperlinks](https://quarto.org/)
+
+```
+:::
+::: {.column width="50%"}
+
+You can embed [named hyperlinks](https://quarto.org/)
+
+:::
+:::
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+```markdown
+
+Simply a direct url like <https://quarto.org/>
+
+```
+:::
+::: {.column width="50%"}
+
+Simply a direct url like <https://quarto.org/>
+
+:::
+:::
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+```markdown
+
+Links to [other places](#quarto-anatomy) in the document. 
+
+```
+:::
+::: {.column width="50%"}
+
+Links to [other places](#quarto-anatomy) in the document. 
+
+:::
+:::
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+```markdown
+
+Or embed an image: 
+![penguins](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png)
+
+```
+:::
+::: {.column width="50%"}
+
+Or embed an image: <br>
+![penguins](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png)
+
 :::
 :::
 
@@ -158,13 +245,14 @@ countdown(minutes = 10,
 
 # Referencing {background-color="#FFCD00"}
 
-## BibText Keys
+## BibTex Keys
 
-Now that we know how to write in Markdown and run analyses in code chunks, let's learn about referencing using BibTex keys!
+Now that we know how to write in Markdown, let's add some references! 
 
-A typical BibTex key might look like the following:
+Adding reproducible references happens with **BibTex keys**.
+A typical BibTex key might look like as follows:
 
-```
+```markdown
 @article{nash51,
   author  = "Nash, John",
   title   = "Non-cooperative Games",
@@ -178,11 +266,11 @@ A typical BibTex key might look like the following:
 
 ## Working With BibTex Keys
 
-We will work with with bibliographies in the form of `.bib` files. `.bib` stands for _BibTeX Bibliographical Database_. They are text files which contain a list of references in the form of BibTex keys.
+We will work with with bibliographies in the form of `.bib` files (*BibTeX Bibliographical Database*). `.bib` files are text files which contain a list of references in the form of BibTex keys.
 
 Here is an example of another BibTex key for a reference used in this workshop:
 
-```
+```markdown
 @misc{RMarkdownWritingReproducible,
 	title = {{RMarkdown} for writing reproducible scientific papers},
 	url = {https://libscie.github.io/rmarkdown-workshop/handout.html},
@@ -191,17 +279,25 @@ Here is an example of another BibTex key for a reference used in this workshop:
 }
 ```
 
-## Working with BibTex keys
+## Working With BibTex Keys {.smaller}
 
-In practice, your `.bib` file should be updated along the way to include the BibTex keys for all your references. You can cite a specific reference using the the `@` character with the key/identifier in the first line of the entry. 
+The typical workflow is as follows:
 
-For the previously mentioned examples, it would be:
+::: {.incremental}
+1. Find a reference that you need in your manuscript.
+2. Save it to your Zotero library via the browser extension    
+    Zotero automatically updates your `.bib` file through syncing with 
+    Zotero desktop and updating the `.bib` file.
+3. Cite the references using the `@` + reference identifier:
+   - **In-text citations**:  `@nash51` OR `@RMarkdownWritingReproducible`
+   - **Bracketed citations**: `[@nash51]` OR `[@nash51, @RMarkdownWritingReproducible]`
 
-- **In-Text Citations**: `@nash51` OR `@RMarkdownWritingReproducible`
+:::
 
-- **Bracketed Citations**: `[@nash51]` OR `[@nash51, @RMarkdownWritingReproducible]`
+. . .
 
-More information can be found at: https://quarto.org/docs/authoring/footnotes-and-citations.html
+More info: [https://quarto.org/docs/authoring/footnotes-and-citations.html](https://quarto.org/docs/authoring/footnotes-and-citations.html)
+
 
 ## Exercise
 

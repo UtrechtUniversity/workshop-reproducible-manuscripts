@@ -5,8 +5,5 @@ These materials were drafted with the help from the following contributors:
 - [Neha Moopen](https://orcid.org/0000-0003-1412-4402)
 - [Dorien Huijser](https://orcid.org/0000-0003-3282-8083)
 
-Our materials have borrowed liberally from the following sources:
-
-- [Getting Started with Quarto](https://jthomasmock.github.io/quarto-2hr-webinar) (2-hour webinar) by Thomas Mock (CC-BY 4.0)
-- [Getting Started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/) (rstudio::conf 2022 workshop) by Thomas Mock (CC-BY 4.0)
-- [RMarkdown for writing reproducible scientific papers](https://libscie.github.io/rmarkdown-workshop/handout.html) by Mike Frank & Chris Hartgerink (CC0)
+Our materials have borrowed liberally from @mockGetStartedQuarto2022a, @mockGetStartedQuarto2022, @hartgerinkComposingReproducibleManuscripts2017 and the Quarto documentation (@quartoQuartoGuide).
+See also the [references](references.html).
