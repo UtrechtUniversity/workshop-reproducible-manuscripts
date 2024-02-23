@@ -5,7 +5,7 @@ you can start to create the Quarto document that you will be working in during t
 
 ::: {.panel-tabset}
 
-## R
+## Rstudio
 
 **1. Create an RStudio Project**
 
@@ -40,7 +40,7 @@ Give the file a clear name, without using  spaces. For example, `my-reproducible
 - Once everything has been saved correctly, click the _Render_ button in the menu bar.
 - The rendered HTML copy of your document will appear in your web browser or alongside the editor in RStudio. You will also see a `my-reproducible-manuscript.html` file appear in the `docs` folder.
 
-## Python
+## VScode
 
 **1. Open the `my-reproducible-manuscript` folder in Visual Studio Code**
 
@@ -99,4 +99,46 @@ quarto render my-reproducible-manuscript.qmd
 
 The rendered HTML copy of your document will appear in your web browser or alongside the editor in VS Code.
 You will also see a `my-reproducible-manuscript.html` file appear in the `docs` folder.
+
+## Jupyter Lab
+
+**1. Open the `my-reproducible-manuscript` folder in Jupyter Lab**
+
+- Open Anaconda Navigator > Jupyter Lab.
+- Start a clean environment: close running kernels and non-relevant files you have open.
+- In the files section of Jupyter Lab, navigate to the location where you stored the `my-reproducible-manuscript` folder.
+
+**2. Document your project for reproducibility**
+
+Your project already contains pre-made folders, a README file and a License.
+Open the `README.md` file and fill it with a few relevant details, for example:
+
+- Purpose and contents of the project
+- Your name (Author)
+- The date of creation
+- Etc.
+
+**3. Open the Jupyter Notebook**
+
+- Navigate to the `docs` folder.
+- Open the `my-reproducible-manuscript.ipynb` file.
+- Give your new document a Title, such as `My Reproducible Manuscript` and save your changes.
+
+**4. Render the Quarto document to HTML**
+
+- In Jupyter Lab, click _File_ -> _New_ -> _Terminal_
+- Set the working directory to your project folder in the terminal, such as (use tab for autocompletion):
+
+```
+cd .\path\to\my-reproducible-manuscript\
+```
+
+- In the newly created Terminal, run the following command:
+
+```
+quarto render docs/my-reproducible-manuscript.ipynb
+```
+
+You will see a `my-reproducible-manuscript.html` file appear in the `docs` folder. Click on it to open it.
+
 :::
