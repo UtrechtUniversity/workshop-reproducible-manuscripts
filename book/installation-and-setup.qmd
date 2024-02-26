@@ -1,11 +1,12 @@
 # Installation & Setup {.unnumbered}
 
-The installation procedure will differ depending on how you choose to work with the Quarto publishing system. Below we go into the following 2 situations:
+**To prepare yourself for the workshop, please follow both step A and B listed below.**
 
-1. Using Quarto with Python or R in Visual Studio Code
-2. Using Quarto with R in RStudio
+The installation procedure under A. will differ depending on how you choose to work with the Quarto publishing system. Below we go into the following 3 situations:
 
-It is also possible to use Quarto with Python in Jupyter notebooks. We do not go into that situation in this workshop for now. Just know that it is possible by installing a Python installation, Jupyter lab (e.g., via Anaconda) and Quarto ([see Quarto documentation](https://quarto.org/docs/get-started/hello/jupyter.html)).
+1. Using Quarto with Python in Jupyter Lab
+2. Using Quarto with Python or R in Visual Studio Code
+3. Using Quarto with R in RStudio
 
 :::{.callout-note}
 Besides R and Python, Quarto can also work with other programming languages, such as Julia or Observable, and it can interact with other software as well, like Neovim and simple Text editors.
@@ -15,7 +16,25 @@ Besides R and Python, Quarto can also work with other programming languages, suc
 
 ::: panel-tabset 
 
-# 1. Quarto in VS Code (R or Python)
+# 1. Quarto in Jupyter Lab (Python)
+
+## 1. Install Python and Jupyter Lab
+
+If you don't have Python and Jupyter Lab installed yet, follow **only step 1 "Install Python"** on [this page](https://utrechtuniversity.github.io/workshop-introduction-to-python/installation-and-setup.html#step-1-install-python). Here you will install Anaconda Navigator, which installs both Python and Jupyter Lab.
+
+## 2. Install Quarto
+
+1. Download Quarto from [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
+2. Open the msi/executable file. Answer "Yes" to the pop-up question "Do you want to allow this app to make changes to your device?". Then start the set-up wizard.
+3. Choose `Install for all users`. If you do not have administrator rights, select `Install just for you`.
+4. Choose the installation location, usually the default proposed location is fine.
+5. Installation will start. After installation, click Finish.
+
+## 3. Enable the Quarto extension in Jupyter Lab (optional)
+
+Although it is not strictly necessary, the Quarto extension in Jupyter Lab gives you nice Quarto previews of your Jupyter notebook files. To enable it, follow the steps listed under "Installing the extension" on [this page of the Quarto documentation](https://quarto.org/docs/tools/jupyter-lab-extension.html#installing-the-extension).
+
+# 2. Quarto in VS Code (R or Python)
 
 ## 1. Install Visual Studio Code
 Install Visual Studio Code (VS Code) using the [set-up instructions for your operating system](https://code.visualstudio.com/docs/setup/setup-overview).
@@ -56,7 +75,7 @@ Now that everything is installed, we need to make sure VS Code can use Quarto an
    c. If a version number appears, Python is detected.
 8. Check whether R is detected: if you can open an R terminal, it shows you the R version and R is detected successfully.
 
-# 2. Quarto in Rstudio (R)
+# 3. Quarto in Rstudio (R)
 
 ## 1. Install R and Rstudio
 
