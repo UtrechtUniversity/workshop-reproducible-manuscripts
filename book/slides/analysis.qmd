@@ -164,35 +164,57 @@ Why?
 
 ## Inline code: how?
 
-**In R**
-
 ```{r}
 #| label: Load the penguins dataset
 #| echo: false
 library(palmerpenguins)
 ```
 
+**In R**
+
+:::: {.columns}
+::: {.column width="50%"}
 ````md
-There are `r knitr::inline_expr("sum(penguins$Species=='Adelie')")` 
-penguins of the Adelie species in the dataset.
+There are 
+`r knitr::inline_expr("sum(penguins$Species=='Adelie')")` 
+Adelie penguins 
 ````
+:::
+
+::: {.column width="50%"}
 ````md
-There are `r sum(penguins$species=="Adelie")` penguins of the "Adelie" species in the dataset.
+There are 
+`r sum(penguins$species=="Adelie")` 
+Adelie penguins 
 ````
+:::
+::::
 
 <br>
 
-**In Python (Quarto >= 1.4)[^1]**
+**In Python (Quarto >= 1.4)**
+
+:::: {.columns}
+::: {.column width="50%"}
 ````
 ```{{python}}
 x = 5 + 5
 ```
 ````
+:::
+::: {.column width="50%"}
 ````md
 The answer to 5 + 5 is `{python} x`
 ````
+:::
+::::
 
-[^1]: Jupyter notebooks: also add `execute: enable: all` to the document yaml.
+In Jupyter notebooks: also add this to the document yaml:
+
+  ```yaml
+  execute:
+    enable: true
+  ```
 
 ## Exercise
 
