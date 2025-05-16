@@ -299,6 +299,23 @@ The typical workflow is as follows:
 More info: [https://quarto.org/docs/authoring/footnotes-and-citations.html](https://quarto.org/docs/authoring/footnotes-and-citations.html)
 
 
+## Citation style
+
+Default: Chicago Manual of Style.   
+Want a different citation style? Easy!
+
+1. Search your style of preference: <https://www.zotero.org/styles>
+2. Download the csl file into your manuscript folder
+3. Reference the csl file in your yaml:
+
+    ```yaml
+    ---
+    title: "My Reproducible Manuscript"
+    bibliography: references.bib
+    csl: nature.csl
+    ---
+    ```
+
 ## Exercise
 
 Go to the _Referencing_ chapter in the workshop book and refer to the instructions in the _Exercise_ section.
