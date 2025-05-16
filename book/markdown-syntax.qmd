@@ -20,15 +20,13 @@ Meet the penguins
 
 The penguins data from the palmerpenguins package contains size measurements for 
 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica. 
-
-The plot below shows the relationship between flipper and bill lengths of these penguins.
 ```
 
 ### What It Should Look Like
 
-![](https://quarto.org/docs/get-started/hello/images/rstudio-text.png)
+![](images/markdown_exercise_penguins.png)
 
 ### Links you need
 
-- You can find the illustration of the three species of Palmer Archipelago penguins (Chinstrap, Gentoo, and Adelie) here: [https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png).
-- The link to the Palmer Penguins package is here: [https://allisonhorst.github.io/palmerpenguins/](https://allisonhorst.github.io/palmerpenguins/).
+- You can find the illustration of the three species of Palmer Archipelago penguins (Chinstrap, Gentoo, and Adelie) here: <https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png>.
+- The link to the Palmer Penguins package is here: <https://allisonhorst.github.io/palmerpenguins/>
