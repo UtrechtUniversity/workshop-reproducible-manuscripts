@@ -30,13 +30,13 @@ We're assuming installation of Zotero Desktop, Zotero Connector, and Better BibT
 
 - update the YAML to include the bibliography:
 
-```
----
-title: "My Reproducible Manuscript"
-format: html
-bibliography: references.bib
----
-```
+    ```
+    ---
+    title: "My Reproducible Manuscript"
+    format: html
+    bibliography: references.bib
+    ---
+    ```
 
 5. **Insert a Citation**
 
@@ -53,3 +53,19 @@ bibliography: references.bib
 - if you did a bracketed citation before, do an in-text citation this time (or vice versa)
 
 **Note:** Steps 1, 3, 4 can be skipped. These were a one-time thing.
+
+7. **BONUS: Change the citation style**
+
+- [Download a csl file](https://www.zotero.org/styles) into your project 
+- Update the YAML to reference the citation style file:
+
+    ```
+    ---
+    title: "My Reproducible Manuscript"
+    format: html
+    bibliography: references.bib
+    csl: your-file-name.csl
+    ---
+    ```
+
+- Re-render your document and see if the citation style has changed!
