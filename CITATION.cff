@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: Workshop Writing Reproducible Manuscripts in R and Python
+message: 'If you reuse our workshop contents, please cite us!'
+type: software
+authors:
+  - name: Research Data Management Support
+    website: "https://uu.nl/rdm"
+    email: "info.rdm@uu.nl"
+repository-code: 'hhttps://github.com/utrechtUniversity/workshop-reproducible-manuscripts'
+url: 'https://utrechtuniversity.github.io/workshop-reproducible-manuscripts/'
+abstract: >-
+  This repository contains the Quarto book that
+  contains slides and exercises to learn how to use Quarto 
+  to generate a reproducible document that contains R or Python code.
+  The workshop was developed by Research Data Management Support 
+  at Utrecht University and taught in 2022-2024.
+keywords:
+  - reproducibility
+  - quarto
+  - scientific publishing
+  - research data management
+  - research compendium
+license: CC-BY-4.0
+contact:
+  - name: "Research Data Management Support"
